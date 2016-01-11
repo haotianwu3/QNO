@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9392B6C5BBF629BFFE597625 /* Pods_QNOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169199A5DA078031217D31FD /* Pods_QNOTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFD01C436EDE0050474D /* AppDelegate.swift */; };
 		A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFD21C436EDE0050474D /* ViewController.swift */; };
 		A9E4AFD61C436EDE0050474D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E4AFD41C436EDE0050474D /* Main.storyboard */; };
@@ -15,6 +16,11 @@
 		A9E4AFE61C436EDE0050474D /* QNOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFE51C436EDE0050474D /* QNOTests.swift */; };
 		A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFF01C436EDE0050474D /* QNOUITests.swift */; };
 		A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFFE1C4371060050474D /* PageItemController.swift */; };
+		B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
+		B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
+		B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
+		B2A924F91C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
+		F9F99EF48DDE0D5C9F40E5E9 /* Pods_QNO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		169199A5DA078031217D31FD /* Pods_QNOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A403FA7B2F044A8F710514EC /* Pods-QNO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QNO/Pods-QNO.debug.xcconfig"; sourceTree = "<group>"; };
 		A9E4AFCD1C436EDE0050474D /* QNO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QNO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E4AFD01C436EDE0050474D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9E4AFD21C436EDE0050474D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,12 @@
 		A9E4AFF01C436EDE0050474D /* QNOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QNOUITests.swift; sourceTree = "<group>"; };
 		A9E4AFF21C436EDE0050474D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E4AFFE1C4371060050474D /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
+		B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPI.swift; path = Classes/QNOAPI.swift; sourceTree = "<group>"; };
+		B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPIError.swift; path = Classes/QNOAPIError.swift; sourceTree = "<group>"; };
+		BCDFA1D12B60DB107C9BD450 /* Pods-QNO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNO.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNO/Pods-QNO.release.xcconfig"; sourceTree = "<group>"; };
+		C94C27322507C269B69C4086 /* Pods-QNOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNOTests/Pods-QNOTests.release.xcconfig"; sourceTree = "<group>"; };
+		CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE4FC9721A37F684295AE08 /* Pods-QNOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QNOTests/Pods-QNOTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9F99EF48DDE0D5C9F40E5E9 /* Pods_QNO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9392B6C5BBF629BFFE597625 /* Pods_QNOTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +92,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053BF5BA21309E2CE340870B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */,
+				169199A5DA078031217D31FD /* Pods_QNOTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CF744183CD1FC1CDC5911CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A403FA7B2F044A8F710514EC /* Pods-QNO.debug.xcconfig */,
+				BCDFA1D12B60DB107C9BD450 /* Pods-QNO.release.xcconfig */,
+				DBE4FC9721A37F684295AE08 /* Pods-QNOTests.debug.xcconfig */,
+				C94C27322507C269B69C4086 /* Pods-QNOTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A9E4AFC41C436EDE0050474D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +119,8 @@
 				A9E4AFE41C436EDE0050474D /* QNOTests */,
 				A9E4AFEF1C436EDE0050474D /* QNOUITests */,
 				A9E4AFCE1C436EDE0050474D /* Products */,
+				8CF744183CD1FC1CDC5911CE /* Pods */,
+				053BF5BA21309E2CE340870B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +137,7 @@
 		A9E4AFCF1C436EDE0050474D /* QNO */ = {
 			isa = PBXGroup;
 			children = (
+				B2A924F31C43D3FA00FF6DD0 /* Classes */,
 				A9E4AFD01C436EDE0050474D /* AppDelegate.swift */,
 				A9E4AFD21C436EDE0050474D /* ViewController.swift */,
 				A9E4AFFE1C4371060050474D /* PageItemController.swift */,
@@ -128,6 +167,15 @@
 			path = QNOUITests;
 			sourceTree = "<group>";
 		};
+		B2A924F31C43D3FA00FF6DD0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */,
+				B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9E4AFF51C436EDE0050474D /* Build configuration list for PBXNativeTarget "QNO" */;
 			buildPhases = (
+				45ADF77CDE808AB297874461 /* Check Pods Manifest.lock */,
 				A9E4AFC91C436EDE0050474D /* Sources */,
 				A9E4AFCA1C436EDE0050474D /* Frameworks */,
 				A9E4AFCB1C436EDE0050474D /* Resources */,
+				9AAE4EB403C461F022FBE5D8 /* Embed Pods Frameworks */,
+				33071A4B4718EC2A304F9067 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9E4AFF81C436EDE0050474D /* Build configuration list for PBXNativeTarget "QNOTests" */;
 			buildPhases = (
+				1924DF78B1B85C2437A8FFE8 /* Check Pods Manifest.lock */,
 				A9E4AFDD1C436EDE0050474D /* Sources */,
 				A9E4AFDE1C436EDE0050474D /* Frameworks */,
 				A9E4AFDF1C436EDE0050474D /* Resources */,
+				764584E885D5BD12F0C7A857 /* Embed Pods Frameworks */,
+				1081134C8BC275E3EBF1AC77 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,14 +308,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1081134C8BC275E3EBF1AC77 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QNOTests/Pods-QNOTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1924DF78B1B85C2437A8FFE8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33071A4B4718EC2A304F9067 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QNO/Pods-QNO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45ADF77CDE808AB297874461 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		764584E885D5BD12F0C7A857 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QNOTests/Pods-QNOTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AAE4EB403C461F022FBE5D8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QNO/Pods-QNO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9E4AFC91C436EDE0050474D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */,
+				B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */,
 				A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */,
 				A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */,
+				B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +419,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9E4AFE61C436EDE0050474D /* QNOTests.swift in Sources */,
+				B2A924F91C43D55800FF6DD0 /* QNOAPIError.swift in Sources */,
+				B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +550,7 @@
 		};
 		A9E4AFF61C436EDE0050474D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A403FA7B2F044A8F710514EC /* Pods-QNO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -411,6 +563,7 @@
 		};
 		A9E4AFF71C436EDE0050474D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCDFA1D12B60DB107C9BD450 /* Pods-QNO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -423,6 +576,7 @@
 		};
 		A9E4AFF91C436EDE0050474D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBE4FC9721A37F684295AE08 /* Pods-QNOTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = QNOTests/Info.plist;
@@ -435,6 +589,7 @@
 		};
 		A9E4AFFA1C436EDE0050474D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94C27322507C269B69C4086 /* Pods-QNOTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = QNOTests/Info.plist;
@@ -488,6 +643,7 @@
 				A9E4AFF71C436EDE0050474D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9E4AFF81C436EDE0050474D /* Build configuration list for PBXNativeTarget "QNOTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +652,7 @@
 				A9E4AFFA1C436EDE0050474D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9E4AFFB1C436EDE0050474D /* Build configuration list for PBXNativeTarget "QNOUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +661,7 @@
 				A9E4AFFD1C436EDE0050474D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

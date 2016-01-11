@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9392B6C5BBF629BFFE597625 /* Pods_QNOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169199A5DA078031217D31FD /* Pods_QNOTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9392B6C5BBF629BFFE597625 /* Pods_QNOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169199A5DA078031217D31FD /* Pods_QNOTests.framework */; };
 		A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFD01C436EDE0050474D /* AppDelegate.swift */; };
 		A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFD21C436EDE0050474D /* ViewController.swift */; };
 		A9E4AFD61C436EDE0050474D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E4AFD41C436EDE0050474D /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 		B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
 		B2A924F91C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
-		F9F99EF48DDE0D5C9F40E5E9 /* Pods_QNO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F9F99EF48DDE0D5C9F40E5E9 /* Pods_QNO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

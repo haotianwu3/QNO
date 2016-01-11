@@ -173,15 +173,29 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xz3-UW-yah">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem title="Locate Shop" width="120" id="lpr-G4-mj7"/>
+                                    <barButtonItem title="Scan QR" width="120" id="PN3-6I-V4T"/>
+                                    <barButtonItem title="Setting" width="120" id="ohb-vu-rah"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xz3-UW-yah" firstAttribute="leading" secondItem="3LB-0J-mZT" secondAttribute="leading" id="5CW-YB-oq8"/>
+                            <constraint firstAttribute="trailing" secondItem="Xz3-UW-yah" secondAttribute="trailing" id="AQX-k5-aBs"/>
+                            <constraint firstItem="Xz3-UW-yah" firstAttribute="centerX" secondItem="3LB-0J-mZT" secondAttribute="centerX" id="DyX-a6-SpX"/>
                             <constraint firstItem="9QT-WR-pLz" firstAttribute="leading" secondItem="3LB-0J-mZT" secondAttribute="leading" id="Q7a-xf-Ve3"/>
                             <constraint firstItem="ahQ-fI-9za" firstAttribute="centerX" secondItem="3LB-0J-mZT" secondAttribute="centerX" id="SVC-FT-e4d"/>
                             <constraint firstItem="vRP-h3-YB0" firstAttribute="centerX" secondItem="3LB-0J-mZT" secondAttribute="centerX" id="U8h-Bq-pTL"/>
                             <constraint firstItem="ahQ-fI-9za" firstAttribute="top" secondItem="9QT-WR-pLz" secondAttribute="bottom" id="VBd-Fo-phN"/>
                             <constraint firstItem="9QT-WR-pLz" firstAttribute="top" secondItem="YfA-QO-zwE" secondAttribute="bottom" id="XM4-Df-Iwu"/>
+                            <constraint firstItem="1za-8g-6Dk" firstAttribute="top" secondItem="Xz3-UW-yah" secondAttribute="bottom" id="nUw-NX-vOL"/>
                             <constraint firstItem="vRP-h3-YB0" firstAttribute="top" secondItem="9QT-WR-pLz" secondAttribute="bottom" id="tHU-sH-Gbf"/>
                             <constraint firstAttribute="trailing" secondItem="9QT-WR-pLz" secondAttribute="trailing" id="w53-it-osG"/>
                         </constraints>
@@ -190,6 +204,7 @@
                                 <exclude reference="ahQ-fI-9za"/>
                                 <exclude reference="9QT-WR-pLz"/>
                                 <exclude reference="vRP-h3-YB0"/>
+                                <exclude reference="Xz3-UW-yah"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Q7a-xf-Ve3"/>
@@ -199,6 +214,10 @@
                                 <exclude reference="VBd-Fo-phN"/>
                                 <exclude reference="U8h-Bq-pTL"/>
                                 <exclude reference="tHU-sH-Gbf"/>
+                                <exclude reference="5CW-YB-oq8"/>
+                                <exclude reference="AQX-k5-aBs"/>
+                                <exclude reference="DyX-a6-SpX"/>
+                                <exclude reference="nUw-NX-vOL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -206,6 +225,7 @@
                                 <include reference="ahQ-fI-9za"/>
                                 <include reference="9QT-WR-pLz"/>
                                 <include reference="vRP-h3-YB0"/>
+                                <include reference="Xz3-UW-yah"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Q7a-xf-Ve3"/>
@@ -215,6 +235,10 @@
                                 <include reference="VBd-Fo-phN"/>
                                 <include reference="U8h-Bq-pTL"/>
                                 <include reference="tHU-sH-Gbf"/>
+                                <include reference="5CW-YB-oq8"/>
+                                <include reference="AQX-k5-aBs"/>
+                                <include reference="DyX-a6-SpX"/>
+                                <include reference="nUw-NX-vOL"/>
                             </mask>
                         </variation>
                     </view>

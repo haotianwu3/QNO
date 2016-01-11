@@ -6,6 +6,7 @@ use_frameworks!
 target 'QNO' do
 
 pod 'Alamofire', '~> 3.0'
+pod 'QRCodeReader.swift', '~> 5.2'
 
 end
 
@@ -16,6 +17,7 @@ pod 'Alamofire', '~> 3.0'
 end
 
 target 'QNOUITests' do
+pod 'QRCodeReader.swift', '~> 5.2'
 
 end
 

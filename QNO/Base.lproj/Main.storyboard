@@ -141,6 +141,32 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Queues" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRP-h3-YB0">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="JQd-bz-2C6"/>
+                                    <constraint firstAttribute="height" constant="38" id="tfe-1u-iLv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JQd-bz-2C6"/>
+                                        <exclude reference="tfe-1u-iLv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JQd-bz-2C6"/>
+                                        <include reference="tfe-1u-iLv"/>
+                                    </mask>
+                                </variation>
+                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xz3-UW-yah">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <animations/>
@@ -168,32 +194,6 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Queues" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRP-h3-YB0">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="JQd-bz-2C6"/>
-                                    <constraint firstAttribute="height" constant="38" id="tfe-1u-iLv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="JQd-bz-2C6"/>
-                                        <exclude reference="tfe-1u-iLv"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="JQd-bz-2C6"/>
-                                        <include reference="tfe-1u-iLv"/>
-                                    </mask>
-                                </variation>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -215,9 +215,9 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ahQ-fI-9za"/>
+                                <exclude reference="vRP-h3-YB0"/>
                                 <exclude reference="Xz3-UW-yah"/>
                                 <exclude reference="271-09-YE3"/>
-                                <exclude reference="vRP-h3-YB0"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2AV-hx-kwQ"/>
@@ -238,9 +238,9 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="ahQ-fI-9za"/>
+                                <include reference="vRP-h3-YB0"/>
                                 <include reference="Xz3-UW-yah"/>
                                 <include reference="271-09-YE3"/>
-                                <include reference="vRP-h3-YB0"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2AV-hx-kwQ"/>
@@ -274,7 +274,7 @@
         <!--Scan QR-->
         <scene sceneID="vsk-PL-mU1">
             <objects>
-                <viewController id="aHV-eI-wcz" sceneMemberID="viewController">
+                <viewController id="aHV-eI-wcz" customClass="QRCodeReaderViewController" customModule="QRCodeReader" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="teW-ug-T6i"/>
                         <viewControllerLayoutGuide type="bottom" id="sbb-40-dxF"/>
@@ -325,8 +325,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Locate Shop" id="Xqt-2X-h2X"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="RcD-KQ-R5s" id="27v-Mv-Xgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRB-19-mtE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="RcD-KQ-R5s">
+                    <connections>
+                        <outlet property="delegate" destination="Vuy-KZ-OfT" id="Tkj-lQ-id0"/>
+                        <outlet property="searchContentsController" destination="Vuy-KZ-OfT" id="G6U-5K-0Ch"/>
+                        <outlet property="searchResultsDataSource" destination="Vuy-KZ-OfT" id="v3l-To-AC0"/>
+                        <outlet property="searchResultsDelegate" destination="Vuy-KZ-OfT" id="6v9-TZ-Wry"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1501.5" y="1972.5"/>
         </scene>
@@ -354,8 +365,7 @@
                                         <exclude reference="upu-qS-peM"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="131" y="72" width="140" height="140"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="PJl-nY-dhB"/>
                                         <include reference="upu-qS-peM"/>

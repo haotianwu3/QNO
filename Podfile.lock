@@ -1,10 +1,13 @@
 PODS:
   - Alamofire (3.1.4)
+  - QRCodeReader.swift (5.2.1)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
+  - QRCodeReader.swift (~> 5.2)
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  QRCodeReader.swift: 671627ada6872fbdc75bc99442f53f7fd81646aa
 
 COCOAPODS: 0.39.0

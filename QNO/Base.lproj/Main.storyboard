@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainEntryViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,135 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-186" y="453.75"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="4HL-pc-l7E">
+            <objects>
+                <pageViewController storyboardIdentifier="MainPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="RaN-Ss-oIB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zis-Tp-UYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508.5" y="453.75"/>
+        </scene>
+        <!--Page Item Controller-->
+        <scene sceneID="Nmr-By-9Iu">
+            <objects>
+                <viewController storyboardIdentifier="MainPageItemController" id="cNY-wP-zfw" customClass="PageItemController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="av2-1f-3gp"/>
+                        <viewControllerLayoutGuide type="bottom" id="q1F-Sg-dtd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OxJ-XT-oRg">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zz3-su-TGt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl7-Dn-nfe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start Using QNO"/>
+                                <connections>
+                                    <segue destination="H75-JL-SAV" kind="show" id="7X3-nn-e7d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bl7-Dn-nfe" secondAttribute="bottom" constant="20" id="Gwn-dh-hSk"/>
+                            <constraint firstAttribute="trailing" secondItem="zz3-su-TGt" secondAttribute="trailing" id="OWv-OL-ngV"/>
+                            <constraint firstItem="zz3-su-TGt" firstAttribute="centerX" secondItem="OxJ-XT-oRg" secondAttribute="centerX" id="X6Q-Lr-oho"/>
+                            <constraint firstItem="zz3-su-TGt" firstAttribute="top" secondItem="OxJ-XT-oRg" secondAttribute="topMargin" constant="20" id="cBw-4K-zFo"/>
+                            <constraint firstItem="zz3-su-TGt" firstAttribute="bottom" secondItem="OxJ-XT-oRg" secondAttribute="bottomMargin" id="fUe-uR-oBH"/>
+                            <constraint firstItem="bl7-Dn-nfe" firstAttribute="centerX" secondItem="OxJ-XT-oRg" secondAttribute="centerX" id="wNS-dp-0Jj"/>
+                            <constraint firstItem="zz3-su-TGt" firstAttribute="leading" secondItem="OxJ-XT-oRg" secondAttribute="leading" id="ydz-NH-Nhi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zz3-su-TGt"/>
+                                <exclude reference="bl7-Dn-nfe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="OWv-OL-ngV"/>
+                                <exclude reference="X6Q-Lr-oho"/>
+                                <exclude reference="cBw-4K-zFo"/>
+                                <exclude reference="fUe-uR-oBH"/>
+                                <exclude reference="ydz-NH-Nhi"/>
+                                <exclude reference="Gwn-dh-hSk"/>
+                                <exclude reference="wNS-dp-0Jj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zz3-su-TGt"/>
+                                <include reference="bl7-Dn-nfe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="OWv-OL-ngV"/>
+                                <include reference="X6Q-Lr-oho"/>
+                                <include reference="cBw-4K-zFo"/>
+                                <include reference="fUe-uR-oBH"/>
+                                <include reference="ydz-NH-Nhi"/>
+                                <include reference="Gwn-dh-hSk"/>
+                                <include reference="wNS-dp-0Jj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="MainPageItemImageView" destination="zz3-su-TGt" id="wsd-FK-t4X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Saw-Hm-rd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508.5" y="1104.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zja-vN-GYH">
+            <objects>
+                <viewController id="H75-JL-SAV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YfA-QO-zwE"/>
+                        <viewControllerLayoutGuide type="bottom" id="1za-8g-6Dk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3LB-0J-mZT">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is where user start using QNO and where we implement functions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-vn-guf">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-68" y="389" width="538" height="79"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LFC-vn-guf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="LFC-vn-guf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YkM-Jz-cLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300.5" y="1104.75"/>
         </scene>
     </scenes>
 </document>

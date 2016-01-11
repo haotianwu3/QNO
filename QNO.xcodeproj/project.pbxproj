@@ -14,6 +14,7 @@
 		A9E4AFDB1C436EDE0050474D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E4AFD91C436EDE0050474D /* LaunchScreen.storyboard */; };
 		A9E4AFE61C436EDE0050474D /* QNOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFE51C436EDE0050474D /* QNOTests.swift */; };
 		A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFF01C436EDE0050474D /* QNOUITests.swift */; };
+		A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFFE1C4371060050474D /* PageItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A9E4AFEC1C436EDE0050474D /* QNOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QNOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E4AFF01C436EDE0050474D /* QNOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QNOUITests.swift; sourceTree = "<group>"; };
 		A9E4AFF21C436EDE0050474D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9E4AFFE1C4371060050474D /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				A9E4AFD01C436EDE0050474D /* AppDelegate.swift */,
 				A9E4AFD21C436EDE0050474D /* ViewController.swift */,
+				A9E4AFFE1C4371060050474D /* PageItemController.swift */,
 				A9E4AFD41C436EDE0050474D /* Main.storyboard */,
 				A9E4AFD71C436EDE0050474D /* Assets.xcassets */,
 				A9E4AFD91C436EDE0050474D /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */,
 				A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */,
 				A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = QNO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = September.com.QNO;
@@ -408,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = QNO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = September.com.QNO;

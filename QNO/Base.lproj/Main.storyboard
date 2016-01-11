@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -42,6 +43,7 @@
                         <viewControllerLayoutGuide type="bottom" id="q1F-Sg-dtd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OxJ-XT-oRg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zz3-su-TGt">
@@ -74,13 +76,13 @@
                                 <exclude reference="bl7-Dn-nfe"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Gwn-dh-hSk"/>
+                                <exclude reference="wNS-dp-0Jj"/>
                                 <exclude reference="OWv-OL-ngV"/>
                                 <exclude reference="X6Q-Lr-oho"/>
                                 <exclude reference="cBw-4K-zFo"/>
                                 <exclude reference="fUe-uR-oBH"/>
                                 <exclude reference="ydz-NH-Nhi"/>
-                                <exclude reference="Gwn-dh-hSk"/>
-                                <exclude reference="wNS-dp-0Jj"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -89,13 +91,13 @@
                                 <include reference="bl7-Dn-nfe"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Gwn-dh-hSk"/>
+                                <include reference="wNS-dp-0Jj"/>
                                 <include reference="OWv-OL-ngV"/>
                                 <include reference="X6Q-Lr-oho"/>
                                 <include reference="cBw-4K-zFo"/>
                                 <include reference="fUe-uR-oBH"/>
                                 <include reference="ydz-NH-Nhi"/>
-                                <include reference="Gwn-dh-hSk"/>
-                                <include reference="wNS-dp-0Jj"/>
                             </mask>
                         </variation>
                     </view>
@@ -116,6 +118,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1za-8g-6Dk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3LB-0J-mZT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="ahQ-fI-9za">
@@ -207,17 +210,17 @@
                                 <exclude reference="Xz3-UW-yah"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="nUw-NX-vOL"/>
+                                <exclude reference="U8h-Bq-pTL"/>
+                                <exclude reference="tHU-sH-Gbf"/>
                                 <exclude reference="Q7a-xf-Ve3"/>
                                 <exclude reference="XM4-Df-Iwu"/>
                                 <exclude reference="w53-it-osG"/>
-                                <exclude reference="SVC-FT-e4d"/>
-                                <exclude reference="VBd-Fo-phN"/>
-                                <exclude reference="U8h-Bq-pTL"/>
-                                <exclude reference="tHU-sH-Gbf"/>
                                 <exclude reference="5CW-YB-oq8"/>
                                 <exclude reference="AQX-k5-aBs"/>
                                 <exclude reference="DyX-a6-SpX"/>
-                                <exclude reference="nUw-NX-vOL"/>
+                                <exclude reference="SVC-FT-e4d"/>
+                                <exclude reference="VBd-Fo-phN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -228,17 +231,17 @@
                                 <include reference="Xz3-UW-yah"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="nUw-NX-vOL"/>
+                                <include reference="U8h-Bq-pTL"/>
+                                <include reference="tHU-sH-Gbf"/>
                                 <include reference="Q7a-xf-Ve3"/>
                                 <include reference="XM4-Df-Iwu"/>
                                 <include reference="w53-it-osG"/>
-                                <include reference="SVC-FT-e4d"/>
-                                <include reference="VBd-Fo-phN"/>
-                                <include reference="U8h-Bq-pTL"/>
-                                <include reference="tHU-sH-Gbf"/>
                                 <include reference="5CW-YB-oq8"/>
                                 <include reference="AQX-k5-aBs"/>
                                 <include reference="DyX-a6-SpX"/>
-                                <include reference="nUw-NX-vOL"/>
+                                <include reference="SVC-FT-e4d"/>
+                                <include reference="VBd-Fo-phN"/>
                             </mask>
                         </variation>
                     </view>

@@ -11,6 +11,24 @@ import PKHUD
 
 class HouseRegistrationViewController: UIViewController {
     
+    @IBOutlet weak var houseNameTextField: UITextField!
+    
+    @IBOutlet weak var addressTextField: UITextField!
+    
+    @IBOutlet weak var telTextField: UITextField!
+    
+    @IBOutlet weak var homepageTextField: UITextField!
+    
+    
+    override func viewDidLoad() {
+        let singleTap = UITapGestureRecognizer(target: self, action: "hideKeyboard")
+        singleTap.numberOfTapsRequired = 1
+        singleTap.numberOfTouchesRequired = 1
+        singleTap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(singleTap)
+    }
+    
+    
     // validate form
     // if no error, return nil
     func validateForm() -> String? {
@@ -49,5 +67,12 @@ class HouseRegistrationViewController: UIViewController {
             print("Unknown error")
         }
         
+    }
+    
+    func hideKeyboard() {
+        houseNameTextField.resignFirstResponder()
+        addressTextField.resignFirstResponder()
+        telTextField.resignFirstResponder()
+        homepageTextField.resignFirstResponder()
     }
 }

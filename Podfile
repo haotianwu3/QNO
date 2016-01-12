@@ -7,12 +7,14 @@ target 'QNO' do
 
 pod 'Alamofire', '~> 3.0'
 pod "PKHUD"
+pod 'SwiftyUserDefaults'
 
 end
 
 target 'QNOTests' do
 
 pod 'Alamofire', '~> 3.0'
+pod 'SwiftyUserDefaults'
 
 end
 

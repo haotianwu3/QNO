@@ -21,6 +21,9 @@
 		B21488A11C44E09800922957 /* HouseRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */; };
 		B21488A21C44E09800922957 /* HouseRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */; };
 		B21488A41C44F96300922957 /* HouseManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A31C44F96300922957 /* HouseManageViewController.swift */; };
+		B21488A61C4501D100922957 /* SelectRoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A51C4501D100922957 /* SelectRoleViewController.swift */; };
+		B21488A81C452C9300922957 /* HouseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A71C452C9300922957 /* HouseLoginViewController.swift */; };
+		B21488A91C452C9300922957 /* HouseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A71C452C9300922957 /* HouseLoginViewController.swift */; };
 		B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
@@ -46,7 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		007F30A5CD5933145BA38FFB /* Pods_QNOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		169199A5DA078031217D31FD /* Pods_QNOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47FE372C8F943F1B839A7609 /* Pods_QNOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CFCE858D8B68355F829BEA /* Pods-QNOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QNOUITests/Pods-QNOUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +71,8 @@
 		ABCF6773C69B4BD74561DC4E /* Pods-QNOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNOUITests/Pods-QNOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseRegistrationViewController.swift; path = ViewControllers/HouseRegistrationViewController.swift; sourceTree = "<group>"; };
 		B21488A31C44F96300922957 /* HouseManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseManageViewController.swift; path = ViewControllers/HouseManageViewController.swift; sourceTree = "<group>"; };
+		B21488A51C4501D100922957 /* SelectRoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectRoleViewController.swift; path = ViewControllers/SelectRoleViewController.swift; sourceTree = "<group>"; };
+		B21488A71C452C9300922957 /* HouseLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseLoginViewController.swift; path = ViewControllers/HouseLoginViewController.swift; sourceTree = "<group>"; };
 		B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPI.swift; path = Classes/QNOAPI.swift; sourceTree = "<group>"; };
 		B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPIError.swift; path = Classes/QNOAPIError.swift; sourceTree = "<group>"; };
 		BCDFA1D12B60DB107C9BD450 /* Pods-QNO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNO.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNO/Pods-QNO.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,8 +192,10 @@
 		B214889F1C44E03E00922957 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B21488A71C452C9300922957 /* HouseLoginViewController.swift */,
 				B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */,
 				B21488A31C44F96300922957 /* HouseManageViewController.swift */,
+				B21488A51C4501D100922957 /* SelectRoleViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -443,21 +449,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QNOTests/Pods-QNOTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A11A52AE70139BECD76F1D6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		9AAE4EB403C461F022FBE5D8 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -481,10 +472,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */,
+				B21488A81C452C9300922957 /* HouseLoginViewController.swift in Sources */,
 				B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */,
 				B21488A41C44F96300922957 /* HouseManageViewController.swift in Sources */,
 				A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */,
 				A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */,
+				B21488A61C4501D100922957 /* SelectRoleViewController.swift in Sources */,
 				B21488A11C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
 				A9ADAE841C44E0FC00EC31A3 /* QRCodeReader.swift in Sources */,
 				B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */,
@@ -505,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21488A91C452C9300922957 /* HouseLoginViewController.swift in Sources */,
 				B21488A21C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
 				A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */,
 			);

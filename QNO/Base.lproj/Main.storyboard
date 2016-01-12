@@ -205,14 +205,14 @@
                                 <exclude reference="Xz3-UW-yah"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="RoS-pE-84h"/>
-                                <exclude reference="SVC-FT-e4d"/>
+                                <exclude reference="nUw-NX-vOL"/>
                                 <exclude reference="U8h-Bq-pTL"/>
                                 <exclude reference="bIT-YN-G7n"/>
                                 <exclude reference="5CW-YB-oq8"/>
                                 <exclude reference="AQX-k5-aBs"/>
                                 <exclude reference="DyX-a6-SpX"/>
-                                <exclude reference="nUw-NX-vOL"/>
+                                <exclude reference="RoS-pE-84h"/>
+                                <exclude reference="SVC-FT-e4d"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -222,14 +222,14 @@
                                 <include reference="Xz3-UW-yah"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="RoS-pE-84h"/>
-                                <include reference="SVC-FT-e4d"/>
+                                <include reference="nUw-NX-vOL"/>
                                 <include reference="U8h-Bq-pTL"/>
                                 <include reference="bIT-YN-G7n"/>
                                 <include reference="5CW-YB-oq8"/>
                                 <include reference="AQX-k5-aBs"/>
                                 <include reference="DyX-a6-SpX"/>
-                                <include reference="nUw-NX-vOL"/>
+                                <include reference="RoS-pE-84h"/>
+                                <include reference="SVC-FT-e4d"/>
                             </mask>
                         </variation>
                     </view>
@@ -268,6 +268,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YlH-rf-vkR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VEy-pM-W5K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -285,6 +286,7 @@
                         <viewControllerLayoutGuide type="bottom" id="JZU-hj-wEJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YW0-R8-7tT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -293,18 +295,67 @@
             </objects>
             <point key="canvasLocation" x="1438.5" y="1863.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Code Reader-->
         <scene sceneID="vyJ-Tb-7Kf">
             <objects>
-                <viewController id="c1S-e2-OGs" sceneMemberID="viewController">
+                <viewController id="c1S-e2-OGs" customClass="QRCodeReader" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ohl-Si-SOT"/>
                         <viewControllerLayoutGuide type="bottom" id="8pZ-FY-kGK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JQh-fn-ZIL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCodeLabel: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHJ-8b-j28">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCodeNotDetected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-aR-81F">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BAh-aR-81F" firstAttribute="leading" secondItem="mHJ-8b-j28" secondAttribute="trailing" constant="8" symbolic="YES" id="KZP-eS-lxT"/>
+                            <constraint firstItem="mHJ-8b-j28" firstAttribute="leading" secondItem="JQh-fn-ZIL" secondAttribute="leadingMargin" id="QIY-eU-dY0"/>
+                            <constraint firstAttribute="bottom" secondItem="mHJ-8b-j28" secondAttribute="bottom" constant="20" symbolic="YES" id="TaX-tb-SCm"/>
+                            <constraint firstItem="BAh-aR-81F" firstAttribute="baseline" secondItem="mHJ-8b-j28" secondAttribute="baseline" id="zkN-Xp-vpM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mHJ-8b-j28"/>
+                                <exclude reference="BAh-aR-81F"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QIY-eU-dY0"/>
+                                <exclude reference="TaX-tb-SCm"/>
+                                <exclude reference="KZP-eS-lxT"/>
+                                <exclude reference="zkN-Xp-vpM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mHJ-8b-j28"/>
+                                <include reference="BAh-aR-81F"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QIY-eU-dY0"/>
+                                <include reference="TaX-tb-SCm"/>
+                                <include reference="KZP-eS-lxT"/>
+                                <include reference="zkN-Xp-vpM"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="QRCodeLabel" destination="mHJ-8b-j28" id="mD0-3z-X7m"/>
+                        <outlet property="QRCodeState" destination="BAh-aR-81F" id="tlr-OD-Q6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3R-3z-EXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

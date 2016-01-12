@@ -532,9 +532,9 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Uf4-pQ-rA8"/>
-                                    <barButtonItem title="Scan QR" id="1rm-ud-obe">
+                                    <barButtonItem title="My Queues" id="1rm-ud-obe">
                                         <connections>
-                                            <segue destination="c1S-e2-OGs" kind="show" id="qPQ-DG-yBW"/>
+                                            <segue destination="OGv-Ey-sPV" kind="show" id="oV0-UO-lyg"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zPW-7i-gYr"/>
@@ -766,7 +766,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3R-3z-EXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3030" y="1863"/>
+            <point key="canvasLocation" x="3030" y="2562.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hXy-hL-x9i">
+            <objects>
+                <viewController id="OGv-Ey-sPV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RtO-gR-dp5"/>
+                        <viewControllerLayoutGuide type="bottom" id="sWU-A7-Ggy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pc3-95-JAr">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGh-Py-MEt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Scan QR Code"/>
+                                <connections>
+                                    <segue destination="c1S-e2-OGs" kind="show" id="9f0-a8-9oU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SGh-Py-MEt" firstAttribute="centerY" secondItem="Pc3-95-JAr" secondAttribute="centerY" id="cAq-Fw-ro9"/>
+                            <constraint firstItem="SGh-Py-MEt" firstAttribute="centerX" secondItem="Pc3-95-JAr" secondAttribute="centerX" id="vzc-nX-FGk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="SGh-Py-MEt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="cAq-Fw-ro9"/>
+                                <exclude reference="vzc-nX-FGk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="SGh-Py-MEt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="cAq-Fw-ro9"/>
+                                <include reference="vzc-nX-FGk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WaT-xW-PjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3030" y="1854.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tWY-Qa-U4b">

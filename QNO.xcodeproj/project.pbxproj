@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		51F718A91C0E355518924DF1 /* Pods_QNOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FE372C8F943F1B839A7609 /* Pods_QNOUITests.framework */; };
 		9392B6C5BBF629BFFE597625 /* Pods_QNOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169199A5DA078031217D31FD /* Pods_QNOTests.framework */; };
+		A9107CA51C4549BC00BCF790 /* UserMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9107CA41C4549BC00BCF790 /* UserMainViewController.swift */; };
+		A9107CA71C4549FF00BCF790 /* UserMainAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9107CA61C4549FF00BCF790 /* UserMainAds.swift */; };
+		A9107CA91C454B0400BCF790 /* UserMainAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */; };
 		A9ADAE841C44E0FC00EC31A3 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */; };
 		A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFD01C436EDE0050474D /* AppDelegate.swift */; };
 		A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFD21C436EDE0050474D /* ViewController.swift */; };
@@ -57,6 +60,9 @@
 		47FE372C8F943F1B839A7609 /* Pods_QNOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CFCE858D8B68355F829BEA /* Pods-QNOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QNOUITests/Pods-QNOUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A403FA7B2F044A8F710514EC /* Pods-QNO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QNO/Pods-QNO.debug.xcconfig"; sourceTree = "<group>"; };
+		A9107CA41C4549BC00BCF790 /* UserMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMainViewController.swift; sourceTree = "<group>"; };
+		A9107CA61C4549FF00BCF790 /* UserMainAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMainAds.swift; sourceTree = "<group>"; };
+		A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMainAdsTableViewCell.swift; sourceTree = "<group>"; };
 		A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
 		A9E4AFCD1C436EDE0050474D /* QNO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QNO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E4AFD01C436EDE0050474D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +173,9 @@
 				B2A924F31C43D3FA00FF6DD0 /* Classes */,
 				A9E4AFD01C436EDE0050474D /* AppDelegate.swift */,
 				A9E4AFD21C436EDE0050474D /* ViewController.swift */,
+				A9107CA41C4549BC00BCF790 /* UserMainViewController.swift */,
+				A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */,
+				A9107CA61C4549FF00BCF790 /* UserMainAds.swift */,
 				A9E4AFFE1C4371060050474D /* PageItemController.swift */,
 				A9E4AFD41C436EDE0050474D /* Main.storyboard */,
 				A9E4AFD71C436EDE0050474D /* Assets.xcassets */,
@@ -487,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9107CA71C4549FF00BCF790 /* UserMainAds.swift in Sources */,
 				A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */,
 				B21488AB1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
 				B21488A81C452C9300922957 /* HouseLoginViewController.swift in Sources */,
@@ -497,6 +507,8 @@
 				A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */,
 				B21488A61C4501D100922957 /* SelectRoleViewController.swift in Sources */,
 				B21488A11C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
+				A9107CA51C4549BC00BCF790 /* UserMainViewController.swift in Sources */,
+				A9107CA91C454B0400BCF790 /* UserMainAdsTableViewCell.swift in Sources */,
 				A9ADAE841C44E0FC00EC31A3 /* QRCodeReader.swift in Sources */,
 				B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */,
 			);

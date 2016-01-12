@@ -188,7 +188,6 @@
                             </toolbar>
                             <tableView opaque="NO" clipsSubviews="YES" alpha="0.65000000000000002" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="271-09-YE3">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -342,10 +341,10 @@
                                 <exclude reference="BAh-aR-81F"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="QIY-eU-dY0"/>
-                                <exclude reference="TaX-tb-SCm"/>
                                 <exclude reference="KZP-eS-lxT"/>
                                 <exclude reference="zkN-Xp-vpM"/>
+                                <exclude reference="QIY-eU-dY0"/>
+                                <exclude reference="TaX-tb-SCm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -354,10 +353,10 @@
                                 <include reference="BAh-aR-81F"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="QIY-eU-dY0"/>
-                                <include reference="TaX-tb-SCm"/>
                                 <include reference="KZP-eS-lxT"/>
                                 <include reference="zkN-Xp-vpM"/>
+                                <include reference="QIY-eU-dY0"/>
+                                <include reference="TaX-tb-SCm"/>
                             </mask>
                         </variation>
                     </view>
@@ -373,6 +372,5 @@
     </scenes>
     <resources>
         <image name="back" width="114" height="160"/>
-        <image name="img_1" width="166" height="242"/>
     </resources>
 </document>

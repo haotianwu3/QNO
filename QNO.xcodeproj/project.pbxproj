@@ -20,10 +20,14 @@
 		A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFFE1C4371060050474D /* PageItemController.swift */; };
 		B21488A11C44E09800922957 /* HouseRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */; };
 		B21488A21C44E09800922957 /* HouseRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */; };
-		B21488A41C44F96300922957 /* HouseManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A31C44F96300922957 /* HouseManageViewController.swift */; };
+		B21488A41C44F96300922957 /* QueueManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A31C44F96300922957 /* QueueManageViewController.swift */; };
 		B21488A61C4501D100922957 /* SelectRoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A51C4501D100922957 /* SelectRoleViewController.swift */; };
 		B21488A81C452C9300922957 /* HouseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A71C452C9300922957 /* HouseLoginViewController.swift */; };
 		B21488A91C452C9300922957 /* HouseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A71C452C9300922957 /* HouseLoginViewController.swift */; };
+		B21488AB1C45391D00922957 /* CustomerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */; };
+		B21488AC1C45391D00922957 /* CustomerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */; };
+		B21488AF1C453C4300922957 /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488AE1C453C4300922957 /* QueueTableViewCell.swift */; };
+		B21488B01C453C4300922957 /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488AE1C453C4300922957 /* QueueTableViewCell.swift */; };
 		B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
@@ -70,9 +74,11 @@
 		A9E4AFFE1C4371060050474D /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		ABCF6773C69B4BD74561DC4E /* Pods-QNOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNOUITests/Pods-QNOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseRegistrationViewController.swift; path = ViewControllers/HouseRegistrationViewController.swift; sourceTree = "<group>"; };
-		B21488A31C44F96300922957 /* HouseManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseManageViewController.swift; path = ViewControllers/HouseManageViewController.swift; sourceTree = "<group>"; };
+		B21488A31C44F96300922957 /* QueueManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueManageViewController.swift; path = ViewControllers/QueueManageViewController.swift; sourceTree = "<group>"; };
 		B21488A51C4501D100922957 /* SelectRoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectRoleViewController.swift; path = ViewControllers/SelectRoleViewController.swift; sourceTree = "<group>"; };
 		B21488A71C452C9300922957 /* HouseLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseLoginViewController.swift; path = ViewControllers/HouseLoginViewController.swift; sourceTree = "<group>"; };
+		B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerLoginViewController.swift; path = ViewControllers/CustomerLoginViewController.swift; sourceTree = "<group>"; };
+		B21488AE1C453C4300922957 /* QueueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueTableViewCell.swift; path = ViewControllers/SubViewControllers/QueueTableViewCell.swift; sourceTree = "<group>"; };
 		B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPI.swift; path = Classes/QNOAPI.swift; sourceTree = "<group>"; };
 		B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPIError.swift; path = Classes/QNOAPIError.swift; sourceTree = "<group>"; };
 		BCDFA1D12B60DB107C9BD450 /* Pods-QNO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNO.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNO/Pods-QNO.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,12 +198,22 @@
 		B214889F1C44E03E00922957 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B21488AD1C453C0900922957 /* SubViewControllers */,
 				B21488A71C452C9300922957 /* HouseLoginViewController.swift */,
 				B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */,
-				B21488A31C44F96300922957 /* HouseManageViewController.swift */,
+				B21488A31C44F96300922957 /* QueueManageViewController.swift */,
 				B21488A51C4501D100922957 /* SelectRoleViewController.swift */,
+				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B21488AD1C453C0900922957 /* SubViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B21488AE1C453C4300922957 /* QueueTableViewCell.swift */,
+			);
+			name = SubViewControllers;
 			sourceTree = "<group>";
 		};
 		B2A924F31C43D3FA00FF6DD0 /* Classes */ = {
@@ -472,9 +488,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */,
+				B21488AB1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
 				B21488A81C452C9300922957 /* HouseLoginViewController.swift in Sources */,
+				B21488AF1C453C4300922957 /* QueueTableViewCell.swift in Sources */,
 				B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */,
-				B21488A41C44F96300922957 /* HouseManageViewController.swift in Sources */,
+				B21488A41C44F96300922957 /* QueueManageViewController.swift in Sources */,
 				A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */,
 				A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */,
 				B21488A61C4501D100922957 /* SelectRoleViewController.swift in Sources */,
@@ -498,8 +516,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21488B01C453C4300922957 /* QueueTableViewCell.swift in Sources */,
 				B21488A91C452C9300922957 /* HouseLoginViewController.swift in Sources */,
 				B21488A21C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
+				B21488AC1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
 				A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

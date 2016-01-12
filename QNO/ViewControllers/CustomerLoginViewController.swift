@@ -1,5 +1,5 @@
 //
-//  HouseLoginViewController.swift
+//  CustomerLoginViewController.swift
 //  QNO
 //
 //  Created by Xinhong LIU on 12/1/2016.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class HouseLoginViewController: UIViewController {
-
-    @IBAction func login(sender: AnyObject) {
-        self.performSegueWithIdentifier("house_login", sender: self)
-    }
+class CustomerLoginViewController: UIViewController {
     
+    @IBAction func login(sender: AnyObject) {
+        self.performSegueWithIdentifier("customer_login", sender: self)
+    }
 }

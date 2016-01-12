@@ -69,6 +69,10 @@ class HouseRegistrationViewController: UIViewController {
         
     }
     
+    func login() {
+        
+    }
+    
     func hideKeyboard() {
         houseNameTextField.resignFirstResponder()
         addressTextField.resignFirstResponder()

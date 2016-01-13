@@ -14,6 +14,7 @@ class Shop{
     var ShopLogoName: String
     var ShopDescription: String
     var ShopAddress: String
+    var distance: Double = 0.0
     
     var ShopLatitude: Double
     var ShopLongitude: Double

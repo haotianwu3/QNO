@@ -56,7 +56,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
         let userLocation = locations.last
         let userCenter = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
-        let userRegion = MKCoordinateRegion(center: userCenter, span: MKCoordinateSpanMake(0.0006, 0.0006))
+        let userRegion = MKCoordinateRegion(center: userCenter, span: MKCoordinateSpanMake(0.006, 0.006))
         self.MapView.setRegion(userRegion, animated: true)
         self.locationManager.stopUpdatingLocation()
         

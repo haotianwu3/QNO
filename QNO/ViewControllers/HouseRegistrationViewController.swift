@@ -8,6 +8,7 @@
 
 import UIKit
 import PKHUD
+import SwiftyUserDefaults
 
 class HouseRegistrationViewController: UIViewController {
     
@@ -32,17 +33,26 @@ class HouseRegistrationViewController: UIViewController {
     // validate form
     // if no error, return nil
     func validateForm() -> String? {
-        // TODO: Read form
+        
+        let houseName = houseNameTextField.text
+        let address = addressTextField.text
+        let tel = telTextField.text
+        let homepage = homepageTextField.text
+        
+        guard houseName != nil && houseName != "" else {
+            return "Please fill the house name"
+        }
+        
         return nil
     }
     
-    func register() {
+    @IBAction func register(sender: AnyObject) {
         let error = validateForm()
         
-        let houseName = ""
-        let address = ""
-        let tel = ""
-        let homepage = ""
+        let houseName = houseNameTextField.text!
+        let address = addressTextField.text
+        let tel = telTextField.text
+        let homepage = homepageTextField.text
         
         guard error == nil else {
             let alertController = UIAlertController(title: "Invalid inputs", message: error, preferredStyle: .Alert)
@@ -56,7 +66,22 @@ class HouseRegistrationViewController: UIViewController {
         let api = QNOAPI()
         do {
             try api.addHouse(houseName, address: address, tel: tel, homepage: homepage) { (errorMessage) -> Void in
-                
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    if errorMessage == nil {
+                        let alertController = UIAlertController(title: "House has been created", message: "You can login now", preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) -> Void in
+                            QNOStorage.setHouseName(houseName)
+                            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                                self.performSegueWithIdentifier("unwind", sender: self)
+                            })
+                        }))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    } else {
+                        let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
+                })
             }
         } catch QNOAPIRuntimeError.InvalidOperation {
             let alertController = UIAlertController(title: "Invalid operation", message: error, preferredStyle: .Alert)
@@ -69,7 +94,7 @@ class HouseRegistrationViewController: UIViewController {
         
     }
     
-    func login() {
+    @IBAction func unwind(segue: UIStoryboardSegue) {
         
     }
     

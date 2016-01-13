@@ -25,16 +25,16 @@ class nearbyShopsViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        loadSampleShops()
         
         self.cellLocationManager.delegate = self
         self.cellLocationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.cellLocationManager.requestWhenInUseAuthorization()
         self.cellLocationManager.startUpdatingLocation()
         
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         
-        loadSampleShops()
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,8 +63,14 @@ class nearbyShopsViewController: UIViewController, UITableViewDataSource, UITabl
         
         shopCellLatitude = shop.ShopLatitude
         shopCellLongitude = shop.ShopLongitude
+        let userLocation = cellLocationManager.location
+        let shopCLLocation: CLLocation = CLLocation(latitude: shopCellLatitude!, longitude: shopCellLongitude!)
+        let distanceBetween: CLLocationDistance = (userLocation?.distanceFromLocation(shopCLLocation))!
+        self.distanceCell = String(format: "%.2f m", distanceBetween)
+
         
         cell.DistanceFromUser.text = self.distanceCell
+        
         return cell
     }
     
@@ -88,22 +94,7 @@ class nearbyShopsViewController: UIViewController, UITableViewDataSource, UITabl
         detail.shopAddress = item.ShopAddress
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let userLocation = locations.last
-        
-        let shopCLLocation: CLLocation = CLLocation(latitude: shopCellLatitude!, longitude: shopCellLongitude!)
-        let distanceBetween: CLLocationDistance = (userLocation?.distanceFromLocation(shopCLLocation))!
-        self.distanceCell = String(format: "%.2f m", distanceBetween)
-        
-        self.cellLocationManager.stopUpdatingLocation()
-        
-    }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
-    {
-        print("Errors: " + error.localizedDescription)
-    }
 
 
 }

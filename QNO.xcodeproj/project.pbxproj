@@ -228,18 +228,9 @@
 		B214889F1C44E03E00922957 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B21488AD1C453C0900922957 /* SubViewControllers */,
-				B21488A71C452C9300922957 /* HouseLoginViewController.swift */,
-				B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */,
-				B21488A31C44F96300922957 /* QueueManageViewController.swift */,
-				B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */,
+				B2C8B6901C4817E500173925 /* Customer */,
+				B2C8B68E1C4817C400173925 /* House */,
 				B21488A51C4501D100922957 /* SelectRoleViewController.swift */,
-				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
-				A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */,
-				A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */,
-				A9B38BAA1C467C9100C9227C /* DetailViewController.swift */,
-				A9C6EAFD1C47561300F199A9 /* QRCodeGenerator.swift */,
-				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -248,8 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				B21488AE1C453C4300922957 /* QueueTableViewCell.swift */,
-				A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */,
-				A97E35741C47770E009552FA /* CategoryRow.swift */,
 			);
 			name = SubViewControllers;
 			sourceTree = "<group>";
@@ -263,6 +252,41 @@
 				A9B38BA41C46769F00C9227C /* Shops.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		B2C8B68E1C4817C400173925 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				B21488AD1C453C0900922957 /* SubViewControllers */,
+				B21488A71C452C9300922957 /* HouseLoginViewController.swift */,
+				B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */,
+				B21488A31C44F96300922957 /* QueueManageViewController.swift */,
+				B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */,
+				A9C6EAFD1C47561300F199A9 /* QRCodeGenerator.swift */,
+			);
+			name = House;
+			sourceTree = "<group>";
+		};
+		B2C8B6901C4817E500173925 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
+				A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */,
+				A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */,
+				A9B38BAA1C467C9100C9227C /* DetailViewController.swift */,
+				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
+				B2C8B6911C4817EA00173925 /* SubViewControllers */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		B2C8B6911C4817EA00173925 /* SubViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A97E35741C47770E009552FA /* CategoryRow.swift */,
+				A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */,
+			);
+			name = SubViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

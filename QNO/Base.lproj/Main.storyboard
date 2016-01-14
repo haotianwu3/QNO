@@ -237,6 +237,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="61"/>
+                                                    </variation>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yYb-qu-ue6">
                                                     <rect key="frame" x="0.0" y="61" width="543" height="21"/>
@@ -278,8 +281,14 @@
                                                             </variation>
                                                         </label>
                                                     </subviews>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="61" width="343" height="21"/>
+                                                    </variation>
                                                 </stackView>
                                             </subviews>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="16" y="8" width="343" height="82"/>
+                                            </variation>
                                         </stackView>
                                     </subviews>
                                     <constraints>
@@ -1047,6 +1056,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="361-Uy-5U8" id="XST-HY-3sv">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="565"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qCO-fh-KMA">
@@ -1194,12 +1204,12 @@
                                 <exclude reference="2cw-7j-5uK"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="y73-eO-Kp7"/>
+                                <exclude reference="7Cj-5n-EBK"/>
+                                <exclude reference="g8b-mC-QlN"/>
                                 <exclude reference="8TY-ne-qwI"/>
                                 <exclude reference="Jn3-ao-WnO"/>
                                 <exclude reference="Pt7-3r-zTb"/>
-                                <exclude reference="7Cj-5n-EBK"/>
-                                <exclude reference="g8b-mC-QlN"/>
-                                <exclude reference="y73-eO-Kp7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1208,12 +1218,12 @@
                                 <include reference="2cw-7j-5uK"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="y73-eO-Kp7"/>
+                                <include reference="7Cj-5n-EBK"/>
+                                <include reference="g8b-mC-QlN"/>
                                 <include reference="8TY-ne-qwI"/>
                                 <include reference="Jn3-ao-WnO"/>
                                 <include reference="Pt7-3r-zTb"/>
-                                <include reference="7Cj-5n-EBK"/>
-                                <include reference="g8b-mC-QlN"/>
-                                <include reference="y73-eO-Kp7"/>
                             </mask>
                         </variation>
                     </view>

@@ -221,7 +221,7 @@ class QueueManageViewController: UITableViewController {
                             self.tickNs.append(obj["ticketNumber"] as! Int)
                         }
                     } catch {
-                        let alertController = UIAlertController(title: "Error", message: "Invalid request", preferredStyle: .Alert)
+                        let alertController = UIAlertController(title: "Error", message: "Invalid response", preferredStyle: .Alert)
                         alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                         self.presentViewController(alertController, animated: true, completion: nil)
                         return

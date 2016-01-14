@@ -14,7 +14,7 @@
 		A9107CA91C454B0400BCF790 /* UserMainAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */; };
 		A97E35731C4774A7009552FA /* MyCurrentQueuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */; };
 		A97E35751C47770E009552FA /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E35741C47770E009552FA /* CategoryRow.swift */; };
-		A9ADAE841C44E0FC00EC31A3 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */; };
+		A9ADAE841C44E0FC00EC31A3 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */; };
 		A9B38BA51C46769F00C9227C /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA41C46769F00C9227C /* Shops.swift */; };
 		A9B38BA71C4679ED00C9227C /* nearbyShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */; };
 		A9B38BA91C467A5400C9227C /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */; };
@@ -46,6 +46,8 @@
 		B2A924F91C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
 		B2C8B68B1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */; };
 		B2C8B68C1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */; };
+		B2C8B6931C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B6921C4824FF00173925 /* CustomerTicketTableCell.swift */; };
+		B2C8B6941C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B6921C4824FF00173925 /* CustomerTicketTableCell.swift */; };
 		F9F99EF48DDE0D5C9F40E5E9 /* Pods_QNO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +78,7 @@
 		A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMainAdsTableViewCell.swift; sourceTree = "<group>"; };
 		A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCurrentQueuesViewController.swift; sourceTree = "<group>"; };
 		A97E35741C47770E009552FA /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
-		A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
+		A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
 		A9B38BA41C46769F00C9227C /* Shops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
 		A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearbyShopsViewController.swift; sourceTree = "<group>"; };
 		A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPIError.swift; path = Classes/QNOAPIError.swift; sourceTree = "<group>"; };
 		B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueUpdateViewController.swift; path = ViewControllers/QueueUpdateViewController.swift; sourceTree = "<group>"; };
 		B2C8B68D1C47D75000173925 /* QNO-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QNO-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2C8B6921C4824FF00173925 /* CustomerTicketTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerTicketTableCell.swift; path = ViewControllers/SubViewControllers/CustomerTicketTableCell.swift; sourceTree = "<group>"; };
 		BCDFA1D12B60DB107C9BD450 /* Pods-QNO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNO.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNO/Pods-QNO.release.xcconfig"; sourceTree = "<group>"; };
 		C94C27322507C269B69C4086 /* Pods-QNOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNOTests/Pods-QNOTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,18 +231,9 @@
 		B214889F1C44E03E00922957 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B21488AD1C453C0900922957 /* SubViewControllers */,
-				B21488A71C452C9300922957 /* HouseLoginViewController.swift */,
-				B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */,
-				B21488A31C44F96300922957 /* QueueManageViewController.swift */,
-				B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */,
+				B2C8B6901C4817E500173925 /* Customer */,
+				B2C8B68E1C4817C400173925 /* House */,
 				B21488A51C4501D100922957 /* SelectRoleViewController.swift */,
-				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
-				A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */,
-				A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */,
-				A9B38BAA1C467C9100C9227C /* DetailViewController.swift */,
-				A9C6EAFD1C47561300F199A9 /* QRCodeGenerator.swift */,
-				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -248,8 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				B21488AE1C453C4300922957 /* QueueTableViewCell.swift */,
-				A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */,
-				A97E35741C47770E009552FA /* CategoryRow.swift */,
 			);
 			name = SubViewControllers;
 			sourceTree = "<group>";
@@ -263,6 +255,42 @@
 				A9B38BA41C46769F00C9227C /* Shops.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		B2C8B68E1C4817C400173925 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				B21488AD1C453C0900922957 /* SubViewControllers */,
+				B21488A71C452C9300922957 /* HouseLoginViewController.swift */,
+				B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */,
+				B21488A31C44F96300922957 /* QueueManageViewController.swift */,
+				B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */,
+				A9C6EAFD1C47561300F199A9 /* QRCodeGenerator.swift */,
+			);
+			name = House;
+			sourceTree = "<group>";
+		};
+		B2C8B6901C4817E500173925 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
+				A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */,
+				A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */,
+				A9B38BAA1C467C9100C9227C /* DetailViewController.swift */,
+				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
+				B2C8B6911C4817EA00173925 /* SubViewControllers */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		B2C8B6911C4817EA00173925 /* SubViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A97E35741C47770E009552FA /* CategoryRow.swift */,
+				A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */,
+				B2C8B6921C4824FF00173925 /* CustomerTicketTableCell.swift */,
+			);
+			name = SubViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,6 +570,7 @@
 				A97E35731C4774A7009552FA /* MyCurrentQueuesViewController.swift in Sources */,
 				B21579831C46369900F188C8 /* QNOStorage.swift in Sources */,
 				A9B38BAB1C467C9100C9227C /* DetailViewController.swift in Sources */,
+				B2C8B6931C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */,
 				A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */,
 				A9C6EAFE1C47561300F199A9 /* QRCodeGenerator.swift in Sources */,
 				B21488A61C4501D100922957 /* SelectRoleViewController.swift in Sources */,
@@ -549,7 +578,7 @@
 				A9107CA51C4549BC00BCF790 /* UserMainViewController.swift in Sources */,
 				A9107CA91C454B0400BCF790 /* UserMainAdsTableViewCell.swift in Sources */,
 				A9B38BA91C467A5400C9227C /* ShopTableViewCell.swift in Sources */,
-				A9ADAE841C44E0FC00EC31A3 /* QRCodeReader.swift in Sources */,
+				A9ADAE841C44E0FC00EC31A3 /* QRCodeReaderViewController.swift in Sources */,
 				B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +602,7 @@
 				B21488A91C452C9300922957 /* HouseLoginViewController.swift in Sources */,
 				B21488A21C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
 				B2C8B68C1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */,
+				B2C8B6941C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */,
 				B21488AC1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
 				A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */,
 			);

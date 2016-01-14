@@ -164,7 +164,7 @@ class QNOAPI {
     }
     
     // permission: GUEST | HOUSE | CUSTOMER
-    func requestQueue(houseName: String, queueName: String, callback: (errorMessage: String?) -> Void) throws {
+    func requestQueue(houseName: String, queueName: String, callback: (errorMessage: String?, response: NSData?) -> Void) throws {
         
         let url = "\(URLPrefix)\(housePrefix)/requestQueue"
         
@@ -183,7 +183,7 @@ class QNOAPI {
             }
             
             if HTTPStatus == 200 {
-                callback(errorMessage: nil)
+                callback(errorMessage: nil, response: response.data)
             } else {
                 var message: String?
                 do {
@@ -191,7 +191,7 @@ class QNOAPI {
                 } catch _ {
                     message = "Unknown error occurs, please contact our support for help."
                 }
-                callback(errorMessage: message)
+                callback(errorMessage: message, response: nil)
             }
         })
     }

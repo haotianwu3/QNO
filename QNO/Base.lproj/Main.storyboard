@@ -237,6 +237,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="61"/>
+                                                    </variation>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yYb-qu-ue6">
                                                     <rect key="frame" x="0.0" y="61" width="543" height="21"/>
@@ -278,8 +281,14 @@
                                                             </variation>
                                                         </label>
                                                     </subviews>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="61" width="343" height="21"/>
+                                                    </variation>
                                                 </stackView>
                                             </subviews>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="16" y="8" width="343" height="82"/>
+                                            </variation>
                                         </stackView>
                                     </subviews>
                                     <constraints>
@@ -702,6 +711,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="upn-zs-UOx" id="xqk-fF-An7">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShopTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oio-6n-jDt">
@@ -814,6 +824,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nMN-hU-vIK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hmp-K7-q9t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="M3o-qf-XM8">

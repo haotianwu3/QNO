@@ -997,10 +997,10 @@
             </objects>
             <point key="canvasLocation" x="2250" y="2625"/>
         </scene>
-        <!--Code Reader-->
+        <!--Code Reader View Controller-->
         <scene sceneID="vyJ-Tb-7Kf">
             <objects>
-                <viewController id="c1S-e2-OGs" customClass="QRCodeReader" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c1S-e2-OGs" customClass="QRCodeReaderViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ohl-Si-SOT"/>
                         <viewControllerLayoutGuide type="bottom" id="8pZ-FY-kGK"/>
@@ -1010,13 +1010,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCodeLabel: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHJ-8b-j28">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="20" y="559" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCodeNotDetected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-aR-81F">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="143" y="559" width="163" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1029,30 +1029,6 @@
                             <constraint firstAttribute="bottom" secondItem="mHJ-8b-j28" secondAttribute="bottom" constant="20" symbolic="YES" id="TaX-tb-SCm"/>
                             <constraint firstItem="BAh-aR-81F" firstAttribute="baseline" secondItem="mHJ-8b-j28" secondAttribute="baseline" id="zkN-Xp-vpM"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="mHJ-8b-j28"/>
-                                <exclude reference="BAh-aR-81F"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="KZP-eS-lxT"/>
-                                <exclude reference="zkN-Xp-vpM"/>
-                                <exclude reference="QIY-eU-dY0"/>
-                                <exclude reference="TaX-tb-SCm"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="mHJ-8b-j28"/>
-                                <include reference="BAh-aR-81F"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="KZP-eS-lxT"/>
-                                <include reference="zkN-Xp-vpM"/>
-                                <include reference="QIY-eU-dY0"/>
-                                <include reference="TaX-tb-SCm"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="QRCodeLabel" destination="mHJ-8b-j28" id="mD0-3z-X7m"/>
@@ -1156,15 +1132,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="566" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pjn-5q-0gz">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pjn-5q-0gz">
+                                <rect key="frame" x="0.0" y="64" width="580" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customer_queue" rowHeight="140" id="3a7-ic-yLJ" customClass="CustomerTicketTableCell" customModule="QNO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="580" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3a7-ic-yLJ" id="bnc-EY-pOu">
+                                            <rect key="frame" x="0.0" y="0.0" width="580" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="idy-an-Jdl">
+                                                    <rect key="frame" x="16" y="8" width="556" height="123"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Housename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBT-RT-tVg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="556" height="71"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="QueueName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tD-85-j1c">
+                                                            <rect key="frame" x="0.0" y="76" width="556" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="L69-xi-xOA">
+                                                            <rect key="frame" x="0.0" y="102" width="556" height="21"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mine:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4f-zr-oN1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="114" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usW-WB-C7n">
+                                                                    <rect key="frame" x="119" y="0.0" width="115" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVt-62-PD5">
+                                                                    <rect key="frame" x="239" y="0.0" width="172" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="140-7d-cGr">
+                                                                    <rect key="frame" x="416" y="0.0" width="140" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="idy-an-Jdl" firstAttribute="top" secondItem="bnc-EY-pOu" secondAttribute="topMargin" id="7lT-6k-o1f"/>
+                                                <constraint firstItem="idy-an-Jdl" firstAttribute="leading" secondItem="bnc-EY-pOu" secondAttribute="leadingMargin" constant="8" id="Lg9-UW-5zO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="idy-an-Jdl" secondAttribute="trailing" id="cAC-dF-bcp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="idy-an-Jdl" secondAttribute="bottom" id="kOF-v0-19h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="expectedNumberLabel" destination="140-7d-cGr" id="LCj-Dp-Wqj"/>
+                                            <outlet property="houseNameLabel" destination="eBT-RT-tVg" id="Ash-46-5ZV"/>
+                                            <outlet property="myTicketNumber" destination="usW-WB-C7n" id="wlj-tG-BoV"/>
+                                            <outlet property="queueNameLabel" destination="3tD-85-j1c" id="WVX-op-DfA"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="566" id="361-Uy-5U8" customClass="CategoryRow" customModule="QNO" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="566"/>
+                                        <rect key="frame" x="0.0" y="232" width="580" height="566"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="361-Uy-5U8" id="XST-HY-3sv">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="565"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="580" height="565"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qCO-fh-KMA">
@@ -1289,25 +1333,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cw-7j-5uK">
-                                <rect key="frame" x="236" y="562" width="129" height="30"/>
-                                <state key="normal" title="Generate QR Code"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2cw-7j-5uK" firstAttribute="centerX" secondItem="pjn-5q-0gz" secondAttribute="centerX" id="7Cj-5n-EBK"/>
                             <constraint firstItem="pjn-5q-0gz" firstAttribute="leading" secondItem="Pc3-95-JAr" secondAttribute="leading" id="8TY-ne-qwI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pjn-5q-0gz" secondAttribute="trailing" id="HMH-aX-rui"/>
                             <constraint firstItem="pjn-5q-0gz" firstAttribute="top" secondItem="RtO-gR-dp5" secondAttribute="bottom" id="Jn3-ao-WnO"/>
                             <constraint firstItem="pjn-5q-0gz" firstAttribute="bottom" secondItem="sWU-A7-Ggy" secondAttribute="top" id="Pt7-3r-zTb"/>
-                            <constraint firstItem="2cw-7j-5uK" firstAttribute="centerX" secondItem="Pc3-95-JAr" secondAttribute="centerX" id="g8b-mC-QlN"/>
-                            <constraint firstItem="sWU-A7-Ggy" firstAttribute="top" secondItem="2cw-7j-5uK" secondAttribute="bottom" constant="8" symbolic="YES" id="y73-eO-Kp7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Current Queues" id="ZcR-BI-fqz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VEB-vX-23S">
                             <connections>
-                                <segue destination="c1S-e2-OGs" kind="show" id="oiT-mi-UZq"/>
+                                <segue destination="c1S-e2-OGs" kind="presentation" id="oiT-mi-UZq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

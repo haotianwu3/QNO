@@ -936,6 +936,105 @@
             </objects>
             <point key="canvasLocation" x="3030" y="2562.75"/>
         </scene>
+        <!--Code Generator-->
+        <scene sceneID="25w-Ag-Ab7">
+            <objects>
+                <viewController id="kIG-c6-OW0" customClass="QRCodeGenerator" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ubZ-sM-sSo"/>
+                        <viewControllerLayoutGuide type="bottom" id="RfJ-Wy-8dk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hhe-GI-HWa">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Variable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-RM-vqn">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fZR-t1-VrW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5f2-3H-aAt"/>
+                                    <constraint firstAttribute="height" constant="240" id="RzK-Uk-7UP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5f2-3H-aAt"/>
+                                        <exclude reference="RzK-Uk-7UP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5f2-3H-aAt"/>
+                                        <include reference="RzK-Uk-7UP"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="27V-l4-zwF">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <connections>
+                                    <action selector="changeImageViewScale:" destination="kIG-c6-OW0" eventType="valueChanged" id="lIF-2P-VUc"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fZR-t1-VrW" firstAttribute="centerX" secondItem="ftS-RM-vqn" secondAttribute="centerX" id="N6W-JV-70J"/>
+                            <constraint firstItem="fZR-t1-VrW" firstAttribute="trailing" secondItem="27V-l4-zwF" secondAttribute="trailing" id="Tkf-1G-i3W"/>
+                            <constraint firstItem="fZR-t1-VrW" firstAttribute="centerY" secondItem="Hhe-GI-HWa" secondAttribute="centerY" id="Ump-dK-wyf"/>
+                            <constraint firstItem="ftS-RM-vqn" firstAttribute="top" secondItem="ubZ-sM-sSo" secondAttribute="bottom" constant="8" symbolic="YES" id="WD5-8O-Unt"/>
+                            <constraint firstItem="fZR-t1-VrW" firstAttribute="leading" secondItem="27V-l4-zwF" secondAttribute="leading" id="cep-Gy-2pk"/>
+                            <constraint firstAttribute="trailing" secondItem="ftS-RM-vqn" secondAttribute="trailing" id="rsY-7s-Kig"/>
+                            <constraint firstAttribute="bottom" secondItem="27V-l4-zwF" secondAttribute="bottom" constant="20" symbolic="YES" id="t8A-4z-MdI"/>
+                            <constraint firstItem="ftS-RM-vqn" firstAttribute="leading" secondItem="Hhe-GI-HWa" secondAttribute="leading" id="v7Y-9Y-mfG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ftS-RM-vqn"/>
+                                <exclude reference="fZR-t1-VrW"/>
+                                <exclude reference="27V-l4-zwF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WD5-8O-Unt"/>
+                                <exclude reference="rsY-7s-Kig"/>
+                                <exclude reference="v7Y-9Y-mfG"/>
+                                <exclude reference="N6W-JV-70J"/>
+                                <exclude reference="Tkf-1G-i3W"/>
+                                <exclude reference="Ump-dK-wyf"/>
+                                <exclude reference="cep-Gy-2pk"/>
+                                <exclude reference="t8A-4z-MdI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ftS-RM-vqn"/>
+                                <include reference="fZR-t1-VrW"/>
+                                <include reference="27V-l4-zwF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WD5-8O-Unt"/>
+                                <include reference="rsY-7s-Kig"/>
+                                <include reference="v7Y-9Y-mfG"/>
+                                <include reference="N6W-JV-70J"/>
+                                <include reference="Tkf-1G-i3W"/>
+                                <include reference="Ump-dK-wyf"/>
+                                <include reference="cep-Gy-2pk"/>
+                                <include reference="t8A-4z-MdI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="QRCodeDisplayArea" destination="fZR-t1-VrW" id="PQ9-hU-23d"/>
+                        <outlet property="QRCodeSizeSlider" destination="27V-l4-zwF" id="g04-tS-Y7C"/>
+                        <outlet property="ShopLinkVariable" destination="ftS-RM-vqn" id="YNT-ii-hVd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGK-ek-KxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3864" y="2562.75"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hXy-hL-x9i">
             <objects>
@@ -955,28 +1054,43 @@
                                     <segue destination="c1S-e2-OGs" kind="show" id="9f0-a8-9oU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cw-7j-5uK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Generate QR Code"/>
+                                <connections>
+                                    <segue destination="kIG-c6-OW0" kind="show" id="8CP-mc-wn7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2cw-7j-5uK" firstAttribute="centerX" secondItem="SGh-Py-MEt" secondAttribute="centerX" id="J74-Vj-Zg1"/>
                             <constraint firstItem="SGh-Py-MEt" firstAttribute="centerY" secondItem="Pc3-95-JAr" secondAttribute="centerY" id="cAq-Fw-ro9"/>
+                            <constraint firstItem="2cw-7j-5uK" firstAttribute="top" secondItem="SGh-Py-MEt" secondAttribute="bottom" constant="8" symbolic="YES" id="jU4-SE-Pbx"/>
                             <constraint firstItem="SGh-Py-MEt" firstAttribute="centerX" secondItem="Pc3-95-JAr" secondAttribute="centerX" id="vzc-nX-FGk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="SGh-Py-MEt"/>
+                                <exclude reference="2cw-7j-5uK"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="cAq-Fw-ro9"/>
                                 <exclude reference="vzc-nX-FGk"/>
+                                <exclude reference="J74-Vj-Zg1"/>
+                                <exclude reference="jU4-SE-Pbx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="SGh-Py-MEt"/>
+                                <include reference="2cw-7j-5uK"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="cAq-Fw-ro9"/>
                                 <include reference="vzc-nX-FGk"/>
+                                <include reference="J74-Vj-Zg1"/>
+                                <include reference="jU4-SE-Pbx"/>
                             </mask>
                         </variation>
                     </view>

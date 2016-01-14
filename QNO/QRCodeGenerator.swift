@@ -9,6 +9,8 @@
 import UIKit
 
 class QRCodeGenerator: UIViewController {
+    var link: String!
+    
     @IBOutlet weak var ShopLinkVariable: UILabel!
 
     @IBOutlet weak var QRCodeDisplayArea: UIImageView!
@@ -20,6 +22,7 @@ class QRCodeGenerator: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ShopLinkVariable.text = link
         generateQRCode()
         displayQRCodeImage()
         // Do any additional setup after loading the view, typically from a nib.
@@ -67,17 +70,7 @@ class QRCodeGenerator: UIViewController {
         
     }
     
-    
-    //func here is for the scene before this scene
-    //func here is for the scene before this scene
-    //func here is for the scene before this scene
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        let item = sender as! UINavigationItem
-        
-        let detail = segue.destinationViewController as! QRCodeGenerator
-        //uncomment code below & change the "shopName" to the variable of the current shop name
-        //detail.ShopLinkVariable = item.shopName
-        
+    @IBAction func close(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
 }

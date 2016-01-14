@@ -8,6 +8,7 @@ target 'QNO' do
 pod 'Alamofire', '~> 3.0'
 pod "PKHUD"
 pod 'SwiftyUserDefaults'
+pod 'MGSwipeTableCell'
 
 end
 
@@ -19,7 +20,9 @@ pod 'SwiftyUserDefaults'
 end
 
 target 'QNOUITests' do
+
 pod "PKHUD"
+pod 'MGSwipeTableCell'
 
 end
 

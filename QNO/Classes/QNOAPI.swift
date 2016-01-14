@@ -9,10 +9,11 @@
 import Foundation
 import Alamofire
 
-enum QNOAPIStatus {
-    case GUEST
-    case CUSTOMER
-    case HOUSE
+enum QNOAPIStatus: Int {
+    case GUEST = 0
+    case CUSTOMER = 1
+    case HOUSE = 2
+    case CH = 3
 }
 
 enum QNOAPIRuntimeError: ErrorType {
@@ -24,33 +25,23 @@ class QNOAPI {
     let URLPrefix = "http://144.214.121.58:8080/JOS"
     let housePrefix = "/house"
     
-    var APIStatus: QNOAPIStatus = .GUEST
     var userId: String?
     var accessToken: String?
-    
-    init() {
-        // as guest
-    }
-    
-    init(fromUserId userId: String, accessToken: String) {
-        // as a user
-    }
-    
+
     func status() -> QNOAPIStatus {
-        if userId == nil || accessToken == nil {
-            APIStatus = .GUEST
+        var s = 0
+        
+        if QNOStorage.getHouseName() != nil {
+            s = s | QNOAPIStatus.HOUSE.rawValue
         }
         
-        return APIStatus
+        return QNOAPIStatus(rawValue: s)!
     }
     
     // MARK: House Controller
     
     // permission: GUEST
     func addHouse(houseName: String, address: String?, tel: String?, homepage: String?, callback: (errorMessage: String?) -> Void) throws {
-        guard (status() == .GUEST) else {
-            throw QNOAPIRuntimeError.InvalidOperation
-        }
         
         let url = "\(URLPrefix)\(housePrefix)/addHouse"
             
@@ -94,7 +85,7 @@ class QNOAPI {
     
     // permission: HOUSE
     func addQueue(houseName: String, queueName: String, expectedNumber: Int, ticketNumber: Int, callback: (errorMessage: String?) -> Void) throws {
-        guard (status() == .HOUSE) else {
+        guard (status().rawValue & QNOAPIStatus.HOUSE.rawValue > 0) else {
             throw QNOAPIRuntimeError.InvalidOperation
         }
         
@@ -134,7 +125,7 @@ class QNOAPI {
     
     // permission: HOUSE
     func updateQueue(houseName: String, queueName: String, expectedNumber: Int, ticketNumber: Int, callback: (errorMessage: String?) -> Void) throws {
-        guard (status() == .HOUSE) else {
+        guard (status().rawValue & QNOAPIStatus.HOUSE.rawValue > 0) else {
             throw QNOAPIRuntimeError.InvalidOperation
         }
         
@@ -205,13 +196,41 @@ class QNOAPI {
         })
     }
     
+    // permission: GUEST | HOUSE | CUSTOMER
+    func requestAllQueues(houseName: String, callback: (errorMessage: String?, response: NSData?) -> Void) throws {
+        
+        let url = "\(URLPrefix)\(housePrefix)/queryQueues"
+        
+        var parameter = [String: AnyObject]()
+        
+        parameter["houseName"] = houseName
+        
+        Alamofire.request(.POST, url, parameters: parameter).responseString(completionHandler: {response in
+            var HTTPStatus: Int
+            if let httpError = response.result.error {
+                HTTPStatus = httpError.code
+            } else {
+                HTTPStatus = (response.response?.statusCode)!
+            }
+            
+            if HTTPStatus == 200 {
+                callback(errorMessage: nil, response: response.data)
+            } else {
+                var message: String?
+                do {
+                    try message = QNOAPIError.sharedInstance.getMessage(fromHTTPStatus: HTTPStatus)
+                } catch _ {
+                    message = "Unknown error occurs, please contact our support for help."
+                }
+                callback(errorMessage: message, response: nil)
+            }
+        })
+    }
+    
     // MARK: Customer Controller
     
     // permission: GUEST
-    func addGuest(email: String, mobile: String?, address: String?, callback: (errorMessage: String?) -> Void) throws {
-        guard (status() == .GUEST) else {
-            throw QNOAPIRuntimeError.InvalidOperation
-        }
+    func addCustomer(email: String, mobile: String?, address: String?, callback: (errorMessage: String?) -> Void) throws {
         
         let url = "\(URLPrefix)\(housePrefix)/addHouse"
         

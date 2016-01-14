@@ -35,9 +35,6 @@ class HouseRegistrationViewController: UIViewController {
     func validateForm() -> String? {
         
         let houseName = houseNameTextField.text
-        let address = addressTextField.text
-        let tel = telTextField.text
-        let homepage = homepageTextField.text
         
         guard houseName != nil && houseName != "" else {
             return "Please fill the house name"
@@ -62,11 +59,15 @@ class HouseRegistrationViewController: UIViewController {
         }
         
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
         
         let api = QNOAPI()
         do {
             try api.addHouse(houseName, address: address, tel: tel, homepage: homepage) { (errorMessage) -> Void in
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        PKHUD.sharedHUD.hide()
+                    })
                     if errorMessage == nil {
                         let alertController = UIAlertController(title: "House has been created", message: "You can login now", preferredStyle: .Alert)
                         alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) -> Void in
@@ -84,11 +85,17 @@ class HouseRegistrationViewController: UIViewController {
                 })
             }
         } catch QNOAPIRuntimeError.InvalidOperation {
-            let alertController = UIAlertController(title: "Invalid operation", message: error, preferredStyle: .Alert)
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                PKHUD.sharedHUD.hide()
+            })
+            let alertController = UIAlertController(title: "Invalid operation", message: "The operation is not permitted.", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
             return
         } catch {
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                PKHUD.sharedHUD.hide()
+            })
             print("Unknown error")
         }
         

@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
-class QueueTableViewCell: UITableViewCell {
-
+class QueueTableViewCell: MGSwipeTableCell {
     @IBOutlet weak var queueNameLabel: UILabel!
     @IBOutlet weak var expectedNumberLabel: UILabel!
     @IBOutlet weak var ticketNumberLabel: UILabel!

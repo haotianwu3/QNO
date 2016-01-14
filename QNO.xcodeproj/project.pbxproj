@@ -44,6 +44,8 @@
 		B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
 		B2A924F91C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
+		B2C8B68B1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */; };
+		B2C8B68C1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */; };
 		F9F99EF48DDE0D5C9F40E5E9 /* Pods_QNO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,8 @@
 		B21579821C46369900F188C8 /* QNOStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOStorage.swift; path = Classes/QNOStorage.swift; sourceTree = "<group>"; };
 		B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPI.swift; path = Classes/QNOAPI.swift; sourceTree = "<group>"; };
 		B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPIError.swift; path = Classes/QNOAPIError.swift; sourceTree = "<group>"; };
+		B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueUpdateViewController.swift; path = ViewControllers/QueueUpdateViewController.swift; sourceTree = "<group>"; };
+		B2C8B68D1C47D75000173925 /* QNO-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QNO-Bridging-Header.h"; sourceTree = "<group>"; };
 		BCDFA1D12B60DB107C9BD450 /* Pods-QNO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNO.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNO/Pods-QNO.release.xcconfig"; sourceTree = "<group>"; };
 		C94C27322507C269B69C4086 /* Pods-QNOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNOTests/Pods-QNOTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC0EDF65023C2B7BC1BD77D8 /* Pods_QNO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +210,7 @@
 				A9C6EAFD1C47561300F199A9 /* QRCodeGenerator.swift */,
 				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
 				A97E35741C47770E009552FA /* CategoryRow.swift */,
+				B2C8B68D1C47D75000173925 /* QNO-Bridging-Header.h */,
 			);
 			path = QNO;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				B21488A71C452C9300922957 /* HouseLoginViewController.swift */,
 				B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */,
 				B21488A31C44F96300922957 /* QueueManageViewController.swift */,
+				B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */,
 				B21488A51C4501D100922957 /* SelectRoleViewController.swift */,
 				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
 			);
@@ -531,6 +537,7 @@
 				B21488AF1C453C4300922957 /* QueueTableViewCell.swift in Sources */,
 				B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */,
 				B21488A41C44F96300922957 /* QueueManageViewController.swift in Sources */,
+				B2C8B68B1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */,
 				A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */,
 				A97E35731C4774A7009552FA /* MyCurrentQueuesViewController.swift in Sources */,
 				B21579831C46369900F188C8 /* QNOStorage.swift in Sources */,
@@ -565,6 +572,7 @@
 				B21488B01C453C4300922957 /* QueueTableViewCell.swift in Sources */,
 				B21488A91C452C9300922957 /* HouseLoginViewController.swift in Sources */,
 				B21488A21C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
+				B2C8B68C1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */,
 				B21488AC1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
 				A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */,
 			);
@@ -698,6 +706,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = September.com.QNO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "QNO/QNO-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -713,6 +722,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = September.com.QNO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "QNO/QNO-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -725,6 +735,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = September.com.QNOTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QNO/QNO-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QNO.app/QNO";
 			};
 			name = Debug;
@@ -738,6 +749,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = September.com.QNOTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QNO/QNO-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QNO.app/QNO";
 			};
 			name = Release;
@@ -750,6 +762,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = September.com.QNOUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QNO/QNO-Bridging-Header.h";
 				TEST_TARGET_NAME = QNO;
 				USES_XCTRUNNER = YES;
 			};
@@ -763,6 +776,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = September.com.QNOUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QNO/QNO-Bridging-Header.h";
 				TEST_TARGET_NAME = QNO;
 				USES_XCTRUNNER = YES;
 			};

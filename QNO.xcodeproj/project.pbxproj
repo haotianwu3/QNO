@@ -202,14 +202,6 @@
 				A9E4AFD71C436EDE0050474D /* Assets.xcassets */,
 				A9E4AFD91C436EDE0050474D /* LaunchScreen.storyboard */,
 				A9E4AFDC1C436EDE0050474D /* Info.plist */,
-				A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */,
-				A9B38BA41C46769F00C9227C /* Shops.swift */,
-				A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */,
-				A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */,
-				A9B38BAA1C467C9100C9227C /* DetailViewController.swift */,
-				A9C6EAFD1C47561300F199A9 /* QRCodeGenerator.swift */,
-				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
-				A97E35741C47770E009552FA /* CategoryRow.swift */,
 				B2C8B68D1C47D75000173925 /* QNO-Bridging-Header.h */,
 			);
 			path = QNO;
@@ -243,6 +235,11 @@
 				B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */,
 				B21488A51C4501D100922957 /* SelectRoleViewController.swift */,
 				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
+				A9ADAE831C44E0FC00EC31A3 /* QRCodeReader.swift */,
+				A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */,
+				A9B38BAA1C467C9100C9227C /* DetailViewController.swift */,
+				A9C6EAFD1C47561300F199A9 /* QRCodeGenerator.swift */,
+				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -251,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				B21488AE1C453C4300922957 /* QueueTableViewCell.swift */,
+				A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */,
+				A97E35741C47770E009552FA /* CategoryRow.swift */,
 			);
 			name = SubViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +260,7 @@
 				B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */,
 				B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */,
 				B21579821C46369900F188C8 /* QNOStorage.swift */,
+				A9B38BA41C46769F00C9227C /* Shops.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

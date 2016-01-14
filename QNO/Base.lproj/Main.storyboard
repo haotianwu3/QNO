@@ -696,6 +696,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="upn-zs-UOx" id="xqk-fF-An7">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShopTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oio-6n-jDt">
@@ -808,6 +809,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nMN-hU-vIK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hmp-K7-q9t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="M3o-qf-XM8">
@@ -920,6 +922,23 @@
             <point key="canvasLocation" x="3030" y="2562.75"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="Yjs-Ze-tyP">
+            <objects>
+                <viewController id="y84-Op-XdA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LZE-Tb-dhd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eyy-r6-r6g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5uX-0D-2te">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR7-JK-zka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3864" y="2562.75"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="hXy-hL-x9i">
             <objects>
                 <viewController id="OGv-Ey-sPV" sceneMemberID="viewController">
@@ -938,28 +957,43 @@
                                     <segue destination="c1S-e2-OGs" kind="show" id="9f0-a8-9oU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA6-jO-iTS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Generate QR Code"/>
+                                <connections>
+                                    <segue destination="y84-Op-XdA" kind="show" id="Jp2-DG-4uD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PA6-jO-iTS" firstAttribute="top" secondItem="SGh-Py-MEt" secondAttribute="bottom" constant="19" id="7gE-5j-ucj"/>
                             <constraint firstItem="SGh-Py-MEt" firstAttribute="centerY" secondItem="Pc3-95-JAr" secondAttribute="centerY" id="cAq-Fw-ro9"/>
+                            <constraint firstItem="PA6-jO-iTS" firstAttribute="centerX" secondItem="SGh-Py-MEt" secondAttribute="centerX" id="nlA-xW-SH7"/>
                             <constraint firstItem="SGh-Py-MEt" firstAttribute="centerX" secondItem="Pc3-95-JAr" secondAttribute="centerX" id="vzc-nX-FGk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="SGh-Py-MEt"/>
+                                <exclude reference="PA6-jO-iTS"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="cAq-Fw-ro9"/>
                                 <exclude reference="vzc-nX-FGk"/>
+                                <exclude reference="7gE-5j-ucj"/>
+                                <exclude reference="nlA-xW-SH7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="SGh-Py-MEt"/>
+                                <include reference="PA6-jO-iTS"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="cAq-Fw-ro9"/>
                                 <include reference="vzc-nX-FGk"/>
+                                <include reference="7gE-5j-ucj"/>
+                                <include reference="nlA-xW-SH7"/>
                             </mask>
                         </variation>
                     </view>

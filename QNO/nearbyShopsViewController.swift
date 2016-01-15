@@ -11,10 +11,7 @@ import MapKit
 import CoreLocation
 
 
-class nearbyShopsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, CLLocationManagerDelegate {
-    
-    //@IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableView: UITableView!
+class nearbyShopsViewController: UITableViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var shops = [Shop]()
     var afterFilterShops = [Shop]()
@@ -38,14 +35,15 @@ class nearbyShopsViewController: UIViewController, UITableViewDataSource, UITabl
         loadSampleShops()
         filterShops()
         
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidDisappear(animated: Bool) {
+        let selectedIndexPath = tableView.indexPathForSelectedRow
+        guard selectedIndexPath != nil else {
+            return
+        }
+        tableView.deselectRowAtIndexPath(selectedIndexPath!, animated: true)
     }
     
     func filterShops(){
@@ -82,7 +80,7 @@ class nearbyShopsViewController: UIViewController, UITableViewDataSource, UITabl
         shops += [shop1, shop2, shop3, shop4, shop5, shop6]
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "shopCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ShopTableViewCell
         
@@ -102,8 +100,16 @@ class nearbyShopsViewController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return afterFilterShops.count
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

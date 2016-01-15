@@ -1000,7 +1000,6 @@
         <!--My Tickets-->
         <scene sceneID="rSN-T2-s4o">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wq6-yZ-Ult" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="My Tickets" id="jWC-CF-IHB" customClass="MyCurrentQueuesViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xER-SO-Zm5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -1022,12 +1021,18 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="376" height="71"/>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="QueueName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNl-tf-N2A">
                                                     <rect key="frame" x="0.0" y="76" width="576" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                        <rect key="frame" x="0.0" y="76" width="376" height="21"/>
+                                                    </variation>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-7k-4Ni">
                                                     <rect key="frame" x="0.0" y="102" width="576" height="21"/>
@@ -1089,6 +1094,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wq6-yZ-Ult" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3030" y="1863"/>
         </scene>

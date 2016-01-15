@@ -63,13 +63,12 @@ class MyCurrentQueuesViewController: UITableViewController {
                 
                 let responseStr = String(data: response!, encoding: NSUTF8StringEncoding)
                 
-                let tokens = responseStr!.componentsSeparatedByString("next ticket number is : ")
-                
-                
+                var tokens = responseStr!.componentsSeparatedByString("Expected next number is: ")
+                tokens = tokens[1].componentsSeparatedByString(", next ticket number is")
                 if tokens.count == 2 {
                     NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
                         let _cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomerTicketTableCell
-                        _cell.expectedNumberLabel.text = "\(tokens[1])"
+                        _cell.expectedNumberLabel.text = "\(tokens[0])"
                     }
                 } else {
                     let alertController = UIAlertController(title: "Error", message: "Invalid response", preferredStyle: .Alert)

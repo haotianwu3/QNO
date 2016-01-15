@@ -373,7 +373,7 @@
 				TargetAttributes = {
 					A9E4AFCC1C436EDE0050474D = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = T623SW3CME;
+						DevelopmentTeam = 7M3K5V5VWU;
 					};
 					A9E4AFE01C436EDE0050474D = {
 						CreatedOnToolsVersion = 7.1;
@@ -740,7 +740,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QNO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = september.qno;
+				PRODUCT_BUNDLE_IDENTIFIER = com.september.qno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "QNO/QNO-Bridging-Header.h";
@@ -756,7 +756,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QNO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = september.qno;
+				PRODUCT_BUNDLE_IDENTIFIER = com.september.qno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "QNO/QNO-Bridging-Header.h";

@@ -24,6 +24,8 @@ class nearbyShopsViewController: UITableViewController, MKMapViewDelegate, CLLoc
     var distanceCell: String?
     var cellLocationManager = CLLocationManager()
     
+    let placeholderImage = UIImage(named: "no-propertyfound")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -125,9 +127,9 @@ class nearbyShopsViewController: UITableViewController, MKMapViewDelegate, CLLoc
         cell.ShopDecription.text = shop.ShopDescription
         if shop.hasLogo {
             let imageURL = "http://144.214.121.58:8080/JOS/house/houseLogoImage?houseName=\(shop.Name.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)"
-            cell.ShopLogo.sd_setImageWithURL(NSURL(string: imageURL))
+            cell.ShopLogo.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: placeholderImage)
         } else {
-            cell.ShopLogo.sd_setImageWithURL(nil)
+            cell.ShopLogo.image = placeholderImage
         }
         
         self.distanceCell = String(format: "%.2f m", shop.distance!)

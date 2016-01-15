@@ -40,6 +40,8 @@
 		B21488B01C453C4300922957 /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488AE1C453C4300922957 /* QueueTableViewCell.swift */; };
 		B21579831C46369900F188C8 /* QNOStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21579821C46369900F188C8 /* QNOStorage.swift */; };
 		B21579841C46369900F188C8 /* QNOStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21579821C46369900F188C8 /* QNOStorage.swift */; };
+		B26677E41C4943D40005955D /* MySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26677E31C4943D40005955D /* MySpaceViewController.swift */; };
+		B26677E51C4943D50005955D /* MySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26677E31C4943D40005955D /* MySpaceViewController.swift */; };
 		B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
@@ -112,6 +114,7 @@
 		B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerLoginViewController.swift; path = ViewControllers/CustomerLoginViewController.swift; sourceTree = "<group>"; };
 		B21488AE1C453C4300922957 /* QueueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueTableViewCell.swift; path = ViewControllers/SubViewControllers/QueueTableViewCell.swift; sourceTree = "<group>"; };
 		B21579821C46369900F188C8 /* QNOStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOStorage.swift; path = Classes/QNOStorage.swift; sourceTree = "<group>"; };
+		B26677E31C4943D40005955D /* MySpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MySpaceViewController.swift; path = ViewControllers/MySpaceViewController.swift; sourceTree = "<group>"; };
 		B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPI.swift; path = Classes/QNOAPI.swift; sourceTree = "<group>"; };
 		B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPIError.swift; path = Classes/QNOAPIError.swift; sourceTree = "<group>"; };
 		B2BFA3311C48D57900BE97DC /* CustomerRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerRegisterViewController.swift; path = ViewControllers/CustomerRegisterViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +292,7 @@
 				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
 				A9E4AFD21C436EDE0050474D /* ViewController.swift */,
 				A9E4AFFE1C4371060050474D /* PageItemController.swift */,
+				B26677E31C4943D40005955D /* MySpaceViewController.swift */,
 				B2C8B6911C4817EA00173925 /* SubViewControllers */,
 			);
 			name = Customer;
@@ -574,6 +578,7 @@
 				A9B38BA51C46769F00C9227C /* Shop.swift in Sources */,
 				B21488A81C452C9300922957 /* HouseLoginViewController.swift in Sources */,
 				A9B38BA71C4679ED00C9227C /* nearbyShopsViewController.swift in Sources */,
+				B26677E41C4943D40005955D /* MySpaceViewController.swift in Sources */,
 				A97E35751C47770E009552FA /* CategoryRow.swift in Sources */,
 				B21488AF1C453C4300922957 /* QueueTableViewCell.swift in Sources */,
 				B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */,
@@ -621,6 +626,7 @@
 				B2C8B68C1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */,
 				B2C8B6941C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */,
 				B2BFA3361C49221600BE97DC /* MasterViewController.swift in Sources */,
+				B26677E51C4943D50005955D /* MySpaceViewController.swift in Sources */,
 				B2BFA3331C48D57900BE97DC /* CustomerRegisterViewController.swift in Sources */,
 				B21488AC1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
 				A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */,

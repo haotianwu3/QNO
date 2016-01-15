@@ -35,6 +35,10 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         self.cellLocationManager.startUpdatingLocation()
         
         loadOnlineHouses()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: "loadOnlineHouses", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl!)
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -54,6 +58,7 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
             try api.requestAllHouses({ (errorMessage, houses) -> Void in
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                     PKHUD.sharedHUD.hide()
+                    self.refreshControl?.endRefreshing()
                 })
                 if errorMessage == nil {
                     self.shops.removeAll()
@@ -100,6 +105,7 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         } catch QNOAPIRuntimeError.InvalidOperation {
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 PKHUD.sharedHUD.hide()
+                self.refreshControl?.endRefreshing()
             })
             let alertController = UIAlertController(title: "Invalid operation", message: "The operation is not permitted.", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
@@ -108,6 +114,7 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         } catch {
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 PKHUD.sharedHUD.hide()
+                self.refreshControl?.endRefreshing()
             })
             print("Unknown error")
         }

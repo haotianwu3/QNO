@@ -15,6 +15,8 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tabBar: UIToolbar!
     
+    var refreshControl: UIRefreshControl?
+    
     let placeholderImage = UIImage(named: "no-propertyfound")
     
     var Ads = [UserMainAds]()
@@ -29,7 +31,10 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
         self.tableView.dataSource = self
         self.tableView.delegate = self
         loadOnlineAds()
-        // Do any additional setup after loading the view.
+        
+        self.refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: "loadOnlineAds", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +51,7 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
             try api.requestAllAds({ (errorMessage, ads) -> Void in
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                     PKHUD.sharedHUD.hide()
+                    self.refreshControl?.endRefreshing()
                 })
                 if errorMessage == nil {
                     self.Ads.removeAll()
@@ -70,6 +76,7 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
         } catch QNOAPIRuntimeError.InvalidOperation {
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 PKHUD.sharedHUD.hide()
+                self.refreshControl?.endRefreshing()
             })
             let alertController = UIAlertController(title: "Invalid operation", message: "The operation is not permitted.", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
@@ -78,6 +85,7 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
         } catch {
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 PKHUD.sharedHUD.hide()
+                self.refreshControl?.endRefreshing()
             })
             print("Unknown error")
         }

@@ -44,6 +44,8 @@
 		B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
 		B2A924F91C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
+		B2BFA3321C48D57900BE97DC /* CustomerRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFA3311C48D57900BE97DC /* CustomerRegisterViewController.swift */; };
+		B2BFA3331C48D57900BE97DC /* CustomerRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFA3311C48D57900BE97DC /* CustomerRegisterViewController.swift */; };
 		B2C8B68B1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */; };
 		B2C8B68C1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */; };
 		B2C8B6931C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8B6921C4824FF00173925 /* CustomerTicketTableCell.swift */; };
@@ -108,6 +110,7 @@
 		B21579821C46369900F188C8 /* QNOStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOStorage.swift; path = Classes/QNOStorage.swift; sourceTree = "<group>"; };
 		B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPI.swift; path = Classes/QNOAPI.swift; sourceTree = "<group>"; };
 		B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPIError.swift; path = Classes/QNOAPIError.swift; sourceTree = "<group>"; };
+		B2BFA3311C48D57900BE97DC /* CustomerRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerRegisterViewController.swift; path = ViewControllers/CustomerRegisterViewController.swift; sourceTree = "<group>"; };
 		B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueUpdateViewController.swift; path = ViewControllers/QueueUpdateViewController.swift; sourceTree = "<group>"; };
 		B2C8B68D1C47D75000173925 /* QNO-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QNO-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2C8B6921C4824FF00173925 /* CustomerTicketTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerTicketTableCell.swift; path = ViewControllers/SubViewControllers/CustomerTicketTableCell.swift; sourceTree = "<group>"; };
@@ -196,11 +199,6 @@
 				B214889F1C44E03E00922957 /* ViewControllers */,
 				B2A924F31C43D3FA00FF6DD0 /* Classes */,
 				A9E4AFD01C436EDE0050474D /* AppDelegate.swift */,
-				A9E4AFD21C436EDE0050474D /* ViewController.swift */,
-				A9107CA41C4549BC00BCF790 /* UserMainViewController.swift */,
-				A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */,
-				A9107CA61C4549FF00BCF790 /* UserMainAds.swift */,
-				A9E4AFFE1C4371060050474D /* PageItemController.swift */,
 				A9E4AFD41C436EDE0050474D /* Main.storyboard */,
 				A9E4AFD71C436EDE0050474D /* Assets.xcassets */,
 				A9E4AFD91C436EDE0050474D /* LaunchScreen.storyboard */,
@@ -249,6 +247,7 @@
 		B2A924F31C43D3FA00FF6DD0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9107CA61C4549FF00BCF790 /* UserMainAds.swift */,
 				B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */,
 				B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */,
 				B21579821C46369900F188C8 /* QNOStorage.swift */,
@@ -273,11 +272,15 @@
 		B2C8B6901C4817E500173925 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
+				A9107CA41C4549BC00BCF790 /* UserMainViewController.swift */,
 				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
+				B2BFA3311C48D57900BE97DC /* CustomerRegisterViewController.swift */,
 				A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */,
 				A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */,
 				A9B38BAA1C467C9100C9227C /* DetailViewController.swift */,
 				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
+				A9E4AFD21C436EDE0050474D /* ViewController.swift */,
+				A9E4AFFE1C4371060050474D /* PageItemController.swift */,
 				B2C8B6911C4817EA00173925 /* SubViewControllers */,
 			);
 			name = Customer;
@@ -286,6 +289,7 @@
 		B2C8B6911C4817EA00173925 /* SubViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */,
 				A97E35741C47770E009552FA /* CategoryRow.swift */,
 				A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */,
 				B2C8B6921C4824FF00173925 /* CustomerTicketTableCell.swift */,
@@ -572,6 +576,7 @@
 				A9B38BAB1C467C9100C9227C /* DetailViewController.swift in Sources */,
 				B2C8B6931C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */,
 				A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */,
+				B2BFA3321C48D57900BE97DC /* CustomerRegisterViewController.swift in Sources */,
 				A9C6EAFE1C47561300F199A9 /* QRCodeGenerator.swift in Sources */,
 				B21488A61C4501D100922957 /* SelectRoleViewController.swift in Sources */,
 				B21488A11C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
@@ -603,6 +608,7 @@
 				B21488A21C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
 				B2C8B68C1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */,
 				B2C8B6941C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */,
+				B2BFA3331C48D57900BE97DC /* CustomerRegisterViewController.swift in Sources */,
 				B21488AC1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
 				A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */,
 			);

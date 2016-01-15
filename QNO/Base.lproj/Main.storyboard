@@ -505,7 +505,7 @@
         <!--Customer Registration-->
         <scene sceneID="nDj-cp-Pyb">
             <objects>
-                <viewController title="House Registration" id="6IQ-qP-Uby" userLabel="Customer Registration" sceneMemberID="viewController">
+                <viewController title="House Registration" id="6IQ-qP-Uby" userLabel="Customer Registration" customClass="CustomerRegisterViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EjX-j0-lXI"/>
                         <viewControllerLayoutGuide type="bottom" id="ydY-A9-DZ5"/>
@@ -514,7 +514,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jxP-ET-Sdg">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jxP-ET-Sdg">
                                 <rect key="frame" x="20" y="72" width="560" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OAs-aV-awq">
@@ -549,20 +549,20 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="huK-ID-PSD">
                                         <rect key="frame" x="146" y="0.0" width="414" height="150"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXu-2X-4b9">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OXu-2X-4b9">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3A-vw-ArQ">
                                                 <rect key="frame" x="0.0" y="40" width="414" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iiK-My-dMZ">
                                                 <rect key="frame" x="0.0" y="80" width="414" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Arg-WI-waz">
                                                 <rect key="frame" x="0.0" y="120" width="414" height="30"/>
@@ -576,6 +576,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="521-g2-hBL">
                                 <rect key="frame" x="272" y="285" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="register:" destination="6IQ-qP-Uby" eventType="touchUpInside" id="0ax-FZ-2RJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -588,15 +591,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressTextField" destination="m3A-vw-ArQ" id="UyA-ap-FQY"/>
-                        <outlet property="homepageTextField" destination="Arg-WI-waz" id="ETO-4E-tDi"/>
-                        <outlet property="houseNameTextField" destination="OXu-2X-4b9" id="Ycq-j7-XCM"/>
-                        <outlet property="telTextField" destination="iiK-My-dMZ" id="FvL-Hj-TT4"/>
+                        <outlet property="accountTextField" destination="OXu-2X-4b9" id="XVd-N0-zbz"/>
+                        <outlet property="addressTextField" destination="Arg-WI-waz" id="z7J-9A-SnQ"/>
+                        <outlet property="emailTextField" destination="m3A-vw-ArQ" id="VZj-rM-Lbr"/>
+                        <outlet property="mobileTextField" destination="iiK-My-dMZ" id="NX0-o5-rGW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53L-Kn-1kE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="2412"/>
+            <point key="canvasLocation" x="627" y="2437"/>
         </scene>
         <!--QNO-->
         <scene sceneID="Zja-vN-GYH">
@@ -696,6 +699,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="QNO" id="W9g-Ts-5rb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="QSY-2h-HvU">
+                            <connections>
+                                <action selector="close:" destination="H75-JL-SAV" id="YzB-JJ-V8A"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="Rzw-JM-Ick"/>
                     </navigationItem>
                     <connections>
@@ -1000,7 +1008,6 @@
         <!--My Tickets-->
         <scene sceneID="rSN-T2-s4o">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wq6-yZ-Ult" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="My Tickets" id="jWC-CF-IHB" customClass="MyCurrentQueuesViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xER-SO-Zm5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -1089,6 +1096,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wq6-yZ-Ult" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3030" y="1863"/>
         </scene>
@@ -1268,7 +1276,7 @@
                                 <rect key="frame" x="216" y="362" width="168" height="30"/>
                                 <state key="normal" title="do not have an account?"/>
                                 <connections>
-                                    <segue destination="6IQ-qP-Uby" kind="show" id="hJR-Hx-jkc"/>
+                                    <segue destination="6IQ-qP-Uby" kind="show" id="fpx-Uf-ge0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1292,6 +1300,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="accountTextField" destination="ddv-Gd-CQ9" id="jD7-Ol-1aE"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="customer_demo" id="Oak-hL-2dh"/>
                         <segue destination="egN-hT-ulE" kind="presentation" identifier="customer_login" id="Jwp-na-Ru1"/>
                     </connections>

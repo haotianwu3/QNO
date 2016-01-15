@@ -58,6 +58,9 @@ class UserMainViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
 
+    @IBAction func close(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

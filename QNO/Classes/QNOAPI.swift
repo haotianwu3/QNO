@@ -24,6 +24,7 @@ class QNOAPI {
     
     let URLPrefix = "http://144.214.121.58:8080/JOS"
     let housePrefix = "/house"
+    let customerPrefix = "/customer"
     
     var userId: String?
     var accessToken: String?
@@ -230,13 +231,17 @@ class QNOAPI {
     // MARK: Customer Controller
     
     // permission: GUEST
-    func addCustomer(email: String, mobile: String?, address: String?, callback: (errorMessage: String?) -> Void) throws {
+    func addCustomer(account: String, email: String?, mobile: String?, address: String?, callback: (errorMessage: String?) -> Void) throws {
         
-        let url = "\(URLPrefix)\(housePrefix)/addHouse"
+        let url = "\(URLPrefix)\(customerPrefix)/addCustomer"
         
         var parameter = [String: AnyObject]()
         
-        parameter["email"] = email
+        parameter["customerId"] = account
+        
+        if email != nil {
+            parameter["email"] = email
+        }
         
         if mobile != nil {
             parameter["mobile"] = mobile

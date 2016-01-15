@@ -25,6 +25,18 @@ class QNOStorage {
         return Defaults[houseNameKey]
     }
     
+    class func setCustomerId(account: String?) {
+        if account == nil {
+            Defaults.remove(customerIdKey)
+        } else {
+            Defaults[customerIdKey] = account!
+        }
+    }
+    
+    class func getCustomerId() -> String? {
+        return Defaults[customerIdKey]
+    }
+    
     class func getAndSetNotFirstLogin() -> Bool {
         let nfl = Defaults[notFirstLoginKey] == true
         Defaults[notFirstLoginKey] = true

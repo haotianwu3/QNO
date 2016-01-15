@@ -10,6 +10,16 @@ import UIKit
 
 class CustomerLoginViewController: UIViewController {
     
+    @IBOutlet weak var accountTextField: UITextField!
+    
+    override func viewDidAppear(animated: Bool) {
+        if let account = QNOStorage.getCustomerId() {
+            accountTextField.text = account
+        } else {
+            accountTextField.text = ""
+        }
+    }
+    
     @IBAction func login(sender: AnyObject) {
         if QNOStorage.getAndSetNotFirstLogin() {
             self.performSegueWithIdentifier("customer_login", sender: self)

@@ -725,7 +725,6 @@
                                 <action selector="close:" destination="H75-JL-SAV" id="YzB-JJ-V8A"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Profile" id="Rzw-JM-Ick"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tabBar" destination="Xz3-UW-yah" id="jRY-L3-dOC"/>

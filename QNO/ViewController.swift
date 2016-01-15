@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPageViewControllerDataSource {
+class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     private var MainPageViewController: UIPageViewController?
     
-    private let contentImages = ["img_1.png", "img_2.png", "img_3.png", "img_4.png"]
+    private let contentImages = ["demo1", "demo2", "demo3"]
     
     
 
@@ -47,10 +47,15 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     private func setupPageControl() {
         let appearance = UIPageControl.appearance()
-        appearance.pageIndicatorTintColor = UIColor.grayColor()
-        appearance.currentPageIndicatorTintColor = UIColor.darkGrayColor()
-        appearance.backgroundColor = UIColor.whiteColor()
+        appearance.pageIndicatorTintColor = UIColor.darkGrayColor()
+        appearance.currentPageIndicatorTintColor = UIColor.whiteColor()
+        appearance.backgroundColor = UIColor.lightGrayColor()
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         

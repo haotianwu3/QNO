@@ -73,7 +73,7 @@ class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjec
     
     func initializeQRView() {
         vwQRCode = UIView()
-        vwQRCode?.layer.borderColor = UIColor.redColor().CGColor
+        vwQRCode?.layer.borderColor = UIColor.greenColor().CGColor
         vwQRCode?.layer.borderWidth = 5
         self.view.addSubview(vwQRCode!)
         self.view.bringSubviewToFront(vwQRCode!)

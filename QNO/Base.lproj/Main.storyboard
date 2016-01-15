@@ -624,7 +624,7 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xz3-UW-yah">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Tk4-y4-GwS"/>
                                     <barButtonItem title="Nearby" id="eGb-JA-opP">
@@ -728,6 +728,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="Rzw-JM-Ick"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="tabBar" destination="Xz3-UW-yah" id="jRY-L3-dOC"/>
                         <outlet property="tableView" destination="ael-qX-BIZ" id="xx9-j9-raa"/>
                     </connections>
                 </viewController>

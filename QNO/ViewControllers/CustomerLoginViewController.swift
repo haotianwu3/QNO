@@ -8,11 +8,13 @@
 
 import UIKit
 
-class CustomerLoginViewController: UIViewController {
+class CustomerLoginViewController: MasterViewController {
     
     @IBOutlet weak var accountTextField: UITextField!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         let singleTap = UITapGestureRecognizer(target: self, action: "hideKeyboard")
         singleTap.numberOfTapsRequired = 1
         singleTap.numberOfTouchesRequired = 1
@@ -29,6 +31,7 @@ class CustomerLoginViewController: UIViewController {
     }
     
     @IBAction func login(sender: AnyObject) {
+        QNOStorage.setCustomerId(accountTextField.text)
         if QNOStorage.getAndSetNotFirstLogin() {
             self.performSegueWithIdentifier("customer_login", sender: self)
         } else {

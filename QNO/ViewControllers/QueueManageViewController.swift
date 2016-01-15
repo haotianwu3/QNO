@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 import MGSwipeTableCell
 
-class QueueManageViewController: UITableViewController {
+class QueueManageViewController: MasterTableViewController {
     
     var houseName: String!
     

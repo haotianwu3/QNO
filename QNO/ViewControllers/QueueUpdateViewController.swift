@@ -9,7 +9,7 @@
 import UIKit
 import PKHUD
 
-class QueueUpdateViewController: UIViewController {
+class QueueUpdateViewController: MasterViewController {
     var houseName: String!
     var queueName: String!
     var expectedNumber: Int!

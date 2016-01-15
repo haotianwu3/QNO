@@ -15,7 +15,7 @@ import CoreLocation
 @IBOutlet weak var distance: UINavigationItem!
 @IBOutlet weak var distance: UINavigationItem!
 displays its item (the selected master list row) */
-class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class DetailViewController: MasterViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var shopName: String?
     var shopLatitude: Double = 0.0

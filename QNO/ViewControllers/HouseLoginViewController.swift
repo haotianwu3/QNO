@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HouseLoginViewController: UIViewController {
+class HouseLoginViewController: MasterViewController {
 
     @IBOutlet weak var houseNameTextField: UITextField!
     

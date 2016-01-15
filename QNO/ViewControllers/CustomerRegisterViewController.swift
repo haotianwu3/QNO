@@ -9,7 +9,7 @@
 import UIKit
 import PKHUD
 
-class CustomerRegisterViewController: UIViewController {
+class CustomerRegisterViewController: MasterViewController {
 
     @IBOutlet weak var accountTextField: UITextField!
     

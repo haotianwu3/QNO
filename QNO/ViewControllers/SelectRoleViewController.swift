@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SelectRoleViewController: UIViewController {
+class SelectRoleViewController: MasterViewController {
 
 }

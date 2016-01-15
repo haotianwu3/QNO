@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 import SwiftyUserDefaults
 
-class HouseRegistrationViewController: UIViewController {
+class HouseRegistrationViewController: MasterViewController {
     
     @IBOutlet weak var houseNameTextField: UITextField!
     

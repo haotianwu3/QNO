@@ -10,9 +10,10 @@ import UIKit
 import PKHUD
 import SDWebImage
 
-class UserMainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class UserMainViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tabBar: UIToolbar!
     
     let placeholderImage = UIImage(named: "no-propertyfound")
     
@@ -20,6 +21,10 @@ class UserMainViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBar.backgroundColor = UIColor(patternImage: UIImage(named: "page_background")!)
+        
+        self.navigationController
         
         self.tableView.dataSource = self
         self.tableView.delegate = self

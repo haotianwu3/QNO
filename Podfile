@@ -9,6 +9,7 @@ pod 'Alamofire', '~> 3.0'
 pod "PKHUD"
 pod 'SwiftyUserDefaults'
 pod 'MGSwipeTableCell'
+pod 'SDWebImage', '~>3.7'
 
 end
 
@@ -23,6 +24,7 @@ target 'QNOUITests' do
 
 pod "PKHUD"
 pod 'MGSwipeTableCell'
+pod 'SDWebImage', '~>3.7'
 
 end
 

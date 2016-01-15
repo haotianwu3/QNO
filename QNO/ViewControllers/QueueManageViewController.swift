@@ -229,7 +229,7 @@ class QueueManageViewController: UITableViewController {
                     
                     NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
                         self.refreshControl?.endRefreshing()
-                        self.tableView.reloadData()
+                        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
                     }
             }
         } catch QNOAPIRuntimeError.InvalidOperation {

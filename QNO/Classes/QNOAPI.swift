@@ -272,4 +272,34 @@ class QNOAPI {
             }
         })
     }
+    
+    func requestAllHouses(callback: (errorMessage: String?, houses: [AnyObject]?) -> Void) throws {
+        let url = "\(URLPrefix)\(housePrefix)/listAllHouses"
+        
+        Alamofire.request(.POST, url).responseString(completionHandler: {response in
+            var HTTPStatus: Int
+            if let httpError = response.result.error {
+                HTTPStatus = httpError.code
+            } else {
+                HTTPStatus = (response.response?.statusCode)!
+            }
+            
+            if HTTPStatus == 200 {
+                do {
+                    let houses = try NSJSONSerialization.JSONObjectWithData(response.data!, options: .AllowFragments) as! [AnyObject]
+                    callback(errorMessage: nil, houses: houses)
+                } catch {
+                    callback(errorMessage: "Response is invalid", houses: nil)
+                }
+            } else {
+                var message: String?
+                do {
+                    try message = QNOAPIError.sharedInstance.getMessage(fromHTTPStatus: HTTPStatus)
+                } catch _ {
+                    message = "Unknown error occurs, please contact our support for help."
+                }
+                callback(errorMessage: message, houses: nil)
+            }
+        })
+    }
 }

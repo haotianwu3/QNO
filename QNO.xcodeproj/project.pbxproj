@@ -15,7 +15,7 @@
 		A97E35731C4774A7009552FA /* MyCurrentQueuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */; };
 		A97E35751C47770E009552FA /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E35741C47770E009552FA /* CategoryRow.swift */; };
 		A9ADAE841C44E0FC00EC31A3 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */; };
-		A9B38BA51C46769F00C9227C /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA41C46769F00C9227C /* Shops.swift */; };
+		A9B38BA51C46769F00C9227C /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA41C46769F00C9227C /* Shop.swift */; };
 		A9B38BA71C4679ED00C9227C /* nearbyShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */; };
 		A9B38BA91C467A5400C9227C /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */; };
 		A9B38BAB1C467C9100C9227C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BAA1C467C9100C9227C /* DetailViewController.swift */; };
@@ -81,7 +81,7 @@
 		A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCurrentQueuesViewController.swift; sourceTree = "<group>"; };
 		A97E35741C47770E009552FA /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
-		A9B38BA41C46769F00C9227C /* Shops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
+		A9B38BA41C46769F00C9227C /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		A9B38BA61C4679ED00C9227C /* nearbyShopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearbyShopsViewController.swift; sourceTree = "<group>"; };
 		A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
 		A9B38BAA1C467C9100C9227C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 				B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */,
 				B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */,
 				B21579821C46369900F188C8 /* QNOStorage.swift */,
-				A9B38BA41C46769F00C9227C /* Shops.swift */,
+				A9B38BA41C46769F00C9227C /* Shop.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 				TargetAttributes = {
 					A9E4AFCC1C436EDE0050474D = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = T623SW3CME;
+						DevelopmentTeam = 7M3K5V5VWU;
 					};
 					A9E4AFE01C436EDE0050474D = {
 						CreatedOnToolsVersion = 7.1;
@@ -563,7 +563,7 @@
 				A9107CA71C4549FF00BCF790 /* UserMainAds.swift in Sources */,
 				A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */,
 				B21488AB1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
-				A9B38BA51C46769F00C9227C /* Shops.swift in Sources */,
+				A9B38BA51C46769F00C9227C /* Shop.swift in Sources */,
 				B21488A81C452C9300922957 /* HouseLoginViewController.swift in Sources */,
 				A9B38BA71C4679ED00C9227C /* nearbyShopsViewController.swift in Sources */,
 				A97E35751C47770E009552FA /* CategoryRow.swift in Sources */,

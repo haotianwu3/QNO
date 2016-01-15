@@ -11,13 +11,13 @@ class UserMainAds{
     
     var houseName: String!
     var description: String!
-    var hasLogo: Bool
+    var adId: Int
     
-    init(houseName: String, description: String, hasLogo: Bool) {
+    init(houseName: String, description: String, adId: Int) {
         // Initialize stored properties.
         self.houseName = houseName
         self.description = description
-        self.hasLogo = hasLogo
+        self.adId = adId
     }
     
 }

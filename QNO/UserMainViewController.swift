@@ -53,8 +53,8 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
                         let adDict = ad as! [String: AnyObject]
                         let houseName = adDict["houseName"] as! String
                         let description = adDict["description"] as! String
-                        let hasLogo = adDict["hasLogo"] as! Bool
-                        let adObj = UserMainAds(houseName: houseName, description: description, hasLogo: hasLogo)
+                        let adId = adDict["id"] as! Int
+                        let adObj = UserMainAds(houseName: houseName, description: description, adId: adId)
                         self.Ads.append(adObj)
                     }
                     
@@ -93,12 +93,8 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
         cell.houseNAmeTextLabel.text = Ad.houseName
         cell.AdsDescription.text = Ad.description
         
-        if Ad.hasLogo {
-            let imageURL = "http://144.214.121.58:8080/JOS/house/houseLogoImage?houseName=\(Ad.houseName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)"
-            cell.AdsImage.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: placeholderImage)
-        } else {
-            cell.AdsImage.image = placeholderImage
-        }
+        let imageURL = "http://144.214.121.58:8080/JOS/ad/adImage?adId=\(Ad.adId)"
+        cell.AdsImage.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: placeholderImage)
         
         return cell
     }

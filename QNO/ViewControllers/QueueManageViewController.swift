@@ -43,7 +43,7 @@ class QueueManageViewController: UITableViewController {
         cell.expectedNumberLabel.text = "\(expectedNs[indexPath.row])"
         cell.ticketNumberLabel.text = "\(tickNs[indexPath.row])"
         
-        cell.leftButtons = [MGSwipeButton(title: "Expected+", backgroundColor: UIColor.blueColor(), callback: { (_cell) -> Bool in
+        cell.leftButtons = [MGSwipeButton(title: "Expected+", backgroundColor: UIColor(red: (255/255.0), green: (106/255.0), blue: (106/255.0), alpha: 1.0), callback: { (_cell) -> Bool in
             let index = self.tableView.indexPathForCell(_cell)!.row
             
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
@@ -82,7 +82,7 @@ class QueueManageViewController: UITableViewController {
             }
             
             return true
-        }), MGSwipeButton(title: "Ticket+", backgroundColor: UIColor.greenColor(), callback: { (_cell) -> Bool in
+        }), MGSwipeButton(title: "Ticket+", backgroundColor: UIColor(red: (0/255.0), green: (192/255.0), blue: (255/255.0), alpha: 1.0), callback: { (_cell) -> Bool in
             let index = self.tableView.indexPathForCell(_cell)!.row
             
             PKHUD.sharedHUD.contentView = PKHUDProgressView()

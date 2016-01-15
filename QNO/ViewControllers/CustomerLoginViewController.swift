@@ -12,6 +12,14 @@ class CustomerLoginViewController: UIViewController {
     
     @IBOutlet weak var accountTextField: UITextField!
     
+    override func viewDidLoad() {
+        let singleTap = UITapGestureRecognizer(target: self, action: "hideKeyboard")
+        singleTap.numberOfTapsRequired = 1
+        singleTap.numberOfTouchesRequired = 1
+        singleTap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(singleTap)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         if let account = QNOStorage.getCustomerId() {
             accountTextField.text = account
@@ -26,5 +34,9 @@ class CustomerLoginViewController: UIViewController {
         } else {
             self.performSegueWithIdentifier("customer_demo", sender: self)
         }
+    }
+    
+    func hideKeyboard() {
+        accountTextField.resignFirstResponder()
     }
 }

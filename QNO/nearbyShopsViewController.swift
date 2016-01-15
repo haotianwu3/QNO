@@ -60,7 +60,7 @@ class nearbyShopsViewController: UITableViewController, MKMapViewDelegate, CLLoc
                     for house in houses! {
                         let houseDict = house as! [String: AnyObject]
                         let houseName = houseDict["name"] as! String
-                        let hasLogo = houseDict["logo"] != nil
+                        let hasLogo = houseDict["logoType"] != nil
                         let description = houseDict["description"] as? String
                         let longitude = houseDict["longitude"] as? Double
                         let latitude = houseDict["latitude"] as? Double

@@ -12,6 +12,7 @@ class UserMainAdsTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var AdsImage: UIImageView!
+    @IBOutlet weak var houseNAmeTextLabel: UILabel!
     @IBOutlet weak var AdsDescription: UILabel!
     
     override func awakeFromNib() {

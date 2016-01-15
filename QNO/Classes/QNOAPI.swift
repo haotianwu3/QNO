@@ -25,6 +25,7 @@ class QNOAPI {
     let URLPrefix = "http://144.214.121.58:8080/JOS"
     let housePrefix = "/house"
     let customerPrefix = "/customer"
+    let adPrefix = "/ad"
     
     var userId: String?
     var accessToken: String?
@@ -299,6 +300,36 @@ class QNOAPI {
                     message = "Unknown error occurs, please contact our support for help."
                 }
                 callback(errorMessage: message, houses: nil)
+            }
+        })
+    }
+    
+    func requestAllAds(callback: (errorMessage: String?, ads: [AnyObject]?) -> Void) throws {
+        let url = "\(URLPrefix)\(adPrefix)/allAds"
+        
+        Alamofire.request(.POST, url).responseString(completionHandler: {response in
+            var HTTPStatus: Int
+            if let httpError = response.result.error {
+                HTTPStatus = httpError.code
+            } else {
+                HTTPStatus = (response.response?.statusCode)!
+            }
+            
+            if HTTPStatus == 200 {
+                do {
+                    let ads = try NSJSONSerialization.JSONObjectWithData(response.data!, options: .AllowFragments) as! [AnyObject]
+                    callback(errorMessage: nil, ads: ads)
+                } catch {
+                    callback(errorMessage: "Response is invalid", ads: nil)
+                }
+            } else {
+                var message: String?
+                do {
+                    try message = QNOAPIError.sharedInstance.getMessage(fromHTTPStatus: HTTPStatus)
+                } catch _ {
+                    message = "Unknown error occurs, please contact our support for help."
+                }
+                callback(errorMessage: message, ads: nil)
             }
         })
     }

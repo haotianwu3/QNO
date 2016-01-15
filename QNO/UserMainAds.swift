@@ -9,18 +9,15 @@ import UIKit
 
 class UserMainAds{
     
-    var description: String
-    var photo: UIImage?
+    var houseName: String!
+    var description: String!
+    var hasLogo: Bool
     
-    init?(description: String, photo: UIImage?) {
+    init(houseName: String, description: String, hasLogo: Bool) {
         // Initialize stored properties.
+        self.houseName = houseName
         self.description = description
-        self.photo = photo
-        
-        // if there is no photo, it will return nil
-        if photo == nil  {
-            return nil
-        }
+        self.hasLogo = hasLogo
     }
     
 }

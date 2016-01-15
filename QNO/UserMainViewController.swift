@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import PKHUD
+import SDWebImage
 
 class UserMainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    let placeholderImage = UIImage(named: "no-propertyfound")
     
     var Ads = [UserMainAds]()
     
@@ -19,7 +23,7 @@ class UserMainViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        loadSampleAds()
+        loadOnlineAds()
         // Do any additional setup after loading the view.
     }
 
@@ -28,17 +32,50 @@ class UserMainViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    func loadSampleAds() {
-        let photo1 = UIImage(named: "img_1")!
-        let Ads1 = UserMainAds(description: "Caprese Salad", photo: photo1)!
+    func loadOnlineAds() {
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
         
-        let photo2 = UIImage(named: "img_2")!
-        let Ads2 = UserMainAds(description: "Chicken and Potatoes", photo: photo2)!
-        
-        let photo3 = UIImage(named: "img_3")!
-        let Ads3 = UserMainAds(description: "Pasta with Meatballs", photo: photo3)!
-        
-        Ads += [Ads1, Ads2, Ads3]
+        let api = QNOAPI()
+        do {
+            try api.requestAllAds({ (errorMessage, ads) -> Void in
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    PKHUD.sharedHUD.hide()
+                })
+                if errorMessage == nil {
+                    self.Ads.removeAll()
+                    for ad in ads! {
+                        let adDict = ad as! [String: AnyObject]
+                        let houseName = adDict["houseName"] as! String
+                        let description = adDict["description"] as! String
+                        let hasLogo = adDict["hasLogo"] as! Bool
+                        let adObj = UserMainAds(houseName: houseName, description: description, hasLogo: hasLogo)
+                        self.Ads.append(adObj)
+                    }
+                    
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
+                    })
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .Alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                }
+            })
+        } catch QNOAPIRuntimeError.InvalidOperation {
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                PKHUD.sharedHUD.hide()
+            })
+            let alertController = UIAlertController(title: "Invalid operation", message: "The operation is not permitted.", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return
+        } catch {
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                PKHUD.sharedHUD.hide()
+            })
+            print("Unknown error")
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -48,8 +85,16 @@ class UserMainViewController: UIViewController, UITableViewDataSource, UITableVi
         // Fetches the appropriate meal for the data source layout.
         let Ad = Ads[indexPath.row]
         
+        cell.houseNAmeTextLabel.text = Ad.houseName
         cell.AdsDescription.text = Ad.description
-        cell.AdsImage.image = Ad.photo
+        
+        if Ad.hasLogo {
+            let imageURL = "http://144.214.121.58:8080/JOS/house/houseLogoImage?houseName=\(Ad.houseName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)"
+            cell.AdsImage.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: placeholderImage)
+        } else {
+            cell.AdsImage.image = placeholderImage
+        }
+        
         return cell
     }
     
@@ -57,6 +102,13 @@ class UserMainViewController: UIViewController, UITableViewDataSource, UITableVi
         return Ads.count
     }
     
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100.0
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 200.0
+    }
 
     @IBAction func close(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)

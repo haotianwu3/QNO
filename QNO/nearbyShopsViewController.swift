@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import PKHUD
+import SDWebImage
 
 class nearbyShopsViewController: UITableViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
@@ -122,7 +123,12 @@ class nearbyShopsViewController: UITableViewController, MKMapViewDelegate, CLLoc
         
         cell.ShopTitle.text = shop.Name
         cell.ShopDecription.text = shop.ShopDescription
-        
+        if shop.hasLogo {
+            let imageURL = "http://144.214.121.58:8080/JOS/house/houseLogoImage?houseName=\(shop.Name.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)"
+            cell.ShopLogo.sd_setImageWithURL(NSURL(string: imageURL))
+        } else {
+            cell.ShopLogo.sd_setImageWithURL(nil)
+        }
         
         self.distanceCell = String(format: "%.2f m", shop.distance!)
         
@@ -150,7 +156,7 @@ class nearbyShopsViewController: UITableViewController, MKMapViewDelegate, CLLoc
         let indexPath = self.tableView.indexPathForCell(cell)
         
         // load the selected model
-        let item = self.afterFilterShops[indexPath!.row]
+        let item = self.shops[indexPath!.row]
         
         let detail = segue.destinationViewController as! DetailViewController
         // set the model to be viewed
@@ -159,9 +165,6 @@ class nearbyShopsViewController: UITableViewController, MKMapViewDelegate, CLLoc
         detail.shopLatitude = item.ShopLatitude!
         detail.shopAddress = item.ShopAddress
     }
-    
-    
-
 
 }
 

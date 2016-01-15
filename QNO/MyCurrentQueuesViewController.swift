@@ -8,47 +8,48 @@
 
 import UIKit
 import SwiftyUserDefaults
+import MGSwipeTableCell
 
-class MyCurrentQueuesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    @IBOutlet weak var DataSource: UITableView!
+class MyCurrentQueuesViewController: UITableViewController {
     
     var expectetNumberCache = [Int: Int]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.DataSource.dataSource = self
-        self.DataSource.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Defaults[customerQueueKey].count
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("customer_queue") as! CustomerTicketTableCell
         
         let queueStr = Defaults[customerQueueKey][indexPath.row]
         let tokens = queueStr.componentsSeparatedByString("&")
-        let houseName = tokens[0]
-        let queueName = tokens[1]
+        let houseName = tokens[0].stringByReplacingOccurrencesOfString("+", withString: " ").stringByRemovingPercentEncoding!
+        let queueName = tokens[1].stringByReplacingOccurrencesOfString("+", withString: " ").stringByRemovingPercentEncoding!
         let ticketNumber = tokens[2]
         
         cell.houseNameLabel.text = houseName
         cell.queueNameLabel.text = queueName
         cell.myTicketNumber.text = ticketNumber
         cell.expectedNumberLabel.text = "loading"
+        
+        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: { (_cell) -> Bool in
+            let iP = self.tableView.indexPathForCell(_cell)!
+            Defaults[customerQueueKey].removeAtIndex(iP.row)
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                self.tableView.beginUpdates()
+                self.tableView.deleteRowsAtIndexPaths([iP], withRowAnimation: .Fade)
+                self.tableView.endUpdates()
+            })
+            return true
+        })]
         
         let api = QNOAPI()
         do {

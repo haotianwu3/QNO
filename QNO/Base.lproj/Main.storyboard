@@ -54,8 +54,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="map-3p-ZPa">
-                                <rect key="frame" x="233" y="325" width="135" height="30"/>
-                                <state key="normal" title="I am hosting a store"/>
+                                <rect key="frame" x="242" y="325" width="117" height="30"/>
+                                <state key="normal" title="I run a restaurant"/>
                                 <connections>
                                     <segue destination="WBn-oY-ZvN" kind="show" id="5Nr-H4-m1g"/>
                                 </connections>

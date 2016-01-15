@@ -11,6 +11,10 @@ import UIKit
 class CustomerLoginViewController: UIViewController {
     
     @IBAction func login(sender: AnyObject) {
-        self.performSegueWithIdentifier("customer_login", sender: self)
+        if QNOStorage.getAndSetNotFirstLogin() {
+            self.performSegueWithIdentifier("customer_login", sender: self)
+        } else {
+            self.performSegueWithIdentifier("customer_demo", sender: self)
+        }
     }
 }

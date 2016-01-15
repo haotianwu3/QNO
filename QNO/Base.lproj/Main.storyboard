@@ -1434,7 +1434,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="customer_login" id="Oak-hL-2dh"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="customer_demo" id="Oak-hL-2dh"/>
+                        <segue destination="egN-hT-ulE" kind="presentation" identifier="customer_login" id="Jwp-na-Ru1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1P-wc-7bL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1464,4 +1465,7 @@
         <image name="defaultImage" width="166" height="242"/>
         <image name="ticket-back" width="68" height="94"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Jwp-na-Ru1"/>
+    </inferredMetricsTieBreakers>
 </document>

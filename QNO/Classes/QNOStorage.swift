@@ -10,6 +10,7 @@ import SwiftyUserDefaults
 
 let houseNameKey = DefaultsKey<String?>("house_name")
 let customerIdKey = DefaultsKey<String?>("customer_id")
+let notFirstLoginKey = DefaultsKey<Bool?>("not_first_login")
 
 class QNOStorage {
     class func setHouseName(houseName: String?) {
@@ -22,5 +23,11 @@ class QNOStorage {
     
     class func getHouseName() -> String? {
         return Defaults[houseNameKey]
+    }
+    
+    class func getAndSetNotFirstLogin() -> Bool {
+        let nfl = Defaults[notFirstLoginKey] == true
+        Defaults[notFirstLoginKey] = true
+        return nfl
     }
 }

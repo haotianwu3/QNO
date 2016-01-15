@@ -28,13 +28,15 @@ class nearbyShopsViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleShops()
-        filterShops()
+        
         
         self.cellLocationManager.delegate = self
         self.cellLocationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.cellLocationManager.requestWhenInUseAuthorization()
         self.cellLocationManager.startUpdatingLocation()
+        
+        loadSampleShops()
+        filterShops()
         
         self.tableView.dataSource = self
         self.tableView.delegate = self

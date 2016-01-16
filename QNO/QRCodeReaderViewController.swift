@@ -29,7 +29,12 @@ class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjec
         self.configureVideoCapture()
         self.addVideoPreviewLayer()
         self.initializeQRView()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let singleTap = UITapGestureRecognizer(target: self, action: "close")
+        singleTap.numberOfTapsRequired = 1
+        singleTap.numberOfTouchesRequired = 1
+        singleTap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(singleTap)
     }
     
     override func didReceiveMemoryWarning() {
@@ -154,4 +159,8 @@ class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjec
         }
     }
 
+    func close() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }

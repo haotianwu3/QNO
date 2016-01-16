@@ -969,15 +969,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="M3o-qf-XM8">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </mapView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-Hw-crr">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem tag="1" title="My Location" image="location" id="mdR-mq-uc8"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="UWz-97-mh7" id="Unk-4L-vqO"/>
+                                </connections>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="M3o-qf-XM8" secondAttribute="trailing" id="Gs3-Js-joo"/>
-                            <constraint firstItem="M3o-qf-XM8" firstAttribute="bottom" secondItem="nMN-hU-vIK" secondAttribute="top" id="R4L-a5-qMZ"/>
+                            <constraint firstItem="qTg-Hw-crr" firstAttribute="centerX" secondItem="Hmp-K7-q9t" secondAttribute="centerX" id="Tle-f6-gn2"/>
+                            <constraint firstItem="qTg-Hw-crr" firstAttribute="width" secondItem="Hmp-K7-q9t" secondAttribute="width" id="WBS-LW-6o7"/>
+                            <constraint firstItem="M3o-qf-XM8" firstAttribute="bottom" secondItem="qTg-Hw-crr" secondAttribute="top" id="X7h-vt-nNv"/>
                             <constraint firstItem="M3o-qf-XM8" firstAttribute="top" secondItem="V08-aB-YHU" secondAttribute="bottom" id="biY-5w-7pO"/>
                             <constraint firstItem="M3o-qf-XM8" firstAttribute="leading" secondItem="Hmp-K7-q9t" secondAttribute="leading" id="ggb-vb-MJh"/>
+                            <constraint firstItem="nMN-hU-vIK" firstAttribute="top" secondItem="qTg-Hw-crr" secondAttribute="bottom" id="toP-Gs-eZ8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shop Location" id="Blq-ZK-YU8"/>
@@ -987,7 +1000,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqI-hG-Cw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250" y="2625"/>
+            <point key="canvasLocation" x="2112" y="2715"/>
         </scene>
         <!--My Tickets-->
         <scene sceneID="rSN-T2-s4o">
@@ -1102,14 +1115,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCodeLabel: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHJ-8b-j28">
-                                <rect key="frame" x="20" y="559" width="115" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tap to quit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHJ-8b-j28">
+                                <rect key="frame" x="262" y="558" width="78" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCodeNotDetected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-aR-81F">
-                                <rect key="frame" x="143" y="559" width="163" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="QRCodeNotDetected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-aR-81F">
+                                <rect key="frame" x="348" y="559" width="163" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1117,8 +1131,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mHJ-8b-j28" firstAttribute="centerX" secondItem="JQh-fn-ZIL" secondAttribute="centerX" id="8gq-D1-eA5"/>
                             <constraint firstItem="BAh-aR-81F" firstAttribute="leading" secondItem="mHJ-8b-j28" secondAttribute="trailing" constant="8" symbolic="YES" id="KZP-eS-lxT"/>
-                            <constraint firstItem="mHJ-8b-j28" firstAttribute="leading" secondItem="JQh-fn-ZIL" secondAttribute="leadingMargin" id="QIY-eU-dY0"/>
                             <constraint firstAttribute="bottom" secondItem="mHJ-8b-j28" secondAttribute="bottom" constant="20" symbolic="YES" id="TaX-tb-SCm"/>
                             <constraint firstItem="BAh-aR-81F" firstAttribute="baseline" secondItem="mHJ-8b-j28" secondAttribute="baseline" id="zkN-Xp-vpM"/>
                         </constraints>
@@ -1320,6 +1334,7 @@
     </scenes>
     <resources>
         <image name="defaultImage" width="166" height="242"/>
+        <image name="location" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7X3-nn-e7d"/>

@@ -15,7 +15,7 @@ import CoreLocation
 @IBOutlet weak var distance: UINavigationItem!
 @IBOutlet weak var distance: UINavigationItem!
 displays its item (the selected master list row) */
-class DetailViewController: MasterViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class DetailViewController: MasterViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITabBarDelegate {
     
     var shopName: String?
     var shopLatitude: Double = 0.0
@@ -49,7 +49,6 @@ class DetailViewController: MasterViewController, MKMapViewDelegate, CLLocationM
         annotation.subtitle = self.shopAddress
         MapView.addAnnotation(annotation)
         MapView.selectAnnotation(annotation, animated: true)
-        
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -66,5 +65,13 @@ class DetailViewController: MasterViewController, MKMapViewDelegate, CLLocationM
         print("Errors: " + error.localizedDescription)
     }
     
-    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        if item.tag == 1 {
+            let region = MKCoordinateRegion(center: self.MapView.userLocation.coordinate, span: MKCoordinateSpanMake(0.006, 0.006))
+            self.MapView.setRegion(region, animated: true)
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                tabBar.selectedItem = nil
+            })
+        }
+    }
 }

@@ -36,6 +36,8 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         
         loadOnlineHouses()
         
+        self.tableView.separatorColor = UIColor.clearColor()
+        
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: "loadOnlineHouses", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl!)
@@ -141,10 +143,21 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         
         self.distanceCell = String(format: "%.2f m", shop.distance!)
         
-        
         cell.DistanceFromUser.text = self.distanceCell
         
-        return cell
+        let separatorIdentifier = "shopCellSeparator"
+        let separatorCell = tableView.dequeueReusableCellWithIdentifier(separatorIdentifier, forIndexPath: indexPath) 
+        
+        separatorCell.imageView?.image = UIImage(named: "cell_separator")
+        
+        
+        if(Int(indexPath.row.value) % 2 == 0){
+            return cell
+        }else{
+            return separatorCell
+        }
+        
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "nav_bar"), forBarMetrics: .Default)
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = UIColor.blackColor()
         
         IQKeyboardManager.sharedManager().enable = true
         

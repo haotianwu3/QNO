@@ -11,10 +11,20 @@ import UIKit
 class HouseLoginViewController: MasterViewController {
 
     @IBOutlet weak var houseNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         self.isLoginPage = true
         super.viewDidLoad()
+        
+        let singleTap = UITapGestureRecognizer(target: self, action: "hideKeyboard")
+        singleTap.numberOfTapsRequired = 1
+        singleTap.numberOfTouchesRequired = 1
+        singleTap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(singleTap)
+        
+        houseNameTextField.attributedPlaceholder = NSAttributedString(string: "User Name / Email Address", attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.7)])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.7)])
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -38,6 +48,11 @@ class HouseLoginViewController: MasterViewController {
         
         QNOStorage.setHouseName(houseName)
         self.performSegueWithIdentifier("house_login", sender: self)
+    }
+    
+    func hideKeyboard() {
+        houseNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
 }

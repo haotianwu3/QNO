@@ -49,14 +49,14 @@
                                 <rect key="frame" x="245" y="245" width="110" height="30"/>
                                 <state key="normal" title="I am a customer"/>
                                 <connections>
-                                    <segue destination="o3V-Zy-GgW" kind="show" id="nlS-CV-Wka"/>
+                                    <segue destination="o3V-Zy-GgW" kind="show" identifier="customer_login" id="nlS-CV-Wka"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="map-3p-ZPa">
                                 <rect key="frame" x="242" y="325" width="117" height="30"/>
                                 <state key="normal" title="I run a restaurant"/>
                                 <connections>
-                                    <segue destination="WBn-oY-ZvN" kind="show" id="5Nr-H4-m1g"/>
+                                    <segue destination="WBn-oY-ZvN" kind="show" identifier="restaurant_login" id="5Nr-H4-m1g"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -18,6 +18,7 @@ class QNOStorage {
             Defaults.remove(houseNameKey)
         } else {
             Defaults[houseNameKey] = houseName!
+            QNOStorage.setCustomerId(nil)
         }
     }
     
@@ -30,6 +31,7 @@ class QNOStorage {
             Defaults.remove(customerIdKey)
         } else {
             Defaults[customerIdKey] = account!
+            QNOStorage.setHouseName(nil)
         }
     }
     

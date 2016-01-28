@@ -9,5 +9,19 @@
 import UIKit
 
 class SelectRoleViewController: MasterViewController {
-
+    
+    var jumped = false
+    
+    override func viewDidAppear(animated: Bool) {
+        if jumped {
+            return
+        }
+        
+        jumped = true
+        if QNOStorage.getCustomerId() != nil {
+            self.performSegueWithIdentifier("customer_login", sender: nil)
+        } else if QNOStorage.getHouseName() != nil {
+            self.performSegueWithIdentifier("restaurant_login", sender: nil)
+        }
+    }
 }

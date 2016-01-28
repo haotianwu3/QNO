@@ -12,6 +12,11 @@ class HouseLoginViewController: MasterViewController {
 
     @IBOutlet weak var houseNameTextField: UITextField!
     
+    override func viewDidLoad() {
+        self.isLoginPage = true
+        super.viewDidLoad()
+    }
+    
     override func viewDidAppear(animated: Bool) {
         if let houseName = QNOStorage.getHouseName() {
             houseNameTextField.text = houseName

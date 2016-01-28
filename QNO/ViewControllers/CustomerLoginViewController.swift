@@ -13,6 +13,7 @@ class CustomerLoginViewController: MasterViewController {
     @IBOutlet weak var accountTextField: UITextField!
     
     override func viewDidLoad() {
+        self.isLoginPage = true
         super.viewDidLoad()
         
         let singleTap = UITapGestureRecognizer(target: self, action: "hideKeyboard")

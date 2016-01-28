@@ -45,9 +45,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="fsr-0g-Rdh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-E2-4oV">
                                 <rect key="frame" x="150" y="75" width="300" height="450"/>
                                 <subviews>
@@ -92,11 +89,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FpZ-E2-4oV" firstAttribute="centerY" secondItem="2QF-uo-7aY" secondAttribute="centerY" id="2ac-ct-TgQ"/>
-                            <constraint firstItem="fsr-0g-Rdh" firstAttribute="width" secondItem="2QF-uo-7aY" secondAttribute="width" id="Byq-fr-MDD"/>
-                            <constraint firstItem="fsr-0g-Rdh" firstAttribute="centerX" secondItem="2QF-uo-7aY" secondAttribute="centerX" id="CmD-Ji-gJJ"/>
-                            <constraint firstItem="fsr-0g-Rdh" firstAttribute="height" secondItem="2QF-uo-7aY" secondAttribute="height" id="aZ6-jX-JB9"/>
                             <constraint firstItem="FpZ-E2-4oV" firstAttribute="centerX" secondItem="2QF-uo-7aY" secondAttribute="centerX" id="hcw-bK-y2k"/>
-                            <constraint firstItem="fsr-0g-Rdh" firstAttribute="centerY" secondItem="2QF-uo-7aY" secondAttribute="centerY" id="mkR-rK-nRv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QuF-gJ-w6g"/>
@@ -1367,9 +1360,8 @@
         <image name="defaultImage" width="166" height="242"/>
         <image name="full_logo" width="510" height="380"/>
         <image name="location" width="30" height="30"/>
-        <image name="login_background" width="638" height="1276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7X3-nn-e7d"/>
+        <segue reference="Jwp-na-Ru1"/>
     </inferredMetricsTieBreakers>
 </document>

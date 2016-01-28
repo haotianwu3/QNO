@@ -22,6 +22,9 @@ class HouseRegistrationViewController: MasterViewController {
     
     
     override func viewDidLoad() {
+        self.isLoginPage = true
+        super.viewDidLoad()
+        
         let singleTap = UITapGestureRecognizer(target: self, action: "hideKeyboard")
         singleTap.numberOfTapsRequired = 1
         singleTap.numberOfTouchesRequired = 1

@@ -19,6 +19,11 @@ class CustomerRegisterViewController: MasterViewController {
     
     @IBOutlet weak var addressTextField: UITextField!
     
+    override func viewDidLoad() {
+        self.isLoginPage = true
+        super.viewDidLoad()
+    }
+    
     // return error, nil if no error
     func validateForm() -> String? {
         let account = accountTextField.text

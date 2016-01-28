@@ -12,6 +12,11 @@ class SelectRoleViewController: MasterViewController {
     
     var jumped = false
     
+    override func viewDidLoad() {
+        self.isLoginPage = true
+        super.viewDidLoad()
+    }
+    
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true
     }

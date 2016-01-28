@@ -28,8 +28,9 @@ class UserMainAdsTableViewCell: UITableViewCell {
         houseImageView.layer.shadowOpacity = 0.6
         
         
-        houseNAmeTextLabel.layer.shadowColor = UIColor.grayColor().CGColor
-        houseNAmeTextLabel.layer.shadowRadius = 1.0
+        houseNAmeTextLabel.layer.shadowColor = UIColor.blackColor().CGColor
+        houseNAmeTextLabel.layer.shadowOffset = CGSizeMake(0.0, 0.0)
+        houseNAmeTextLabel.layer.shadowRadius = 0.8
         houseNAmeTextLabel.layer.shadowOpacity = 0.8
         // Initialization code
     }

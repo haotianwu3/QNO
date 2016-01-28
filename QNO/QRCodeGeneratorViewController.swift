@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QRCodeGenerator: MasterViewController {
+class QRCodeGeneratorViewController: MasterViewController {
     var link: String!
     
     @IBOutlet weak var ShopLinkVariable: UILabel!

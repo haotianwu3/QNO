@@ -258,7 +258,8 @@ class QueueManageViewController: MasterTableViewController {
             dest.expectedNumber = expectedNs[index!]
             dest.ticketNumber = tickNs[index!]
         } else if segue.identifier == "show_qr" {
-            let dest = segue.destinationViewController as! QRCodeGenerator
+            let nav = segue.destinationViewController as! UINavigationController
+            let dest = nav.viewControllers[0] as! QRCodeGeneratorViewController
             dest.link = self.linkToBeGeneratedToQRCode
         }
     }

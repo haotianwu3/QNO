@@ -406,7 +406,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="kIG-c6-OW0" kind="presentation" identifier="show_qr" id="DCK-UD-NoL"/>
+                        <segue destination="tDK-iz-kaa" kind="presentation" identifier="show_qr" id="DCK-UD-NoL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mn4-Lq-p7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1295,10 +1295,10 @@
             </objects>
             <point key="canvasLocation" x="3030" y="2601"/>
         </scene>
-        <!--Code Generator-->
+        <!--Code Generator View Controller-->
         <scene sceneID="25w-Ag-Ab7">
             <objects>
-                <viewController id="kIG-c6-OW0" customClass="QRCodeGenerator" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kIG-c6-OW0" customClass="QRCodeGeneratorViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ubZ-sM-sSo"/>
                         <viewControllerLayoutGuide type="bottom" id="RfJ-Wy-8dk"/>
@@ -1307,7 +1307,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Variable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-RM-vqn">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shop Variable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-RM-vqn">
                                 <rect key="frame" x="0.0" y="100" width="600" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1340,20 +1340,9 @@
                                     <action selector="changeImageViewScale:" destination="kIG-c6-OW0" eventType="valueChanged" id="lIF-2P-VUc"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-Jn-RbU">
-                                <rect key="frame" x="550" y="28" width="30" height="70"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <state key="normal" title="x">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="close:" destination="kIG-c6-OW0" eventType="touchUpInside" id="ssz-iP-aBO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="N5g-Jn-RbU" firstAttribute="trailing" secondItem="Hhe-GI-HWa" secondAttribute="trailingMargin" id="Edc-Ii-uMe"/>
                             <constraint firstItem="27V-l4-zwF" firstAttribute="width" secondItem="Hhe-GI-HWa" secondAttribute="width" multiplier="0.8" id="FEn-aN-oiL"/>
                             <constraint firstItem="ftS-RM-vqn" firstAttribute="centerX" secondItem="Hhe-GI-HWa" secondAttribute="centerX" id="ILM-dI-QTO"/>
                             <constraint firstItem="fZR-t1-VrW" firstAttribute="centerY" secondItem="Hhe-GI-HWa" secondAttribute="centerY" id="Ump-dK-wyf"/>
@@ -1361,11 +1350,17 @@
                             <constraint firstItem="fZR-t1-VrW" firstAttribute="centerX" secondItem="Hhe-GI-HWa" secondAttribute="centerX" id="rAj-md-NNg"/>
                             <constraint firstAttribute="trailing" secondItem="ftS-RM-vqn" secondAttribute="trailing" id="rsY-7s-Kig"/>
                             <constraint firstAttribute="bottom" secondItem="27V-l4-zwF" secondAttribute="bottom" constant="20" symbolic="YES" id="t8A-4z-MdI"/>
-                            <constraint firstItem="N5g-Jn-RbU" firstAttribute="top" secondItem="ubZ-sM-sSo" secondAttribute="bottom" constant="8" symbolic="YES" id="taO-TR-D8E"/>
                             <constraint firstItem="ftS-RM-vqn" firstAttribute="leading" secondItem="Hhe-GI-HWa" secondAttribute="leading" id="v7Y-9Y-mfG"/>
                             <constraint firstItem="27V-l4-zwF" firstAttribute="centerX" secondItem="Hhe-GI-HWa" secondAttribute="centerX" id="wPW-yf-Prh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aYA-sE-GAY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Fl3-Qb-cWs">
+                            <connections>
+                                <action selector="close:" destination="kIG-c6-OW0" id="mmk-4J-j0M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="QRCodeDisplayArea" destination="fZR-t1-VrW" id="PQ9-hU-23d"/>
                         <outlet property="QRCodeSizeSlider" destination="27V-l4-zwF" id="g04-tS-Y7C"/>
@@ -1374,7 +1369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGK-ek-KxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="4939"/>
+            <point key="canvasLocation" x="692" y="4939"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tWY-Qa-U4b">
@@ -1536,6 +1531,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4V-YJ-4EO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-932" y="4162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ntC-MX-bIT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tDK-iz-kaa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O8M-xN-2gM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kIG-c6-OW0" kind="relationship" relationship="rootViewController" id="d20-Pu-b11"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3p-Wg-cF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="4939"/>
         </scene>
     </scenes>
     <resources>

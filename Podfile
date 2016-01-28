@@ -10,6 +10,7 @@ pod "PKHUD"
 pod 'SwiftyUserDefaults'
 pod 'MGSwipeTableCell'
 pod 'SDWebImage', '~>3.7'
+pod 'IQKeyboardManagerSwift'
 
 end
 
@@ -25,6 +26,7 @@ target 'QNOUITests' do
 pod "PKHUD"
 pod 'MGSwipeTableCell'
 pod 'SDWebImage', '~>3.7'
+pod 'IQKeyboardManagerSwift'
 
 end
 

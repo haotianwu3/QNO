@@ -11,6 +11,7 @@ import UIKit
 class CustomerLoginViewController: MasterViewController {
     
     @IBOutlet weak var accountTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         self.isLoginPage = true
@@ -21,6 +22,9 @@ class CustomerLoginViewController: MasterViewController {
         singleTap.numberOfTouchesRequired = 1
         singleTap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(singleTap)
+        
+        accountTextField.attributedPlaceholder = NSAttributedString(string: "User Name / Email Address", attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.7)])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.7)])
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -42,5 +46,6 @@ class CustomerLoginViewController: MasterViewController {
     
     func hideKeyboard() {
         accountTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
 }

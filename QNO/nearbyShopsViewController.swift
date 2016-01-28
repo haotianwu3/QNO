@@ -135,7 +135,7 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
             
             // Fetches the appropriate meal for the data source layout.
             let shop = shops[indexPath.row / 2]
-            
+            cell.backgroundColor = UIColor.clearColor()
             cell.ShopTitle.text = shop.Name
             cell.ShopDecription.text = shop.ShopDescription
             if shop.hasLogo {
@@ -153,6 +153,7 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         }else{
             let separatorIdentifier = "shopCellSeparator"
             let separatorCell = tableView.dequeueReusableCellWithIdentifier(separatorIdentifier, forIndexPath: indexPath)
+            separatorCell.backgroundColor = UIColor.clearColor()
             return separatorCell
         }
         

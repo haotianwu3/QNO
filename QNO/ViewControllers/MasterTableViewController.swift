@@ -13,6 +13,8 @@ class MasterTableViewController: UITableViewController {
     override func viewDidLoad() {
         let bgImage = UIImage(named: "page_background_1")
         self.tableView.backgroundColor = UIColor(patternImage: bgImage!)
+        
+        self.tableView.separatorColor = UIColor.clearColor()
         //let bgImageView = UIImageView(image: bgImage)
         //bgImageView.contentMode = .ScaleAspectFill
         //self.tableView.addSubview(bgImageView)

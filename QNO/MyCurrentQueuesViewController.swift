@@ -27,63 +27,72 @@ class MyCurrentQueuesViewController: MasterTableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("customer_queue") as! CustomerTicketTableCell
         
-        let queueStr = Defaults[customerQueueKey][indexPath.row]
-        let tokens = queueStr.componentsSeparatedByString("&")
-        let houseName = tokens[0].stringByReplacingOccurrencesOfString("+", withString: " ").stringByRemovingPercentEncoding!
-        let queueName = tokens[1].stringByReplacingOccurrencesOfString("+", withString: " ").stringByRemovingPercentEncoding!
-        let ticketNumber = tokens[2]
+        if(Int(indexPath.row.value) % 2 == 0){
+            let cell = tableView.dequeueReusableCellWithIdentifier("customer_queue") as! CustomerTicketTableCell
         
-        cell.houseNameLabel.text = houseName
-        cell.queueNameLabel.text = queueName
-        cell.myTicketNumber.text = ticketNumber
-        cell.expectedNumberLabel.text = "loading"
+            let queueStr = Defaults[customerQueueKey][indexPath.row / 2]
+            let tokens = queueStr.componentsSeparatedByString("&")
+            let houseName = tokens[0].stringByReplacingOccurrencesOfString("+", withString: " ").stringByRemovingPercentEncoding!
+            let queueName = tokens[1].stringByReplacingOccurrencesOfString("+", withString: " ").stringByRemovingPercentEncoding!
+            let ticketNumber = tokens[2]
         
-        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: { (_cell) -> Bool in
-            let iP = self.tableView.indexPathForCell(_cell)!
-            Defaults[customerQueueKey].removeAtIndex(iP.row)
-            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                self.tableView.beginUpdates()
-                self.tableView.deleteRowsAtIndexPaths([iP], withRowAnimation: .Fade)
-                self.tableView.endUpdates()
-            })
-            return true
-        })]
+            cell.houseNameLabel.text = houseName
+            cell.queueNameLabel.text = queueName
+            cell.myTicketNumber.text = ticketNumber
+            cell.expectedNumberLabel.text = "loading"
         
-        let api = QNOAPI()
-        do {
-            try api.requestQueue(houseName, queueName: queueName) { (errorMessage, response) -> Void in
-                guard errorMessage == nil && response != nil else {
-                    let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
-                    return
-                }
-                
-                let responseStr = String(data: response!, encoding: NSUTF8StringEncoding)
-                
-                var tokens = responseStr!.componentsSeparatedByString("Expected next number is: ")
-                tokens = tokens[1].componentsSeparatedByString(", next ticket number is")
-                if tokens.count == 2 {
-                    NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
-                        let _cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomerTicketTableCell
-                        _cell.expectedNumberLabel.text = "\(tokens[0])"
+            cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: { (_cell) -> Bool in
+                let iP = self.tableView.indexPathForCell(_cell)!
+                Defaults[customerQueueKey].removeAtIndex(iP.row)
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.tableView.beginUpdates()
+                    self.tableView.deleteRowsAtIndexPaths([iP], withRowAnimation: .Fade)
+                    self.tableView.endUpdates()
+                })
+                return true
+            })]
+        
+            let api = QNOAPI()
+            do {
+                try api.requestQueue(houseName, queueName: queueName) { (errorMessage, response) -> Void in
+                    guard errorMessage == nil && response != nil else {
+                        let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        return
                     }
-                } else {
-                    let alertController = UIAlertController(title: "Error", message: "Invalid response", preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
+                
+                    let responseStr = String(data: response!, encoding: NSUTF8StringEncoding)
+                
+                    var tokens = responseStr!.componentsSeparatedByString("Expected next number is: ")
+                    tokens = tokens[1].componentsSeparatedByString(", next ticket number is")
+                    if tokens.count == 2 {
+                        NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+                            let _cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomerTicketTableCell
+                            _cell.expectedNumberLabel.text = "\(tokens[0])"
+                        }
+                    } else {
+                        let alertController = UIAlertController(title: "Error", message: "Invalid response", preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
                 }
+            } catch QNOAPIRuntimeError.InvalidOperation {
+                let alertController = UIAlertController(title: "Invalid operation", message: "The operation is not permitted.", preferredStyle: .Alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+            } catch {
+                print("Unknown error")
             }
-        } catch QNOAPIRuntimeError.InvalidOperation {
-            let alertController = UIAlertController(title: "Invalid operation", message: "The operation is not permitted.", preferredStyle: .Alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-        } catch {
-            print("Unknown error")
+            cell.backgroundColor = UIColor.clearColor()
+            return cell
         }
-        
-        return cell
+        else{
+            let separatorIdentifier = "customer_queue_separator"
+            let separatorCell = tableView.dequeueReusableCellWithIdentifier(separatorIdentifier, forIndexPath: indexPath)
+            separatorCell.backgroundColor = UIColor.clearColor()
+            return separatorCell
+        }
     }
 }

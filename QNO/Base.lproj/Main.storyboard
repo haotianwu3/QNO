@@ -1334,7 +1334,7 @@
     </scenes>
     <resources>
         <image name="defaultImage" width="166" height="242"/>
-        <image name="location" width="50" height="50"/>
+        <image name="location" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7X3-nn-e7d"/>

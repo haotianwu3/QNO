@@ -102,7 +102,9 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
         cell.AdsDescription.text = Ad.description
         
         let imageURL = "http://144.214.121.58:8080/JOS/ad/adImage?adId=\(Ad.adId)"
-        cell.AdsImage.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: placeholderImage)
+        let houseImageURL = "http://144.214.121.58:8080/JOS/house/houseLogoImage?houseName=\(Ad.houseName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)"
+        cell.AdsImageView.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: placeholderImage)
+        cell.houseImageView.sd_setImageWithURL(NSURL(string: houseImageURL), placeholderImage: placeholderImage)
         
         return cell
     }

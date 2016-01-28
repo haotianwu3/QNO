@@ -11,12 +11,26 @@ import UIKit
 class UserMainAdsTableViewCell: UITableViewCell {
     
     
-    @IBOutlet weak var AdsImage: UIImageView!
+    @IBOutlet weak var AdsImageView: UIImageView!
+    @IBOutlet weak var houseImageView: UIImageView!
     @IBOutlet weak var houseNAmeTextLabel: UILabel!
     @IBOutlet weak var AdsDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        houseImageView.layer.cornerRadius = houseImageView.frame.size.height / 2
+        houseImageView.layer.masksToBounds = true
+        houseImageView.layer.borderWidth = 5
+        houseImageView.layer.borderColor = UIColor.whiteColor().CGColor
+        houseImageView.layer.shadowColor = UIColor.grayColor().CGColor
+        houseImageView.layer.shadowRadius = 2.0
+        houseImageView.layer.shadowOpacity = 0.6
+        
+        
+        houseNAmeTextLabel.layer.shadowColor = UIColor.grayColor().CGColor
+        houseNAmeTextLabel.layer.shadowRadius = 1.0
+        houseNAmeTextLabel.layer.shadowOpacity = 0.8
         // Initialization code
     }
     

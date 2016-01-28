@@ -29,6 +29,8 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         self.cellLocationManager.delegate = self
         self.cellLocationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.cellLocationManager.requestWhenInUseAuthorization()
@@ -178,7 +180,7 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         let indexPath = self.tableView.indexPathForCell(cell)
         
         // load the selected model
-        let item = self.shops[indexPath!.row]
+        let item = self.shops[indexPath!.row / 2]
         
         let detail = segue.destinationViewController as! DetailViewController
         // set the model to be viewed

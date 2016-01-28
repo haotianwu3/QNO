@@ -12,7 +12,7 @@ import CoreLocation
 import PKHUD
 import SDWebImage
 
-class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class NearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var shops = [Shop]()
     var afterFilterShops = [Shop]()

@@ -991,7 +991,7 @@
         <!--Nearby-->
         <scene sceneID="Td1-Aq-ZCD">
             <objects>
-                <tableViewController id="KWf-Gy-uZ7" customClass="nearbyShopsViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="KWf-Gy-uZ7" customClass="NearbyShopsViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lr8-tt-ecK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

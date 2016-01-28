@@ -838,6 +838,7 @@
                     <connections>
                         <outlet property="tabBar" destination="Xz3-UW-yah" id="jRY-L3-dOC"/>
                         <outlet property="tableView" destination="ael-qX-BIZ" id="xx9-j9-raa"/>
+                        <outlet property="toolbar" destination="Xz3-UW-yah" id="hlh-2r-2AY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YkM-Jz-cLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1219,6 +1220,19 @@
                                     <outlet property="myTicketNumber" destination="SMq-6R-VzC" id="ecV-uG-1Ga"/>
                                     <outlet property="queueNameLabel" destination="lNl-tf-N2A" id="Y6D-lK-OUr"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="customer_queue_separator" rowHeight="22" id="ahY-wR-pwp" customClass="CustomerTicketTableCell" customModule="QNO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="232" width="600" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ahY-wR-pwp" id="mhQ-df-0JY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell_separator" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-Ov-r3l">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -15,6 +15,9 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tabBar: UIToolbar!
     
+    @IBOutlet weak var toolbar: UIToolbar! //duplicated
+    
+    
     var refreshControl: UIRefreshControl?
     
     let placeholderImage = UIImage(named: "no-propertyfound")
@@ -25,6 +28,11 @@ class UserMainViewController: MasterViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         
         self.tabBar.backgroundColor = UIColor(patternImage: UIImage(named: "page_background")!)
+        
+        self.toolbar.backgroundColor = UIColor(patternImage: UIImage(named: "page_background")!)
+        
+        let bgImage = UIImage(named: "page_background_1")
+        self.tableView.backgroundColor = UIColor(patternImage: bgImage!)
         
         self.navigationController
         

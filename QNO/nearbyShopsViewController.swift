@@ -36,6 +36,8 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         
         loadOnlineHouses()
         
+        self.tableView.separatorColor = UIColor.clearColor()
+        
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: "loadOnlineHouses", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl!)
@@ -124,31 +126,39 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "shopCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ShopTableViewCell
         
-        // Fetches the appropriate meal for the data source layout.
-        let shop = shops[indexPath.row]
-        
-        cell.ShopTitle.text = shop.Name
-        cell.ShopDecription.text = shop.ShopDescription
-        if shop.hasLogo {
-            let imageURL = "http://144.214.121.58:8080/JOS/house/houseLogoImage?houseName=\(shop.Name.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)"
-            cell.ShopLogo.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: placeholderImage)
-        } else {
-            cell.ShopLogo.image = placeholderImage
+        if(Int(indexPath.row.value) % 2 == 0){
+            let cellIdentifier = "shopCell"
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ShopTableViewCell
+            
+            // Fetches the appropriate meal for the data source layout.
+            let shop = shops[indexPath.row / 2]
+            
+            cell.ShopTitle.text = shop.Name
+            cell.ShopDecription.text = shop.ShopDescription
+            if shop.hasLogo {
+                let imageURL = "http://144.214.121.58:8080/JOS/house/houseLogoImage?houseName=\(shop.Name.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)"
+                cell.ShopLogo.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: placeholderImage)
+            } else {
+                cell.ShopLogo.image = placeholderImage
+            }
+            
+            self.distanceCell = String(format: "%.2f m", shop.distance!)
+            
+            cell.DistanceFromUser.text = self.distanceCell
+            
+            return cell
+        }else{
+            let separatorIdentifier = "shopCellSeparator"
+            let separatorCell = tableView.dequeueReusableCellWithIdentifier(separatorIdentifier, forIndexPath: indexPath)
+            return separatorCell
         }
         
-        self.distanceCell = String(format: "%.2f m", shop.distance!)
         
-        
-        cell.DistanceFromUser.text = self.distanceCell
-        
-        return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shops.count
+        return shops.count * 2 - 1
     }
     
     override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -156,6 +166,9 @@ class nearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row % 2 == 1 {
+            return 10.0
+        }
         return UITableViewAutomaticDimension
     }
     

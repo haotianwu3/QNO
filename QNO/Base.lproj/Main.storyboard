@@ -756,28 +756,33 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xz3-UW-yah">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91649669408798218" green="0.68562549352645874" blue="0.54242461919784546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Tk4-y4-GwS"/>
                                     <barButtonItem title="Nearby" id="eGb-JA-opP">
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <segue destination="KWf-Gy-uZ7" kind="show" id="kEH-rE-Prj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Uf4-pQ-rA8"/>
                                     <barButtonItem title="My Queues" id="1rm-ud-obe">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="jWC-CF-IHB" kind="show" id="xWg-87-uw3"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zPW-7i-gYr"/>
                                     <barButtonItem title="My Space" id="qTT-eC-NmC">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="s8n-lD-IBH" kind="show" id="uoS-xb-B9u"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="YdG-fM-pi7"/>
                                 </items>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.91649669408798218" green="0.68562549352645874" blue="0.54242461919784546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ael-qX-BIZ">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
@@ -830,10 +835,19 @@
                                                         <constraint firstAttribute="height" constant="60" id="Sbn-ed-r7X"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="S7v-yE-Qco">
+                                                    <rect key="frame" x="557" y="18" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="Sdc-Bc-mRn"/>
+                                                        <constraint firstAttribute="width" constant="25" id="qgG-VI-dbI"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="3NI-AW-pYf" firstAttribute="width" secondItem="b82-qH-SaG" secondAttribute="width" id="BrL-85-ZXP"/>
                                                 <constraint firstItem="b82-qH-SaG" firstAttribute="leading" secondItem="H7Y-40-O7m" secondAttribute="leadingMargin" constant="-8" id="OSe-Lw-J8Y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="S7v-yE-Qco" secondAttribute="trailing" constant="10" id="Ob7-Xx-iF6"/>
+                                                <constraint firstItem="S7v-yE-Qco" firstAttribute="top" secondItem="H7Y-40-O7m" secondAttribute="topMargin" constant="10" id="Onj-XE-JcY"/>
                                                 <constraint firstItem="3NI-AW-pYf" firstAttribute="centerX" secondItem="H7Y-40-O7m" secondAttribute="centerX" id="VQg-la-RyT"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="mWz-0P-DbJ" secondAttribute="trailing" id="Yuo-pI-YRS"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="e2h-pS-JPv" secondAttribute="trailing" id="Zps-86-uAl"/>
@@ -1615,6 +1629,7 @@
         <image name="cell_separator" width="211" height="10"/>
         <image name="defaultImage" width="166" height="242"/>
         <image name="full_logo" width="510" height="380"/>
+        <image name="like" width="52" height="52"/>
         <image name="location" width="30" height="30"/>
         <image name="password" width="50" height="50"/>
         <image name="user" width="50" height="50"/>

@@ -18,24 +18,33 @@ class QueueUpdateViewController: MasterViewController {
     @IBOutlet weak var expectedNumberLabel: UILabel!
     @IBOutlet weak var ticketNumberLabel: UILabel!
     
-    @IBOutlet weak var eNStepper: UIStepper!
-    @IBOutlet weak var tNStepper: UIStepper!
-    
-    @IBAction func eNvalueChanged(sender: AnyObject) {
-        let picker = sender as! UIStepper
-        expectedNumber = Int(picker.value)
+    @IBAction func addEN(sender: AnyObject) {
+        expectedNumber = expectedNumber + 1
         expectedNumberLabel.text = "Expected: \(expectedNumber)"
     }
     
-    @IBAction func tNValueChanged(sender: AnyObject) {
-        let picker = sender as! UIStepper
-        ticketNumber = Int(picker.value)
+    @IBAction func minusEN(sender: AnyObject) {
+        expectedNumber = expectedNumber - 1
+        if expectedNumber < 0 {
+            expectedNumber = 0
+        }
+        expectedNumberLabel.text = "Expected: \(expectedNumber)"
+    }
+    
+    @IBAction func addTN(sender: AnyObject) {
+        ticketNumber = ticketNumber + 1
+        ticketNumberLabel.text = "Ticket: \(ticketNumber)"
+    }
+    
+    @IBAction func minusTN(sender: AnyObject) {
+        ticketNumber = ticketNumber - 1
+        if ticketNumber < 0 {
+            ticketNumber = 0
+        }
         ticketNumberLabel.text = "Ticket: \(ticketNumber)"
     }
     
     override func viewDidLoad() {
-        eNStepper.value = Double(expectedNumber)
-        tNStepper.value = Double(ticketNumber)
         expectedNumberLabel.text = "Expected: \(expectedNumber)"
         ticketNumberLabel.text = "Ticket: \(ticketNumber)"
     }

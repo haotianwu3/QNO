@@ -19,7 +19,7 @@ class MyCurrentQueuesViewController: MasterTableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Defaults[customerQueueKey].count
+        return Defaults[customerQueueKey].count * 2 - 1
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

@@ -1273,17 +1273,25 @@
                                     <outlet property="queueNameLabel" destination="lNl-tf-N2A" id="Y6D-lK-OUr"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="customer_queue_separator" rowHeight="22" id="ahY-wR-pwp" customClass="CustomerTicketTableCell" customModule="QNO" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="232" width="600" height="22"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="shopCellSeparator" rowHeight="10" id="p3L-Me-Awm" customClass="ShopTableViewCell" customModule="QNO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="232" width="600" height="10"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ahY-wR-pwp" id="mhQ-df-0JY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p3L-Me-Awm" id="CBU-af-xZ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="9"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell_separator" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-Ov-r3l">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_separator" translatesAutoresizingMaskIntoConstraints="NO" id="NdU-Sb-Buh">
+                                            <rect key="frame" x="0.0" y="-1" width="600" height="11"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="hfs-ZV-WO4"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NdU-Sb-Buh" firstAttribute="centerY" secondItem="CBU-af-xZ8" secondAttribute="centerY" id="YAS-eB-Xtz"/>
+                                        <constraint firstItem="NdU-Sb-Buh" firstAttribute="centerX" secondItem="CBU-af-xZ8" secondAttribute="centerX" id="ap7-uu-aO9"/>
+                                        <constraint firstItem="NdU-Sb-Buh" firstAttribute="width" secondItem="CBU-af-xZ8" secondAttribute="width" id="rlL-fO-OfC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

@@ -23,7 +23,11 @@ class MyCurrentQueuesViewController: MasterTableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        if indexPath.row % 2 == 0 {
+            return 100
+        } else {
+            return 10
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -87,9 +91,8 @@ class MyCurrentQueuesViewController: MasterTableViewController {
             }
             cell.backgroundColor = UIColor.clearColor()
             return cell
-        }
-        else{
-            let separatorIdentifier = "customer_queue_separator"
+        } else {
+            let separatorIdentifier = "shopCellSeparator"
             let separatorCell = tableView.dequeueReusableCellWithIdentifier(separatorIdentifier, forIndexPath: indexPath)
             separatorCell.backgroundColor = UIColor.clearColor()
             return separatorCell

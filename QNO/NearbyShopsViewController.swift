@@ -150,7 +150,7 @@ class NearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
             cell.DistanceFromUser.text = self.distanceCell
             
             return cell
-        }else{
+        } else {
             let separatorIdentifier = "shopCellSeparator"
             let separatorCell = tableView.dequeueReusableCellWithIdentifier(separatorIdentifier, forIndexPath: indexPath)
             separatorCell.backgroundColor = UIColor.clearColor()

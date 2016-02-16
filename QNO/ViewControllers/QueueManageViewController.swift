@@ -21,6 +21,8 @@ class QueueManageViewController: MasterTableViewController {
     var linkToBeGeneratedToQRCode: String!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         houseName = QNOStorage.getHouseName()!
         
         refreshControl = UIRefreshControl()

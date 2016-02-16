@@ -45,6 +45,7 @@ class QueueUpdateViewController: MasterViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         expectedNumberLabel.text = "Expected: \(expectedNumber)"
         ticketNumberLabel.text = "Ticket: \(ticketNumber)"
     }

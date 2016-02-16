@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 import SDWebImage
 
-class UserMainViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate {
+class CustomerEntryViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tabBar: UIToolbar!

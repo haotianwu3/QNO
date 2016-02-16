@@ -7,10 +7,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Customer Demo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainEntryViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainEntryViewController" id="BYZ-38-t0r" customClass="CustomerDemoViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -745,7 +745,7 @@
         <!--QNO-->
         <scene sceneID="Zja-vN-GYH">
             <objects>
-                <viewController id="H75-JL-SAV" customClass="UserMainViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="H75-JL-SAV" customClass="CustomerEntryViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YfA-QO-zwE"/>
                         <viewControllerLayoutGuide type="bottom" id="1za-8g-6Dk"/>
@@ -918,7 +918,7 @@
         <!--My Space-->
         <scene sceneID="tib-VT-0aS">
             <objects>
-                <viewController id="s8n-lD-IBH" customClass="MySpaceViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="s8n-lD-IBH" customClass="CustomerSpaceViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BIG-U2-4MU"/>
                         <viewControllerLayoutGuide type="bottom" id="YlH-rf-vkR"/>
@@ -1147,7 +1147,7 @@
         <!--Shop Location-->
         <scene sceneID="YiZ-R2-0Bl">
             <objects>
-                <viewController id="UWz-97-mh7" customClass="DetailViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UWz-97-mh7" customClass="HouseMapViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V08-aB-YHU"/>
                         <viewControllerLayoutGuide type="bottom" id="nMN-hU-vIK"/>
@@ -1193,7 +1193,7 @@
         <!--My Tickets-->
         <scene sceneID="rSN-T2-s4o">
             <objects>
-                <tableViewController title="My Tickets" id="jWC-CF-IHB" customClass="MyCurrentQueuesViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="My Tickets" id="jWC-CF-IHB" customClass="CustomerTicketsViewController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xER-SO-Zm5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

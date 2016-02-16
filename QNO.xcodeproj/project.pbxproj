@@ -9,26 +9,13 @@
 /* Begin PBXBuildFile section */
 		51F718A91C0E355518924DF1 /* Pods_QNOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FE372C8F943F1B839A7609 /* Pods_QNOUITests.framework */; };
 		9392B6C5BBF629BFFE597625 /* Pods_QNOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169199A5DA078031217D31FD /* Pods_QNOTests.framework */; };
-		A9107CA51C4549BC00BCF790 /* UserMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9107CA41C4549BC00BCF790 /* UserMainViewController.swift */; };
-		A9107CA71C4549FF00BCF790 /* UserMainAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9107CA61C4549FF00BCF790 /* UserMainAds.swift */; };
-		A9107CA91C454B0400BCF790 /* UserMainAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */; };
-		A97E35731C4774A7009552FA /* MyCurrentQueuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */; };
-		A97E35751C47770E009552FA /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E35741C47770E009552FA /* CategoryRow.swift */; };
 		A9A563731C730CB5007B96AE /* RadiusCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A563721C730CB5007B96AE /* RadiusCornerView.swift */; };
-		A9ADAE841C44E0FC00EC31A3 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */; };
-		A9B38BA51C46769F00C9227C /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA41C46769F00C9227C /* Shop.swift */; };
-		A9B38BA71C4679ED00C9227C /* NearbyShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA61C4679ED00C9227C /* NearbyShopsViewController.swift */; };
-		A9B38BA91C467A5400C9227C /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */; };
-		A9B38BAB1C467C9100C9227C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38BAA1C467C9100C9227C /* DetailViewController.swift */; };
-		A9C6EAFE1C47561300F199A9 /* QRCodeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6EAFD1C47561300F199A9 /* QRCodeGeneratorViewController.swift */; };
 		A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFD01C436EDE0050474D /* AppDelegate.swift */; };
-		A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFD21C436EDE0050474D /* ViewController.swift */; };
 		A9E4AFD61C436EDE0050474D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E4AFD41C436EDE0050474D /* Main.storyboard */; };
 		A9E4AFD81C436EDE0050474D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E4AFD71C436EDE0050474D /* Assets.xcassets */; };
 		A9E4AFDB1C436EDE0050474D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E4AFD91C436EDE0050474D /* LaunchScreen.storyboard */; };
 		A9E4AFE61C436EDE0050474D /* QNOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFE51C436EDE0050474D /* QNOTests.swift */; };
 		A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFF01C436EDE0050474D /* QNOUITests.swift */; };
-		A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4AFFE1C4371060050474D /* PageItemController.swift */; };
 		B21488A11C44E09800922957 /* HouseRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */; };
 		B21488A21C44E09800922957 /* HouseRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */; };
 		B21488A41C44F96300922957 /* QueueManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488A31C44F96300922957 /* QueueManageViewController.swift */; };
@@ -41,8 +28,21 @@
 		B21488B01C453C4300922957 /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21488AE1C453C4300922957 /* QueueTableViewCell.swift */; };
 		B21579831C46369900F188C8 /* QNOStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21579821C46369900F188C8 /* QNOStorage.swift */; };
 		B21579841C46369900F188C8 /* QNOStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21579821C46369900F188C8 /* QNOStorage.swift */; };
-		B26677E41C4943D40005955D /* MySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26677E31C4943D40005955D /* MySpaceViewController.swift */; };
-		B26677E51C4943D50005955D /* MySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26677E31C4943D40005955D /* MySpaceViewController.swift */; };
+		B24BE94B1C7327BF007000C9 /* CustomerTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE94A1C7327BF007000C9 /* CustomerTicketsViewController.swift */; };
+		B24BE94D1C73283D007000C9 /* CustomerEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE94C1C73283D007000C9 /* CustomerEntryViewController.swift */; };
+		B24BE9501C73284C007000C9 /* NearbyShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE94E1C73284C007000C9 /* NearbyShopsViewController.swift */; };
+		B24BE9511C73284C007000C9 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE94F1C73284C007000C9 /* QRCodeReaderViewController.swift */; };
+		B24BE9551C73285D007000C9 /* HouseMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE9521C73285D007000C9 /* HouseMapViewController.swift */; };
+		B24BE9561C73285D007000C9 /* CustomerDemoPageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE9531C73285D007000C9 /* CustomerDemoPageItemController.swift */; };
+		B24BE9571C73285D007000C9 /* CustomerDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE9541C73285D007000C9 /* CustomerDemoViewController.swift */; };
+		B24BE95B1C732878007000C9 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE9581C732878007000C9 /* CategoryRow.swift */; };
+		B24BE95C1C732878007000C9 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE9591C732878007000C9 /* ShopTableViewCell.swift */; };
+		B24BE95D1C732878007000C9 /* UserMainAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE95A1C732878007000C9 /* UserMainAdsTableViewCell.swift */; };
+		B24BE95F1C73287F007000C9 /* QRCodeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE95E1C73287F007000C9 /* QRCodeGeneratorViewController.swift */; };
+		B24BE9621C73289A007000C9 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE9601C73289A007000C9 /* Shop.swift */; };
+		B24BE9631C73289A007000C9 /* UserMainAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BE9611C73289A007000C9 /* UserMainAds.swift */; };
+		B26677E41C4943D40005955D /* CustomerSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26677E31C4943D40005955D /* CustomerSpaceViewController.swift */; };
+		B26677E51C4943D50005955D /* CustomerSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26677E31C4943D40005955D /* CustomerSpaceViewController.swift */; };
 		B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F61C43D43500FF6DD0 /* QNOAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */; };
 		B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */; };
@@ -83,21 +83,9 @@
 		47FE372C8F943F1B839A7609 /* Pods_QNOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CFCE858D8B68355F829BEA /* Pods-QNOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QNOUITests/Pods-QNOUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A403FA7B2F044A8F710514EC /* Pods-QNO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QNO/Pods-QNO.debug.xcconfig"; sourceTree = "<group>"; };
-		A9107CA41C4549BC00BCF790 /* UserMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMainViewController.swift; sourceTree = "<group>"; };
-		A9107CA61C4549FF00BCF790 /* UserMainAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMainAds.swift; sourceTree = "<group>"; };
-		A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMainAdsTableViewCell.swift; sourceTree = "<group>"; };
-		A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCurrentQueuesViewController.swift; sourceTree = "<group>"; };
-		A97E35741C47770E009552FA /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		A9A563721C730CB5007B96AE /* RadiusCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadiusCornerView.swift; path = ViewControllers/SubViewControllers/RadiusCornerView.swift; sourceTree = "<group>"; };
-		A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
-		A9B38BA41C46769F00C9227C /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
-		A9B38BA61C4679ED00C9227C /* NearbyShopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyShopsViewController.swift; sourceTree = "<group>"; };
-		A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
-		A9B38BAA1C467C9100C9227C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		A9C6EAFD1C47561300F199A9 /* QRCodeGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeGeneratorViewController.swift; sourceTree = "<group>"; };
 		A9E4AFCD1C436EDE0050474D /* QNO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QNO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E4AFD01C436EDE0050474D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9E4AFD21C436EDE0050474D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9E4AFD51C436EDE0050474D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9E4AFD71C436EDE0050474D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9E4AFDA1C436EDE0050474D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,7 +96,6 @@
 		A9E4AFEC1C436EDE0050474D /* QNOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QNOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E4AFF01C436EDE0050474D /* QNOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QNOUITests.swift; sourceTree = "<group>"; };
 		A9E4AFF21C436EDE0050474D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9E4AFFE1C4371060050474D /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		ABCF6773C69B4BD74561DC4E /* Pods-QNOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNOUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QNOUITests/Pods-QNOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseRegistrationViewController.swift; path = ViewControllers/HouseRegistrationViewController.swift; sourceTree = "<group>"; };
 		B21488A31C44F96300922957 /* QueueManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueManageViewController.swift; path = ViewControllers/QueueManageViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +104,20 @@
 		B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerLoginViewController.swift; path = ViewControllers/CustomerLoginViewController.swift; sourceTree = "<group>"; };
 		B21488AE1C453C4300922957 /* QueueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueTableViewCell.swift; path = ViewControllers/SubViewControllers/QueueTableViewCell.swift; sourceTree = "<group>"; };
 		B21579821C46369900F188C8 /* QNOStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOStorage.swift; path = Classes/QNOStorage.swift; sourceTree = "<group>"; };
-		B26677E31C4943D40005955D /* MySpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MySpaceViewController.swift; path = ViewControllers/MySpaceViewController.swift; sourceTree = "<group>"; };
+		B24BE94A1C7327BF007000C9 /* CustomerTicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerTicketsViewController.swift; path = ViewControllers/CustomerTicketsViewController.swift; sourceTree = "<group>"; };
+		B24BE94C1C73283D007000C9 /* CustomerEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerEntryViewController.swift; path = ViewControllers/CustomerEntryViewController.swift; sourceTree = "<group>"; };
+		B24BE94E1C73284C007000C9 /* NearbyShopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NearbyShopsViewController.swift; path = ViewControllers/NearbyShopsViewController.swift; sourceTree = "<group>"; };
+		B24BE94F1C73284C007000C9 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = ViewControllers/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		B24BE9521C73285D007000C9 /* HouseMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseMapViewController.swift; path = ViewControllers/HouseMapViewController.swift; sourceTree = "<group>"; };
+		B24BE9531C73285D007000C9 /* CustomerDemoPageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerDemoPageItemController.swift; path = ViewControllers/CustomerDemoPageItemController.swift; sourceTree = "<group>"; };
+		B24BE9541C73285D007000C9 /* CustomerDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerDemoViewController.swift; path = ViewControllers/CustomerDemoViewController.swift; sourceTree = "<group>"; };
+		B24BE9581C732878007000C9 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryRow.swift; path = ViewControllers/SubViewControllers/CategoryRow.swift; sourceTree = "<group>"; };
+		B24BE9591C732878007000C9 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopTableViewCell.swift; path = ViewControllers/SubViewControllers/ShopTableViewCell.swift; sourceTree = "<group>"; };
+		B24BE95A1C732878007000C9 /* UserMainAdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMainAdsTableViewCell.swift; path = ViewControllers/SubViewControllers/UserMainAdsTableViewCell.swift; sourceTree = "<group>"; };
+		B24BE95E1C73287F007000C9 /* QRCodeGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeGeneratorViewController.swift; path = ViewControllers/QRCodeGeneratorViewController.swift; sourceTree = "<group>"; };
+		B24BE9601C73289A007000C9 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shop.swift; path = Classes/Shop.swift; sourceTree = "<group>"; };
+		B24BE9611C73289A007000C9 /* UserMainAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMainAds.swift; path = Classes/UserMainAds.swift; sourceTree = "<group>"; };
+		B26677E31C4943D40005955D /* CustomerSpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerSpaceViewController.swift; path = ViewControllers/CustomerSpaceViewController.swift; sourceTree = "<group>"; };
 		B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPI.swift; path = Classes/QNOAPI.swift; sourceTree = "<group>"; };
 		B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QNOAPIError.swift; path = Classes/QNOAPIError.swift; sourceTree = "<group>"; };
 		B2BFA3311C48D57900BE97DC /* CustomerRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerRegisterViewController.swift; path = ViewControllers/CustomerRegisterViewController.swift; sourceTree = "<group>"; };
@@ -263,11 +263,11 @@
 		B2A924F31C43D3FA00FF6DD0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A9107CA61C4549FF00BCF790 /* UserMainAds.swift */,
 				B2A924F41C43D43500FF6DD0 /* QNOAPI.swift */,
 				B2A924F71C43D55800FF6DD0 /* QNOAPIError.swift */,
 				B21579821C46369900F188C8 /* QNOStorage.swift */,
-				A9B38BA41C46769F00C9227C /* Shop.swift */,
+				B24BE9601C73289A007000C9 /* Shop.swift */,
+				B24BE9611C73289A007000C9 /* UserMainAds.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -280,7 +280,6 @@
 				B21488A01C44E09800922957 /* HouseRegistrationViewController.swift */,
 				B21488A31C44F96300922957 /* QueueManageViewController.swift */,
 				B2C8B68A1C47CBA900173925 /* QueueUpdateViewController.swift */,
-				A9C6EAFD1C47561300F199A9 /* QRCodeGeneratorViewController.swift */,
 			);
 			name = House;
 			sourceTree = "<group>";
@@ -288,16 +287,16 @@
 		B2C8B6901C4817E500173925 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
-				A9107CA41C4549BC00BCF790 /* UserMainViewController.swift */,
 				B21488AA1C45391D00922957 /* CustomerLoginViewController.swift */,
 				B2BFA3311C48D57900BE97DC /* CustomerRegisterViewController.swift */,
-				A9ADAE831C44E0FC00EC31A3 /* QRCodeReaderViewController.swift */,
-				A9B38BA61C4679ED00C9227C /* NearbyShopsViewController.swift */,
-				A9B38BAA1C467C9100C9227C /* DetailViewController.swift */,
-				A97E35721C4774A7009552FA /* MyCurrentQueuesViewController.swift */,
-				A9E4AFD21C436EDE0050474D /* ViewController.swift */,
-				A9E4AFFE1C4371060050474D /* PageItemController.swift */,
-				B26677E31C4943D40005955D /* MySpaceViewController.swift */,
+				B24BE94A1C7327BF007000C9 /* CustomerTicketsViewController.swift */,
+				B24BE94E1C73284C007000C9 /* NearbyShopsViewController.swift */,
+				B24BE9521C73285D007000C9 /* HouseMapViewController.swift */,
+				B24BE9531C73285D007000C9 /* CustomerDemoPageItemController.swift */,
+				B24BE9541C73285D007000C9 /* CustomerDemoViewController.swift */,
+				B24BE94F1C73284C007000C9 /* QRCodeReaderViewController.swift */,
+				B24BE94C1C73283D007000C9 /* CustomerEntryViewController.swift */,
+				B26677E31C4943D40005955D /* CustomerSpaceViewController.swift */,
 				B2C8B6911C4817EA00173925 /* SubViewControllers */,
 			);
 			name = Customer;
@@ -306,10 +305,11 @@
 		B2C8B6911C4817EA00173925 /* SubViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A9107CA81C454B0400BCF790 /* UserMainAdsTableViewCell.swift */,
-				A97E35741C47770E009552FA /* CategoryRow.swift */,
-				A9B38BA81C467A5400C9227C /* ShopTableViewCell.swift */,
+				B24BE9581C732878007000C9 /* CategoryRow.swift */,
+				B24BE9591C732878007000C9 /* ShopTableViewCell.swift */,
+				B24BE95A1C732878007000C9 /* UserMainAdsTableViewCell.swift */,
 				B2C8B6921C4824FF00173925 /* CustomerTicketTableCell.swift */,
+				B24BE95E1C73287F007000C9 /* QRCodeGeneratorViewController.swift */,
 				B2C2FF041C5A050D0050AC64 /* InputFieldWrapperView.swift */,
 			);
 			name = SubViewControllers;
@@ -578,35 +578,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9107CA71C4549FF00BCF790 /* UserMainAds.swift in Sources */,
-				A9E4AFFF1C4371060050474D /* PageItemController.swift in Sources */,
 				B21488AB1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
-				A9B38BA51C46769F00C9227C /* Shop.swift in Sources */,
+				B24BE95F1C73287F007000C9 /* QRCodeGeneratorViewController.swift in Sources */,
+				B24BE95D1C732878007000C9 /* UserMainAdsTableViewCell.swift in Sources */,
+				B24BE9621C73289A007000C9 /* Shop.swift in Sources */,
 				B21488A81C452C9300922957 /* HouseLoginViewController.swift in Sources */,
-				A9B38BA71C4679ED00C9227C /* NearbyShopsViewController.swift in Sources */,
 				A9A563731C730CB5007B96AE /* RadiusCornerView.swift in Sources */,
-				B26677E41C4943D40005955D /* MySpaceViewController.swift in Sources */,
-				A97E35751C47770E009552FA /* CategoryRow.swift in Sources */,
+				B26677E41C4943D40005955D /* CustomerSpaceViewController.swift in Sources */,
 				B21488AF1C453C4300922957 /* QueueTableViewCell.swift in Sources */,
+				B24BE9511C73284C007000C9 /* QRCodeReaderViewController.swift in Sources */,
+				B24BE9571C73285D007000C9 /* CustomerDemoViewController.swift in Sources */,
+				B24BE9551C73285D007000C9 /* HouseMapViewController.swift in Sources */,
 				B2A924F81C43D55800FF6DD0 /* QNOAPIError.swift in Sources */,
 				B21488A41C44F96300922957 /* QueueManageViewController.swift in Sources */,
 				B2C8B68B1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */,
-				A9E4AFD31C436EDE0050474D /* ViewController.swift in Sources */,
-				A97E35731C4774A7009552FA /* MyCurrentQueuesViewController.swift in Sources */,
 				B2BFA3381C4922B000BE97DC /* MasterTableViewController.swift in Sources */,
 				B21579831C46369900F188C8 /* QNOStorage.swift in Sources */,
-				A9B38BAB1C467C9100C9227C /* DetailViewController.swift in Sources */,
+				B24BE95C1C732878007000C9 /* ShopTableViewCell.swift in Sources */,
 				B2C8B6931C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */,
+				B24BE95B1C732878007000C9 /* CategoryRow.swift in Sources */,
 				A9E4AFD11C436EDE0050474D /* AppDelegate.swift in Sources */,
 				B2BFA3321C48D57900BE97DC /* CustomerRegisterViewController.swift in Sources */,
-				A9C6EAFE1C47561300F199A9 /* QRCodeGeneratorViewController.swift in Sources */,
+				B24BE9501C73284C007000C9 /* NearbyShopsViewController.swift in Sources */,
+				B24BE94B1C7327BF007000C9 /* CustomerTicketsViewController.swift in Sources */,
 				B21488A61C4501D100922957 /* SelectRoleViewController.swift in Sources */,
 				B21488A11C44E09800922957 /* HouseRegistrationViewController.swift in Sources */,
-				A9107CA51C4549BC00BCF790 /* UserMainViewController.swift in Sources */,
-				A9107CA91C454B0400BCF790 /* UserMainAdsTableViewCell.swift in Sources */,
+				B24BE94D1C73283D007000C9 /* CustomerEntryViewController.swift in Sources */,
+				B24BE9631C73289A007000C9 /* UserMainAds.swift in Sources */,
 				B2BFA3351C49221600BE97DC /* MasterViewController.swift in Sources */,
-				A9B38BA91C467A5400C9227C /* ShopTableViewCell.swift in Sources */,
-				A9ADAE841C44E0FC00EC31A3 /* QRCodeReaderViewController.swift in Sources */,
+				B24BE9561C73285D007000C9 /* CustomerDemoPageItemController.swift in Sources */,
 				B2C2FF051C5A050D0050AC64 /* InputFieldWrapperView.swift in Sources */,
 				B2A924F51C43D43500FF6DD0 /* QNOAPI.swift in Sources */,
 			);
@@ -634,7 +634,7 @@
 				B2C8B68C1C47CBA900173925 /* QueueUpdateViewController.swift in Sources */,
 				B2C8B6941C4824FF00173925 /* CustomerTicketTableCell.swift in Sources */,
 				B2BFA3361C49221600BE97DC /* MasterViewController.swift in Sources */,
-				B26677E51C4943D50005955D /* MySpaceViewController.swift in Sources */,
+				B26677E51C4943D50005955D /* CustomerSpaceViewController.swift in Sources */,
 				B2BFA3331C48D57900BE97DC /* CustomerRegisterViewController.swift in Sources */,
 				B21488AC1C45391D00922957 /* CustomerLoginViewController.swift in Sources */,
 				A9E4AFF11C436EDE0050474D /* QNOUITests.swift in Sources */,

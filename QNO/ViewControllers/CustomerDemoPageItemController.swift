@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageItemController: UIViewController {
+class CustomerDemoPageItemController: UIViewController {
     
     var itemIndex: Int = 0
     var imageName: String = "" {

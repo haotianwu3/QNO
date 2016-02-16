@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 import SDWebImage
 
-class MySpaceViewController: MasterViewController {
+class CustomerSpaceViewController: MasterViewController {
 
     @IBAction func cleanImageCache(sender: AnyObject) {
         SDImageCache.sharedImageCache().clearMemory()

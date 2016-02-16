@@ -183,7 +183,7 @@ class NearbyShopsViewController: MasterTableViewController, MKMapViewDelegate, C
         // load the selected model
         let item = self.shops[indexPath!.row / 2]
         
-        let detail = segue.destinationViewController as! DetailViewController
+        let detail = segue.destinationViewController as! HouseMapViewController
         // set the model to be viewed
         detail.shopName = item.Name
         detail.shopLongitude = item.ShopLongitude!

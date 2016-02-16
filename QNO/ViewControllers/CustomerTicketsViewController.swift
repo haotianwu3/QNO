@@ -10,7 +10,7 @@ import UIKit
 import SwiftyUserDefaults
 import MGSwipeTableCell
 
-class MyCurrentQueuesViewController: MasterTableViewController {
+class CustomerTicketsViewController: MasterTableViewController {
     
     var expectetNumberCache = [Int: Int]()
     

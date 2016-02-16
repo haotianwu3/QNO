@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIPageViewController, UIPageViewControllerDataSource {
+class CustomerDemoViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     private var MainPageViewController: UIPageViewController?
     
@@ -59,7 +59,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        let itemController = viewController as! PageItemController
+        let itemController = viewController as! CustomerDemoPageItemController
         
         if itemController.itemIndex > 0 {
             return getItemController(itemController.itemIndex-1)
@@ -70,7 +70,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        let itemController = viewController as! PageItemController
+        let itemController = viewController as! CustomerDemoPageItemController
         
         if itemController.itemIndex+1 < contentImages.count {
             return getItemController(itemController.itemIndex+1)
@@ -80,10 +80,10 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
 
     
-    private func getItemController(itemIndex: Int) -> PageItemController? {
+    private func getItemController(itemIndex: Int) -> CustomerDemoPageItemController? {
         
         if itemIndex < contentImages.count {
-            let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("MainPageItemController") as! PageItemController
+            let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("MainPageItemController") as! CustomerDemoPageItemController
             pageItemController.itemIndex = itemIndex
             pageItemController.imageName = contentImages[itemIndex]
             return pageItemController

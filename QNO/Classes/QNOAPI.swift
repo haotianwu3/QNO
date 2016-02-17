@@ -126,6 +126,42 @@ class QNOAPI {
     }
     
     // permission: HOUSE
+    func removeQueue(houseName: String, queueName: String, callback: (errorMessage: String?) -> Void) throws {
+        guard (status().rawValue & QNOAPIStatus.HOUSE.rawValue > 0) else {
+            throw QNOAPIRuntimeError.InvalidOperation
+        }
+        
+        let url = "\(URLPrefix)\(housePrefix)/removeQueue"
+        
+        var parameter = [String: AnyObject]()
+        
+        parameter["houseName"] = houseName
+        
+        parameter["queueName"] = queueName
+        
+        Alamofire.request(.POST, url, parameters: parameter).responseString(completionHandler: {response in
+            var HTTPStatus: Int
+            if let httpError = response.result.error {
+                HTTPStatus = httpError.code
+            } else {
+                HTTPStatus = (response.response?.statusCode)!
+            }
+            
+            if HTTPStatus == 200 {
+                callback(errorMessage: nil)
+            } else {
+                var message: String?
+                do {
+                    try message = QNOAPIError.sharedInstance.getMessage(fromHTTPStatus: HTTPStatus)
+                } catch _ {
+                    message = "Unknown error occurs, please contact our support for help."
+                }
+                callback(errorMessage: message)
+            }
+        })
+    }
+    
+    // permission: HOUSE
     func updateQueue(houseName: String, queueName: String, expectedNumber: Int, ticketNumber: Int, callback: (errorMessage: String?) -> Void) throws {
         guard (status().rawValue & QNOAPIStatus.HOUSE.rawValue > 0) else {
             throw QNOAPIRuntimeError.InvalidOperation

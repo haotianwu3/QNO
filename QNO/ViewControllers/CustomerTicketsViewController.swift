@@ -24,7 +24,7 @@ class CustomerTicketsViewController: MasterTableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row % 2 == 0 {
-            return 100
+            return 130
         } else {
             return 10
         }
@@ -43,16 +43,15 @@ class CustomerTicketsViewController: MasterTableViewController {
         
             cell.houseNameLabel.text = houseName
             cell.queueNameLabel.text = queueName
+            cell.estimatedTimeLabel.text = "Estimated waiting time: loading"
             cell.myTicketNumber.text = ticketNumber
             cell.expectedNumberLabel.text = "loading"
         
             cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: { (_cell) -> Bool in
                 let iP = self.tableView.indexPathForCell(_cell)!
-                Defaults[customerQueueKey].removeAtIndex(iP.row)
+                Defaults[customerQueueKey].removeAtIndex(iP.row / 2)
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                    self.tableView.beginUpdates()
-                    self.tableView.deleteRowsAtIndexPaths([iP], withRowAnimation: .Fade)
-                    self.tableView.endUpdates()
+                    self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
                 })
                 return true
             })]
@@ -75,6 +74,9 @@ class CustomerTicketsViewController: MasterTableViewController {
                         NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
                             let _cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomerTicketTableCell
                             _cell.expectedNumberLabel.text = "\(tokens[0])"
+                            let expectedN = Int(tokens[0])!
+                            let estimatedTime = arc4random_uniform(UInt32(10)) + 10
+                            cell.estimatedTimeLabel.text = "Estimated waiting time: \(Int(estimatedTime) * (Int(ticketNumber)! - expectedN)) minutes"
                         }
                     } else {
                         let alertController = UIAlertController(title: "Error", message: "Invalid response", preferredStyle: .Alert)

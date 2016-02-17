@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="-932" y="2404"/>
         </scene>
-        <!--Page Item Controller-->
+        <!--Customer Demo Page Item Controller-->
         <scene sceneID="Nmr-By-9Iu">
             <objects>
-                <viewController storyboardIdentifier="MainPageItemController" id="cNY-wP-zfw" customClass="PageItemController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainPageItemController" id="cNY-wP-zfw" customClass="CustomerDemoPageItemController" customModule="QNO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="av2-1f-3gp"/>
                         <viewControllerLayoutGuide type="bottom" id="q1F-Sg-dtd"/>
@@ -1223,8 +1223,8 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vUd-p8-Wbb">
                                             <rect key="frame" x="16" y="8" width="576" height="123"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Housename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubb-rZ-TlJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="576" height="71"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Housename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubb-rZ-TlJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="576" height="51"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1232,14 +1232,20 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="376" height="71"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="QueueName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNl-tf-N2A">
-                                                    <rect key="frame" x="0.0" y="76" width="576" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="QueueName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNl-tf-N2A">
+                                                    <rect key="frame" x="0.0" y="56" width="576" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
                                                         <rect key="frame" x="0.0" y="76" width="376" height="21"/>
                                                     </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrS-af-fif">
+                                                    <rect key="frame" x="0.0" y="82" width="576" height="15"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-7k-4Ni">
                                                     <rect key="frame" x="0.0" y="102" width="576" height="21"/>
@@ -1281,6 +1287,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="estimatedTimeLabel" destination="wrS-af-fif" id="9bx-lO-aLu"/>
                                     <outlet property="expectedNumberLabel" destination="enA-2b-JyL" id="Sa0-zl-sIz"/>
                                     <outlet property="houseNameLabel" destination="Ubb-rZ-TlJ" id="fwp-0X-Zl0"/>
                                     <outlet property="myTicketNumber" destination="SMq-6R-VzC" id="ecV-uG-1Ga"/>
@@ -1635,6 +1642,6 @@
         <image name="user" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jwp-na-Ru1"/>
+        <segue reference="7X3-nn-e7d"/>
     </inferredMetricsTieBreakers>
 </document>

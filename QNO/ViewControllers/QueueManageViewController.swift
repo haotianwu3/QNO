@@ -127,7 +127,45 @@ class QueueManageViewController: MasterTableViewController {
             return true
         })]
         cell.leftSwipeSettings.transition = .Drag
-        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: { (_) -> Bool in
+        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: { (_cell) -> Bool in
+            
+            let index = self.tableView.indexPathForCell(_cell)!.row
+            
+            PKHUD.sharedHUD.contentView = PKHUDProgressView()
+            PKHUD.sharedHUD.show()
+            
+            let api = QNOAPI()
+            do {
+                try api.removeQueue(self.houseName, queueName: self.queues[index], callback: { (errorMessage) -> Void in
+                    
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        PKHUD.sharedHUD.hide()
+                    })
+                    if errorMessage == nil {
+                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                            self.update()
+                        })
+                    } else {
+                        let _alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .Alert)
+                        _alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                        self.presentViewController(_alertController, animated: true, completion: nil)
+                    }
+                })
+            } catch QNOAPIRuntimeError.InvalidOperation {
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    PKHUD.sharedHUD.hide()
+                })
+                let _alertController = UIAlertController(title: "Invalid operation", message: "The operation is not permitted.", preferredStyle: .Alert)
+                _alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                self.presentViewController(_alertController, animated: true, completion: nil)
+                return false
+            } catch {
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    PKHUD.sharedHUD.hide()
+                })
+                print("Unknown error")
+            }
+            
             return true
         })]
         cell.rightSwipeSettings.transition = .Drag
@@ -163,7 +201,8 @@ class QueueManageViewController: MasterTableViewController {
             
             let api = QNOAPI()
             do {
-                try api.addQueue(self.houseName, queueName: queueName!, expectedNumber: 0, ticketNumber: 0, callback: { (errorMessage) -> Void in
+                let random = Int(arc4random_uniform(UInt32(100)) + 10)
+                try api.addQueue(self.houseName, queueName: queueName!, expectedNumber: random, ticketNumber: random, callback: { (errorMessage) -> Void in
                     NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                         PKHUD.sharedHUD.hide()
                     })

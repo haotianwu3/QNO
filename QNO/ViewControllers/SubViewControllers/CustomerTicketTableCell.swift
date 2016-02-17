@@ -15,4 +15,5 @@ class CustomerTicketTableCell: MGSwipeTableCell {
     @IBOutlet weak var queueNameLabel: UILabel!
     @IBOutlet weak var myTicketNumber: UILabel!
     @IBOutlet weak var expectedNumberLabel: UILabel!
+    @IBOutlet weak var estimatedTimeLabel: UILabel!
 }
